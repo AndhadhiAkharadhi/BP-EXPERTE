@@ -1,463 +1,2215 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="theme-color" content="#1A1A2E">
-<meta name="description" content="Professioneller Businessplan für den Gründungszuschuss — fertig in 48 Stunden. Individuell, behördengerecht, inkl. Finanzplanung. Word + PDF.">
-<meta property="og:title" content="BPX-krekon — Businessplan für Gründungszuschuss">
-<meta property="og:description" content="Schnell, verständlich und behördengerecht. Ihr Businessplan für die Agentur für Arbeit.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<title>BPX-krekon — Businessplan für Gründungszuschuss</title>
-<style>
-:root{--bg:#FAF9F6;--bg-2:#F5F3EF;--ink:#1A1A2E;--ink-2:#2D2D44;--text:#3D3D52;--muted:#6B6B7B;--accent:#E07A5F;--accent-2:#F2CC8F;--accent-3:#C46A52;--sage:#81B29A;--sage-2:#A8D5BA;--white:#fff;--shadow:0 2px 12px rgba(26,26,46,.06);--shadow-lg:0 8px 28px rgba(26,26,46,.10);--radius:16px;--radius-sm:10px;--tap:48px}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--accent-2);color:var(--ink)}
-img,svg{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer;border:none;background:none}
-ul{list-style:none}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPX-krekon — Businessplan für Gründungszuschuss</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+        
+        :root {
+            --cream: #FAF9F6;
+            --cream-2: #F5F3EF;
+            --cream-3: #EDEAE4;
+            --charcoal: #1A1A2E;
+            --charcoal-light: #2D2D44;
+            --text: #3D3D52;
+            --text-muted: #6B6B7B;
+            --accent: #E07A5F;
+            --accent-light: #F2CC8F;
+            --accent-dark: #C46A52;
+            --sage: #81B29A;
+            --sage-light: #A8D5BA;
+            --sage-dark: #5E8B73;
+            --white: #FFFFFF;
+            --shadow: 0 4px 24px rgba(26, 26, 46, 0.06);
+            --shadow-lg: 0 12px 40px rgba(26, 26, 46, 0.10);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --carefree: #B8860B;
+            --carefree-light: #DAA520;
+        }
 
-/* Aurora */
-.aurora{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.25;animation:float 18s ease-in-out infinite}
-.b1{width:50vw;height:50vw;background:linear-gradient(135deg,var(--accent-2),var(--accent));top:-10%;right:-10%;animation-delay:0s}
-.b2{width:40vw;height:40vw;background:linear-gradient(135deg,var(--sage),var(--sage-2));bottom:5%;left:-10%;animation-delay:-6s;animation-duration:22s}
-@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-30px) scale(1.05)}}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
-/* Navigation */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.75rem 0;transition:all .3s ease}
-nav.scrolled{background:rgba(250,249,246,.92);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);box-shadow:0 1px 0 rgba(0,0,0,.05)}
-.nav-c{max-width:1100px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.35rem;font-weight:800;color:var(--ink);letter-spacing:-.5px}
-.logo span{color:var(--accent)}
-.nav-links{display:none;gap:1.75rem;align-items:center;font-size:.9rem;font-weight:500}
-.nav-links a{color:var(--muted);transition:color .2s;position:relative}
-.nav-links a:hover{color:var(--ink)}
-.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:var(--accent);transition:width .2s;border-radius:1px}
-.nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--ink);color:var(--white);padding:.5rem 1.25rem;border-radius:50px;font-weight:600;transition:all .2s}
-.nav-cta:hover{background:var(--accent);box-shadow:0 6px 16px rgba(224,122,95,.25)}
-.nav-cta::after{display:none!important}
-.mob-btn{display:flex;align-items:center;justify-content:center;width:var(--tap);height:var(--tap);font-size:1.4rem;color:var(--ink)}
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
 
-/* Mobile Menu */
-.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(250,249,246,.98);backdrop-filter:blur(12px);padding:1rem 1.25rem 1.5rem;gap:1rem;box-shadow:0 12px 24px rgba(0,0,0,.06)}
-.nav-links.open .nav-cta{width:100%;text-align:center}
+        ::selection {
+            background: var(--accent-light);
+            color: var(--charcoal);
+        }
 
-/* Sections */
-section{position:relative;z-index:1;padding:4rem 1.25rem;max-width:1100px;margin:0 auto}
-.section-label{color:var(--accent);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:.6rem;display:block}
-.section-h{margin-bottom:2.5rem}
-.section-h h2{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-.5px;margin-bottom:.6rem}
-.section-h p{color:var(--muted);font-size:1.05rem;line-height:1.6;max-width:560px}
+        .aurora-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
 
-/* Hero */
-.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;padding:7rem 1.25rem 4rem;text-align:center}
-.hero-c{max-width:780px}
-.badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(224,122,95,.08);border:1px solid rgba(224,122,95,.15);color:var(--accent-3);padding:.4rem 1rem;border-radius:50px;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1.5rem}
-.dot{width:6px;height:6px;background:var(--sage);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;color:var(--ink);line-height:1.08;letter-spacing:-1px;margin-bottom:1rem}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero>p{color:var(--muted);font-size:1.1rem;max-width:520px;margin:0 auto 1.75rem;line-height:1.65}
-.cta-g{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
-.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 1.6rem;border-radius:50px;font-weight:600;font-size:.95rem;transition:all .2s;min-height:var(--tap)}
-.btn-pri{background:var(--accent);color:var(--white);box-shadow:0 6px 18px rgba(224,122,95,.25)}
-.btn-pri:hover{background:var(--accent-3);transform:translateY(-2px);box-shadow:0 10px 24px rgba(224,122,95,.35)}
-.btn-sec{background:transparent;color:var(--ink);border:1.5px solid var(--bg-2)}
-.btn-sec:hover{border-color:var(--ink);background:var(--white)}
-.trust{display:flex;justify-content:center;gap:1.25rem 2rem;flex-wrap:wrap;opacity:.75}
-.trust span{display:flex;align-items:center;gap:.35rem;font-size:.82rem;color:var(--muted);font-weight:500}
-.trust svg{width:16px;height:16px;color:var(--sage);flex-shrink:0}
+        .aurora-bg .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.35;
+            animation: float 20s ease-in-out infinite;
+        }
 
-/* Cards & Grids */
-.grid{display:grid;gap:1rem}
-.g-2{grid-template-columns:1fr}
-.g-3{grid-template-columns:1fr}
-.card{background:var(--white);border:1px solid var(--bg-2);border-radius:var(--radius);padding:1.5rem;transition:all .25s ease}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(224,122,95,.12)}
-.glass{background:rgba(255,255,255,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8)}
-.icon-w{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;background:linear-gradient(135deg,rgba(224,122,95,.08),rgba(242,204,143,.15));border:1px solid rgba(224,122,95,.08)}
-.card h3{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
-.card p{color:var(--muted);font-size:.9rem;line-height:1.6}
+        .blob-1 {
+            width: 600px; height: 600px;
+            background: linear-gradient(135deg, #F2CC8F, #E07A5F);
+            top: -10%; right: -5%;
+            animation-delay: 0s;
+        }
 
-/* Pricing */
-.price-c{position:relative;overflow:hidden}
-.price-c::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--bg-2);transition:background .2s}
-.price-c:hover::before{background:var(--accent)}
-.price-c:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.price-c .tag{position:absolute;top:.75rem;right:1rem;background:var(--accent);color:var(--white);padding:.2rem .7rem;border-radius:50px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-.price-h{margin-bottom:1.5rem}
-.price-h h3{font-size:.85rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem}
-.price-n{font-size:2.4rem;font-weight:800;color:var(--ink);line-height:1;letter-spacing:-1px}
-.price-n span{font-size:.85rem;color:var(--muted);font-weight:500;letter-spacing:0;margin-left:.2rem}
-.rate{display:block;color:var(--accent);font-size:.9rem;font-weight:600;margin-top:.35rem}
-.rate::before{content:'oder ';color:var(--muted);font-weight:500;font-size:.85rem}
-.feat li{padding:.55rem 0;border-bottom:1px solid var(--bg-2);display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--text)}
-.feat li::before{content:'✓';color:var(--sage);font-weight:800;font-size:.9rem;flex-shrink:0}
-.feat li.off{color:var(--muted);text-decoration:line-through;opacity:.55}
-.feat li.off::before{content:'×';color:#bbb}
-.btn-b{display:block;width:100%;text-align:center;padding:.75rem;border-radius:50px;font-weight:600;font-size:.9rem;margin-top:1.25rem;transition:all .2s;min-height:var(--tap)}
-.btn-b.pri{background:var(--ink);color:var(--white)}
-.btn-b.pri:hover{background:var(--accent);box-shadow:0 6px 16px rgba(224,122,95,.25)}
-.btn-b.out{color:var(--ink);border:1.5px solid var(--bg-2);background:transparent}
-.btn-b.out:hover{border-color:var(--ink);background:var(--white)}
+        .blob-2 {
+            width: 500px; height: 500px;
+            background: linear-gradient(135deg, #81B29A, #A8D5BA);
+            bottom: 10%; left: -10%;
+            animation-delay: -7s;
+            animation-duration: 25s;
+        }
 
-/* Process */
-.process{background:var(--bg-2);border-radius:28px;padding:3rem 1.25rem;margin:0 .5rem;max-width:1060px}
-.step{text-align:center;padding:.5rem}
-.step-n{width:52px;height:52px;background:var(--white);border:2px solid var(--bg-2);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;margin:0 auto 1rem;transition:all .2s}
-.step:hover .step-n{border-color:var(--accent);background:var(--accent);color:var(--white);transform:scale(1.08)}
-.step h3{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
-.step p{color:var(--muted);font-size:.85rem;line-height:1.55}
+        .blob-3 {
+            width: 400px; height: 400px;
+            background: linear-gradient(135deg, #E07A5F, #F2CC8F);
+            top: 40%; left: 40%;
+            animation-delay: -14s;
+            animation-duration: 22s;
+            opacity: 0.2;
+        }
 
-/* Audience */
-.pill{display:flex;align-items:center;gap:.75rem;background:var(--white);padding:1rem 1.25rem;border-radius:var(--radius-sm);border:1px solid var(--bg-2);transition:all .2s;font-size:.9rem}
-.pill:hover{border-color:var(--sage);transform:translateX(4px);box-shadow:var(--shadow)}
-.pill .c{width:26px;height:26px;background:var(--sage-2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--white);flex-shrink:0;font-weight:700}
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
 
-/* FAQ */
-.faq{background:var(--white);border:1px solid var(--bg-2);border-radius:var(--radius-sm);margin-bottom:.6rem;overflow:hidden;transition:border-color .2s}
-.faq-q{padding:1.1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink);min-height:var(--tap)}
-.faq-q:hover{color:var(--accent)}
-.faq-i{width:28px;height:28px;background:var(--bg-2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--accent);transition:all .2s;flex-shrink:0;font-weight:300}
-.faq.on{border-color:var(--accent-2);box-shadow:var(--shadow)}
-.faq.on .faq-i{background:var(--accent);color:var(--white);transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;padding:0 1.25rem}
-.faq.on .faq-a{max-height:300px;padding:0 1.25rem 1.1rem}
-.faq-a p{color:var(--muted);font-size:.9rem;line-height:1.65}
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 1000;
+            padding: 1.2rem 0;
+            transition: all 0.4s ease;
+        }
 
-/* Objections */
-.obj-q{font-size:1.05rem;font-style:italic;color:var(--muted);margin-bottom:.75rem;padding-left:.75rem;border-left:3px solid var(--accent-2);line-height:1.45}
-.obj-a{color:var(--text);font-size:.88rem;line-height:1.65}
-.obj-a strong{color:var(--ink)}
+        nav.scrolled {
+            background: rgba(250, 249, 246, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+        }
 
-/* Industries */
-.ind h3{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;display:flex;align-items:center;gap:.4rem}
-.ind li{padding:.3rem 0;color:var(--muted);font-size:.82rem;display:flex;align-items:center;gap:.4rem}
-.ind li::before{content:'';width:4px;height:4px;background:var(--accent-2);border-radius:50%;flex-shrink:0}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* CTA */
-.cta-s{background:var(--ink);border-radius:28px;padding:3.5rem 1.5rem;text-align:center;position:relative;overflow:hidden;margin:0 .5rem;max-width:1060px}
-.cta-s::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 50%,rgba(224,122,95,.12) 0%,transparent 50%);animation:glow 8s ease-in-out infinite}
-@keyframes glow{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
-.cta-s h2{font-size:clamp(1.5rem,4vw,2.2rem);color:var(--white);margin-bottom:.6rem;position:relative;z-index:1;font-weight:800}
-.cta-s p{color:rgba(255,255,255,.55);font-size:1rem;margin-bottom:1.5rem;max-width:460px;margin-inline:auto;position:relative;z-index:1}
-.btn-w{display:inline-flex;align-items:center;gap:.4rem;background:var(--white);color:var(--ink);padding:.85rem 2rem;border-radius:50px;font-weight:700;position:relative;z-index:1;transition:all .2s;min-height:var(--tap)}
-.btn-w:hover{background:var(--accent);color:var(--white);transform:translateY(-2px);box-shadow:0 8px 20px rgba(224,122,95,.3)}
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
 
-/* Footer */
-footer{padding:3rem 1.25rem 1.5rem;text-align:center;position:relative;z-index:1}
-.f-logo{font-size:1.3rem;font-weight:800;color:var(--ink);margin-bottom:.4rem}
-.f-logo span{color:var(--accent)}
-.f-desc{color:var(--muted);font-size:.85rem;margin-bottom:1.25rem;line-height:1.5}
-.f-links{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;font-size:.85rem;font-weight:500}
-.f-links a{color:var(--muted);transition:color .2s}
-.f-links a:hover{color:var(--accent)}
-.copy{color:var(--muted);font-size:.75rem;opacity:.5}
+        .logo span { color: var(--accent); }
 
-/* Reveal Animation */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.reveal.vis{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.08s}
-.d2{transition-delay:.16s}
-.d3{transition-delay:.24s}
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
 
-/* Tablet */
-@media(min-width:640px){
-  .g-2{grid-template-columns:repeat(2,1fr)}
-  .process-steps{grid-template-columns:repeat(2,1fr)}
-  .hero{padding-top:8rem}
-  section{padding:5rem 1.5rem}
-}
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
 
-/* Desktop */
-@media(min-width:900px){
-  .mob-btn{display:none}
-  .nav-links{display:flex}
-  .g-3{grid-template-columns:repeat(3,1fr)}
-  .process-steps{grid-template-columns:repeat(4,1fr)}
-  .process{padding:3.5rem 2.5rem}
-  .cta-s{padding:4rem 2rem}
-  section{padding:6rem 2rem}
-  .hero h1{font-size:3.4rem}
-}
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+            border-radius: 1px;
+        }
 
-/* Reduced Motion */
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-  html{scroll-behavior:auto}
-}
-</style>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"BPX-krekon",
-  "description":"Businessplan-Spezialist für Gründungszuschuss und Existenzgründung",
-  "url":"https://andhadhiakharadhi.github.io/BP-EXPERTE/",
-  "areaServed":"DE",
-  "priceRange":"€€",
-  "serviceType":"Businessplan-Erstellung",
-  "provider":{"@type":"Person","name":"BPX-krekon"}
-}
-</script>
+        .nav-links a:hover { color: var(--charcoal); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            background: var(--charcoal);
+            color: var(--white) !important;
+            padding: 0.6rem 1.6rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s !important;
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--charcoal);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10rem 2rem 6rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(224, 122, 95, 0.1);
+            border: 1px solid rgba(224, 122, 95, 0.2);
+            color: var(--accent-dark);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-badge .dot {
+            width: 6px; height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 560px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(224, 122, 95, 0.3);
+        }
+
+        .btn-main:hover {
+            background: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(224, 122, 95, 0.4);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--charcoal);
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1.5px solid var(--cream-3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--charcoal);
+            background: var(--white);
+        }
+
+        .btn-carefree {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--carefree), var(--carefree-light));
+            color: var(--white);
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(184, 134, 11, 0.3);
+        }
+
+        .btn-carefree:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(184, 134, 11, 0.4);
+        }
+
+        .authority-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--white);
+            border: 1px solid var(--cream-3);
+            border-radius: var(--radius-sm);
+            padding: 0.8rem 1.4rem;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+        }
+
+        .authority-banner:hover {
+            border-color: var(--sage);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .authority-banner .gov-icon {
+            width: 32px; height: 32px;
+            background: var(--sage-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .authority-banner .gov-text {
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        .authority-banner .gov-text strong {
+            color: var(--charcoal);
+            font-weight: 600;
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .authority-banner .gov-text span {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .authority-banner .gov-arrow {
+            color: var(--sage);
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+            margin-left: 0.3rem;
+        }
+
+        .authority-banner:hover .gov-arrow {
+            transform: translateX(4px);
+        }
+
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            opacity: 0.7;
+            margin-top: 2.5rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .trust-item svg {
+            width: 18px; height: 18px;
+            color: var(--sage);
+        }
+
+        section {
+            padding: 7rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-header {
+            max-width: 640px;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(224, 122, 95, 0.15);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-icon-wrap {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, rgba(224,122,95,0.1), rgba(242,204,143,0.2));
+            border: 1px solid rgba(224,122,95,0.1);
+        }
+
+        .glass-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+
+        .glass-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Muster-Ergebnisse */
+        .muster-section {
+            background: var(--cream-2);
+            border-radius: 40px;
+            margin: 0 1rem;
+            max-width: 1160px;
+        }
+
+        .muster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .muster-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 1px solid var(--cream-3);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+        }
+
+        .muster-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(224, 122, 95, 0.15);
+        }
+
+        .muster-header {
+            padding: 1.8rem 2rem;
+            background: linear-gradient(135deg, var(--charcoal), var(--charcoal-light));
+            color: var(--white);
+        }
+
+        .muster-header.gastro {
+            background: linear-gradient(135deg, #14532d, #16a34a);
+        }
+
+        .muster-header.handwerk {
+            background: linear-gradient(135deg, #1e3a5f, #3b82f6);
+        }
+
+        .muster-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .muster-header p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .muster-preview {
+            padding: 1.5rem 2rem;
+            font-size: 0.9rem;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .muster-preview ul {
+            list-style: none;
+            margin: 0.5rem 0;
+        }
+
+        .muster-preview li {
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.88rem;
+        }
+
+        .muster-preview li::before {
+            content: '✓';
+            color: var(--sage);
+            font-weight: 700;
+        }
+
+        .muster-toggle {
+            display: block;
+            width: calc(100% - 4rem);
+            margin: 0 2rem 2rem;
+            padding: 0.8rem;
+            background: var(--cream-2);
+            border: 1.5px solid var(--cream-3);
+            border-radius: 50px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .muster-toggle:hover {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        .muster-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease-out, padding 0.4s;
+            padding: 0 2rem;
+        }
+
+        .muster-content.open {
+            max-height: 3000px;
+            padding: 0 2rem 2rem;
+        }
+
+        .muster-inner {
+            background: var(--cream);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: var(--text);
+            border: 1px solid var(--cream-3);
+        }
+
+        .muster-inner h4 {
+            color: var(--charcoal);
+            font-size: 1rem;
+            margin: 1.2rem 0 0.5rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid var(--accent-light);
+        }
+
+        .muster-inner h4:first-child {
+            margin-top: 0;
+        }
+
+        .muster-inner table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+        }
+
+        .muster-inner th, .muster-inner td {
+            padding: 6px 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--cream-3);
+        }
+
+        .muster-inner th {
+            background: var(--charcoal);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .muster-inner tr:nth-child(even) {
+            background: rgba(255,255,255,0.5);
+        }
+
+        .muster-inner .highlight-box {
+            background: var(--charcoal);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+        }
+
+        .muster-inner .highlight-box strong {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--cream-3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: var(--cream-3);
+            transition: background 0.3s;
+        }
+
+        .pricing-card:hover::before { background: var(--accent); }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(224, 122, 95, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            transform: scale(1.03);
+            box-shadow: 0 20px 50px rgba(224, 122, 95, 0.12);
+        }
+
+        .pricing-card.featured::before { background: var(--accent); }
+
+        .pricing-card.carefree {
+            border-color: var(--carefree);
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(184, 134, 11, 0.15);
+            background: linear-gradient(180deg, var(--white) 0%, #fffbeb 100%);
+        }
+
+        .pricing-card.carefree::before {
+            background: linear-gradient(90deg, var(--carefree), var(--carefree-light));
+        }
+
+        .pricing-card .popular-tag {
+            position: absolute;
+            top: 1rem; right: 1.5rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-card .carefree-tag {
+            position: absolute;
+            top: 1rem; right: 1.5rem;
+            background: linear-gradient(135deg, var(--carefree), var(--carefree-light));
+            color: var(--white);
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-header { margin-bottom: 1.5rem; }
+
+        .pricing-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+
+        .price .rate {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 0.3rem;
+            letter-spacing: 0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--cream-2);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.88rem;
+            color: var(--text);
+        }
+
+        .pricing-features li::before {
+            content: '';
+            width: 18px; height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2381B29A' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/contain no-repeat;
+            flex-shrink: 0;
+        }
+
+        .pricing-features li.disabled {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .pricing-features li.disabled::before {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ccc' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6M6 6l12 12'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+
+        .pricing-features li.carefree-item::before {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23B8860B' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+
+        .btn-pricing {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0.9rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-pricing-primary {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .btn-pricing-primary:hover {
+            background: var(--accent);
+            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.3);
+        }
+
+        .btn-pricing-outline {
+            background: transparent;
+            color: var(--charcoal);
+            border: 1.5px solid var(--cream-3);
+        }
+
+        .btn-pricing-outline:hover {
+            border-color: var(--charcoal);
+            background: var(--white);
+        }
+
+        .btn-pricing-carefree {
+            background: linear-gradient(135deg, var(--carefree), var(--carefree-light));
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .btn-pricing-carefree:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(184, 134, 11, 0.3);
+        }
+
+        /* Einzelpakete */
+        .einzel-section {
+            background: var(--white);
+            border-radius: 40px;
+            margin: 0 1rem;
+            max-width: 1160px;
+            border: 1px solid var(--cream-3);
+        }
+
+        .einzel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .einzel-card {
+            background: var(--cream);
+            border-radius: var(--radius-sm);
+            padding: 1.8rem;
+            border: 1.5px solid var(--cream-3);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .einzel-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .einzel-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, rgba(224,122,95,0.1), rgba(242,204,143,0.2));
+        }
+
+        .einzel-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.4rem;
+        }
+
+        .einzel-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .einzel-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--charcoal);
+        }
+
+        .einzel-price span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .einzel-btn {
+            display: block;
+            margin-top: 1rem;
+            text-align: center;
+            padding: 0.6rem;
+            border-radius: 50px;
+            background: var(--white);
+            border: 1.5px solid var(--cream-3);
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .einzel-btn:hover {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, var(--white), var(--cream-2));
+            border: 1px solid var(--cream-3);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin: 2rem 0 0;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .info-card:hover {
+            border-color: var(--sage);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+
+        .info-card .info-icon {
+            width: 48px; height: 48px;
+            background: var(--sage-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .info-card .info-content h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.3rem;
+        }
+
+        .info-card .info-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .info-card .info-arrow {
+            margin-left: auto;
+            color: var(--sage);
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .info-card:hover .info-arrow {
+            transform: translateX(4px);
+        }
+
+        .process-section {
+            background: var(--cream-2);
+            border-radius: 40px;
+            margin: 0 1rem;
+            max-width: 1160px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .step-num {
+            width: 64px; height: 64px;
+            background: var(--white);
+            border: 2px solid var(--cream-3);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover .step-num {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .audience-pill {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--white);
+            padding: 1.2rem 1.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--cream-3);
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .audience-pill:hover {
+            border-color: var(--sage);
+            transform: translateX(6px);
+            box-shadow: var(--shadow);
+        }
+
+        .audience-pill .check {
+            width: 28px; height: 28px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--cream-3);
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover { border-color: var(--cream-3); }
+        .faq-item.active {
+            border-color: var(--accent-light);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 1.4rem 1.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--charcoal);
+            transition: color 0.3s;
+            gap: 1rem;
+        }
+
+        .faq-question:hover { color: var(--accent); }
+
+        .faq-icon {
+            width: 28px; height: 28px;
+            background: var(--cream-2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent);
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            background: var(--accent);
+            color: var(--white);
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s;
+            padding: 0 1.8rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding: 0 1.8rem 1.4rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .obj-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .obj-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--cream-3);
+            transition: all 0.3s;
+        }
+
+        .obj-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .obj-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-light);
+            line-height: 1.5;
+        }
+
+        .obj-answer {
+            color: var(--text);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .obj-answer strong {
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .ind-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .ind-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--cream-3);
+            transition: all 0.3s;
+        }
+
+        .ind-card:hover {
+            border-color: var(--sage);
+            box-shadow: var(--shadow);
+            transform: translateY(-4px);
+        }
+
+        .ind-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .ind-card ul { list-style: none; }
+
+        .ind-card ul li {
+            padding: 0.4rem 0;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ind-card ul li::before {
+            content: '';
+            width: 5px; height: 5px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cta-wrap {
+            background: var(--charcoal);
+            border-radius: 40px;
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0 1rem;
+            max-width: 1160px;
+        }
+
+        .cta-wrap::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(224, 122, 95, 0.15) 0%, transparent 50%);
+            animation: cta-glow 10s ease-in-out infinite;
+        }
+
+        @keyframes cta-glow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .cta-wrap h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-wrap p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-cta-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            color: var(--charcoal);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-cta-white:hover {
+            background: var(--accent);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(224, 122, 95, 0.4);
+        }
+
+        footer {
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo span { color: var(--accent); }
+
+        .footer-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { padding: 8rem 1.5rem 4rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-cta-group { flex-direction: column; align-items: center; }
+            .btn-ghost { margin-left: 0; }
+            .pricing-card.featured, .pricing-card.carefree { transform: scale(1); }
+            section { padding: 4rem 1.5rem; }
+            .obj-grid, .muster-grid { grid-template-columns: 1fr; }
+            .process-section, .cta-wrap, .muster-section, .einzel-section { margin: 0; border-radius: 24px; }
+            .trust-bar { gap: 1.2rem; }
+            .authority-banner { flex-direction: column; text-align: center; }
+            .info-card { flex-direction: column; text-align: center; }
+            .info-card .info-arrow { margin-left: 0; margin-top: 0.5rem; }
+            .muster-inner .highlight-box { flex-direction: column; gap: 1rem; }
+        }
+
+        .nav-links.open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background: rgba(250, 249, 246, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 2rem;
+            gap: 1.2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+    </style>
 </head>
 <body>
-
-<div class="aurora" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div></div>
-
-<nav id="nav">
-  <div class="nav-c">
-    <a href="#" class="logo">BPX<span>-</span>krekon</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#preise">Preise</a></li>
-      <li><a href="#ablauf">Ablauf</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#kontakt" class="nav-cta">Anfragen</a></li>
-    </ul>
-    <button class="mob-btn" id="mobBtn" aria-label="Menü öffnen">☰</button>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-c">
-    <div class="badge"><span class="dot"></span>Gründungszuschuss-zertifiziert</div>
-    <h1>Ihr professioneller Businessplan für den <em>Gründungszuschuss</em> — fertig in 48 Stunden</h1>
-    <p>Schnell, verständlich und behördengerecht. Ich erstelle Ihren individuellen Plan, der alle Anforderungen der Agentur für Arbeit erfüllt.</p>
-    <div class="cta-g">
-      <a href="#preise" class="btn btn-pri">Pakete entdecken →</a>
-      <a href="#ablauf" class="btn btn-sec">So funktioniert's</a>
+    <div class="aurora-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
-    <div class="trust">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>DSGVO-konform</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Word + PDF</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Kostenlose Überarbeitung</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>Made in Germany</span>
-    </div>
-  </div>
-</section>
 
-<section id="leistungen">
-  <span class="section-label reveal">Leistungen</span>
-  <div class="section-h reveal">
-    <h2>Was Sie von mir bekommen</h2>
-    <p>Ein kompletter Businessplan-Service — von der ersten Idee bis zur erfolgreichen Einreichung.</p>
-  </div>
-  <div class="grid g-2 g-3-md">
-    <div class="card glass reveal d1">
-      <div class="icon-w">📋</div>
-      <h3>Vollständiger Businessplan</h3>
-      <p>10–15 Seiten mit Executive Summary, Unternehmenskonzept, Zielgruppen- und Wettbewerbsanalyse sowie Marketing- & Vertriebsstrategie.</p>
-    </div>
-    <div class="card glass reveal d2">
-      <div class="icon-w">📊</div>
-      <h3>Finanzplanung inklusive</h3>
-      <p>Startkapitalbedarf, Monatskostenplan, Umsatzprognose für 3 Jahre, Break-even-Analyse und Liquiditätsvorschau.</p>
-    </div>
-    <div class="card glass reveal d3">
-      <div class="icon-w">🎨</div>
-      <h3>Professionelles Layout</h3>
-      <p>Lieferung als Word-Dokument + PDF — direkt einreichbar bei der Agentur für Arbeit. Übersichtlich und überzeugend.</p>
-    </div>
-    <div class="card glass reveal d1">
-      <div class="icon-w">⚡</div>
-      <h3>Schnelle Lieferung</h3>
-      <p>Standard-Lieferung in 48–72 Stunden. Express-Option in 24 Stunden verfügbar. Keine Wartezeit.</p>
-    </div>
-    <div class="card glass reveal d2">
-      <div class="icon-w">🔄</div>
-      <h3>Kostenlose Überarbeitung</h3>
-      <p>Ich passe den Plan an die Anforderungen Ihres Sachbearbeiters an — bis er akzeptiert wird.</p>
-    </div>
-    <div class="card glass reveal d3">
-      <div class="icon-w">🤝</div>
-      <h3>Persönliche Betreuung</h3>
-      <p>Direkter Ansprechpartner — erreichbar und schnell bei Rückfragen, von Anfang bis zur Einreichung.</p>
-    </div>
-  </div>
-</section>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">BPX<span>-</span>krekon</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#muster">Muster</a></li>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#preise">Pakete</a></li>
+                <li><a href="#einzel">Einzelpakete</a></li>
+                <li><a href="#ablauf">Ablauf</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontakt" class="nav-cta">Anfragen</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileBtn">☰</button>
+        </div>
+    </nav>
 
-<section id="preise">
-  <span class="section-label reveal">Preise</span>
-  <div class="section-h reveal">
-    <h2>Transparente Pakete für Ihre Gründung</h2>
-    <p>Alle Preise sind Endpreise — wahlweise als Einmalzahlung oder bequem in 9 Monatsraten.</p>
-  </div>
-  <div class="grid g-3">
-    <div class="card price-c reveal d1">
-      <div class="price-h">
-        <h3>Basic</h3>
-        <div class="price-n">499 €<span>/ einmalig</span></div>
-        <span class="rate">9 × 55,56 € / Monat</span>
-      </div>
-      <ul class="feat">
-        <li>Businessplan (ca. 10 Seiten)</li><li>Unternehmenskonzept + Marktanalyse</li><li>Marketingplan</li><li>Einfache Kostenübersicht</li><li>1x kostenlose Überarbeitung</li><li>Lieferung: 72 Stunden</li><li>Format: Word + PDF</li>
-        <li class="off">3-Jahres-Finanzplan</li><li class="off">Break-even-Analyse</li><li class="off">Beratungsgespräch</li>
-      </ul>
-      <a href="#kontakt" class="btn-b out">Basic wählen</a>
-    </div>
-    <div class="card price-c reveal d2" style="border-color:var(--accent);transform:scale(1.02);box-shadow:0 16px 40px rgba(224,122,95,.1);">
-      <div class="tag">Beliebt</div>
-      <div class="price-h">
-        <h3>Standard</h3>
-        <div class="price-n">990 €<span>/ einmalig</span></div>
-        <span class="rate">9 × 110,00 € / Monat</span>
-      </div>
-      <ul class="feat">
-        <li>Businessplan (ca. 12–14 Seiten)</li><li>Alle Inhalte aus Basic</li><li>Vollständiger 3-Jahres-Finanzplan</li><li>Break-even-Analyse</li><li>Executive Summary</li><li>2x kostenlose Überarbeitung</li><li>Lieferung: 48 Stunden</li><li>Format: Word + PDF</li>
-        <li class="off">Liquiditätsplanung (12 Monate)</li><li class="off">Beratungsgespräch</li>
-      </ul>
-      <a href="#kontakt" class="btn-b pri">Standard wählen</a>
-    </div>
-    <div class="card price-c reveal d3">
-      <div class="price-h">
-        <h3>Premium</h3>
-        <div class="price-n">1.499 €<span>/ einmalig</span></div>
-        <span class="rate">9 × 166,56 € / Monat</span>
-      </div>
-      <ul class="feat">
-        <li>Businessplan (ca. 15 Seiten)</li><li>Alle Inhalte aus Standard</li><li>Liquiditätsplanung (12 Monate)</li><li>30-minütiges Beratungsgespräch</li><li>Unbegrenzte Überarbeitungen</li><li>Prioritäts-Lieferung: 24–48h</li><li>Format: Word + PDF</li><li>Optionaler Pitch-Foliensatz</li><li>Persönlicher Premium-Support</li>
-      </ul>
-      <a href="#kontakt" class="btn-b out">Premium wählen</a>
-    </div>
-  </div>
-</section>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Gründungszuschuss-zertifiziert
+            </div>
+            <h1>Ihr professioneller Businessplan für den <em>Gründungszuschuss</em> — fertig in 48 Stunden</h1>
+            <p class="hero-subtitle">Schnell, verständlich und behördengerecht. Ich erstelle Ihren individuellen Plan, der alle Anforderungen der Agentur für Arbeit erfüllt.</p>
+            <div class="hero-cta-group">
+                <a href="#preise" class="btn-main">Pakete entdecken →</a>
+                <a href="#muster" class="btn-ghost">Muster ansehen</a>
+                <a href="#carefree-info" class="btn-carefree">★ Carefree-Paket</a>
+            </div>
+            
+            <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/arbeitslosengeld/gruendungszuschuss-beantragen" target="_blank" rel="noopener noreferrer" class="authority-banner reveal">
+                <div class="gov-icon">🏛️</div>
+                <div class="gov-text">
+                    <strong>Offizielle Information</strong>
+                    <span>Alle Details zum Gründungszuschuss bei der Bundesagentur für Arbeit</span>
+                </div>
+                <div class="gov-arrow">→</div>
+            </a>
 
-<section id="ablauf" class="process">
-  <span class="section-label reveal">Ablauf</span>
-  <div class="section-h reveal">
-    <h2>Von der Idee zur Einreichung in 4 Schritten</h2>
-    <p>Kein komplizierter Prozess. Sie füllen einen Fragebogen aus — ich erledige den Rest.</p>
-  </div>
-  <div class="grid g-2 process-steps" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
-    <div class="step reveal d1"><div class="step-n">1</div><h3>Beauftragung</h3><p>Sie beauftragen mich über Fiverr oder Malt.de und erhalten umgehend meinen strukturierten Fragebogen.</p></div>
-    <div class="step reveal d2"><div class="step-n">2</div><h3>Fragebogen</h3><p>Sie füllen den Fragebogen in nur 10–15 Minuten aus. Kein Fachjargon — einfache, verständliche Fragen.</p></div>
-    <div class="step reveal d3"><div class="step-n">3</div><h3>Erstellung</h3><p>Ich erstelle Ihren individuellen, professionellen Businessplan — maßgeschneidert für Ihre Branche und Idee.</p></div>
-    <div class="step reveal d1"><div class="step-n">4</div><h3>Lieferung</h3><p>Sie erhalten Word + PDF — fertig zur Einreichung bei der Agentur für Arbeit. Überarbeitungen inklusive.</p></div>
-  </div>
-</section>
+            <div class="trust-bar">
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    DSGVO-konform
+                </div>
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Word + PDF
+                </div>
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    Kostenlose Überarbeitung
+                </div>
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+                    Made in Germany
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <span class="section-label reveal">Zielgruppe</span>
-  <div class="section-h reveal">
-    <h2>Für wen ist dieses Angebot?</h2>
-    <p>Ob Existenzgründer, Arbeitslose mit Gründungsidee oder Quereinsteiger — ich unterstütze Sie.</p>
-  </div>
-  <div class="grid g-2">
-    <div class="pill reveal d1"><div class="c">✓</div>Sie erhalten Arbeitslosengeld und wollen sich selbstständig machen</div>
-    <div class="pill reveal d2"><div class="c">✓</div>Sie haben eine konkrete Geschäftsidee und brauchen den Businessplan für die Agentur für Arbeit</div>
-    <div class="pill reveal d3"><div class="c">✓</div>Sie haben wenig Zeit oder Erfahrung mit Businessplänen</div>
-    <div class="pill reveal d1"><div class="c">✓</div>Sie wollen einen professionellen Plan — ohne Fachjargon-Wirrwarr</div>
-    <div class="pill reveal d2"><div class="c">✓</div>Ihre Branche: Dienstleistung, Handel, Gastronomie, Handwerk, IT, Coaching, Tourismus, Beauty, Logistik u.v.m.</div>
-  </div>
-</section>
+    <!-- MUSTER-ERGEBNISSE -->
+    <section id="muster" class="muster-section">
+        <span class="section-label reveal">Muster-Ergebnisse</span>
+        <div class="section-header reveal">
+            <h2>So sieht Ihr fertiger Businessplan aus</h2>
+            <p>Zwei vollständige Muster aus unterschiedlichen Branchen — inklusive Finanzplanung, Marktanalyse und Wettbewerbsvergleich. Klicken Sie zum Aufklappen.</p>
+        </div>
+        <div class="muster-grid">
+            <!-- MUSTER 1: GASTRONOMIE -->
+            <div class="muster-card reveal reveal-delay-1">
+                <div class="muster-header gastro">
+                    <h3>🍽️ Küçük Lezzet</h3>
+                    <p>Türkisches Café & Imbiss · Bremen · Gründerin: Aylin Demir</p>
+                </div>
+                <div class="muster-preview">
+                    <ul>
+                        <li>Executive Summary mit Alleinstellungsmerkmal</li>
+                        <li>Gründerprofil & Sachkunde nach § 4 GastG</li>
+                        <li>Leistungsangebot: Frühstück, Mittagstisch, Backwaren</li>
+                        <li>Zielgruppenanalyse (5 Segmente)</li>
+                        <li>Wettbewerbsmatrix (Döner vs. Restaurant vs. Ketten)</li>
+                        <li>Marketingplan mit Social-Media-Strategie</li>
+                        <li>Startkosten: 11.500 € · Break-even: Monat 3–4</li>
+                        <li>3-Phasen-Umsatzprognose bis 95.000 €/Jahr</li>
+                    </ul>
+                </div>
+                <button class="muster-toggle" onclick="toggleMuster(this)">📄 Vollständiges Muster anzeigen</button>
+                <div class="muster-content">
+                    <div class="muster-inner">
+                        <h4>1. Executive Summary</h4>
+                        <p>Mit <strong>„Küçük Lezzet"</strong> (dt. „kleiner Genuss") wird ein türkisches Café und Imbiss in Bremen-Mitte gegründet. Das Angebot umfasst frisch zubereitete türkische Speisen, hausgemachte Backwaren, Frühstück und Mittagstisch – in einer einladenden, familiären Atmosphäre zu fairen Preisen.</p>
+                        <p>Das Konzept richtet sich an Berufstätige, Studierende und Familien, die eine Alternative zu Fast-Food-Ketten suchen. Das Alleinstellungsmerkmal liegt in authentischer türkischer Küche kombiniert mit selbst gebackenem Gebäck (Simit, Börek, Baklava) und persönlichem Service.</p>
+                        <p>Im ersten Geschäftsjahr wird ein monatlicher Umsatz von <strong>7.000–10.000 €</strong> angestrebt.</p>
 
-<section id="faq">
-  <span class="section-label reveal">FAQ</span>
-  <div class="section-h reveal">
-    <h2>Häufig gestellte Fragen</h2>
-    <p>Alles, was Sie vor der Beauftragung wissen sollten.</p>
-  </div>
-  <div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Brauche ich für den Gründungszuschuss wirklich einen Businessplan?<div class="faq-i">+</div></div><div class="faq-a"><p>Ja. Die Bundesagentur für Arbeit verlangt beim Antrag auf Gründungszuschuss immer einen schriftlichen Businessplan. Ohne ihn wird der Antrag nicht bearbeitet.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Ist der Plan wirklich individuell auf mich zugeschnitten?<div class="faq-i">+</div></div><div class="faq-a"><p>Ja. Ich erstelle keinen Massen-Plan, sondern arbeite mit den Informationen aus Ihrem Fragebogen. Jeder Plan ist individuell formuliert und auf Ihre Branche abgestimmt.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Was ist, wenn die Agentur für Arbeit Änderungen verlangt?<div class="faq-i">+</div></div><div class="faq-a"><p>Im Standard- und Premium-Paket sind mehrere Überarbeitungsrunden inklusive. Ich passe den Plan an die Anforderungen des Sachbearbeiters an, bis er akzeptiert wird.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Wie schnell bekomme ich meinen Businessplan?<div class="faq-i">+</div></div><div class="faq-a"><p>Standard-Lieferzeit: 48–72 Stunden nach Eingang Ihres ausgefüllten Fragebogens. Im Premium-Paket auch Express in 24 Stunden möglich.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Für welche Branchen kann ich einen Businessplan bestellen?<div class="faq-i">+</div></div><div class="faq-a"><p>Ich habe Erfahrung mit nahezu allen Branchen: Online-Handel, Dienstleistung, Gastronomie, Handwerk, IT/Tech, Coaching, Tourismus, Beauty & Wellness, Transport & Logistik, Reinigung, Einzelhandel und mehr.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Muss ich selbst etwas schreiben?<div class="faq-i">+</div></div><div class="faq-a"><p>Nein. Sie füllen nur meinen Fragebogen aus (10–15 Minuten) — den Rest erledige ich.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Was kostet ein Businessplan ohne Ihre Hilfe beim Berater?<div class="faq-i">+</div></div><div class="faq-a"><p>Klassische Unternehmensberater verlangen für vergleichbare Leistungen 1.500 bis 5.000 €. Mein Angebot ist deutlich günstiger — bei gleicher Qualität.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Ich habe noch keine genauen Zahlen für den Finanzplan. Was nun?<div class="faq-i">+</div></div><div class="faq-a"><p>Kein Problem. Ich helfe Ihnen dabei, realistische Schätzungen zu entwickeln. Es geht nicht um perfekte Zahlen, sondern um eine nachvollziehbare, plausible Planung.</p></div></div>
-    <div class="faq reveal"><div class="faq-q" role="button" aria-expanded="false" tabindex="0">Kann ich auch auf Malt bezahlen?<div class="faq-i">+</div></div><div class="faq-a"><p>Ja. Sie können mich sowohl über Fiverr als auch über Malt.de beauftragen. Beide Wege sind sicher und einfach.</p></div></div>
-  </div>
-</section>
+                        <h4>2. Gründerperson und Unternehmen</h4>
+                        <p>Aylin Demir (34) hat über <strong>8 Jahre Erfahrung in der Gastronomie</strong> – als Köchin, Servicekraft und zuletzt als stellvertretende Betriebsleiterin. Sie verfügt über die erforderliche Sachkunde nach § 4 GastG sowie fundierte Kenntnisse in Speisenzubereitung, Lagerhaltung und Kundenkommunikation.</p>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• <strong>Rechtsform:</strong> Einzelunternehmen</li>
+                            <li style="padding:0.2rem 0;">• <strong>Standort:</strong> Bremen-Mitte, gemietete Ladenfläche ca. 60–80 m²</li>
+                            <li style="padding:0.2rem 0;">• <strong>Personal:</strong> Gründerin + 1 Teilzeitkraft ab Monat 3</li>
+                        </ul>
 
-<section>
-  <span class="section-label reveal">Einwände</span>
-  <div class="section-h reveal">
-    <h2>Ihre Zweifel — meine Antworten</h2>
-    <p>Typische Bedenken vor der Beauftragung — und warum Sie sich keine Sorgen machen müssen.</p>
-  </div>
-  <div class="grid g-2">
-    <div class="card reveal d1"><div class="obj-q">„Ich weiß nicht, ob meine Idee gut genug ist…"</div><div class="obj-a"><strong>Für den Gründungszuschuss muss die Idee realistisch und nachvollziehbar sein — nicht revolutionär.</strong> Ich helfe Ihnen, sie überzeugend darzustellen.</div></div>
-    <div class="card reveal d2"><div class="obj-q">„Ich habe Angst, dass der Plan abgelehnt wird…"</div><div class="obj-a"><strong>Im Standard- und Premium-Paket arbeite ich so lange mit Ihnen, bis der Plan akzeptiert wird</strong> — Überarbeitungen sind inklusive.</div></div>
-    <div class="card reveal d3"><div class="obj-q">„Ich brauche den Plan sehr schnell…"</div><div class="obj-a"><strong>Express-Lieferung in 24–48 Stunden ist möglich</strong> — einfach das Premium-Paket wählen oder vorher kurz anfragen.</div></div>
-    <div class="card reveal d1"><div class="obj-q">„Ich bin nicht sicher, welches Paket ich brauche…"</div><div class="obj-a"><strong>Schreiben Sie mir kurz Ihre Situation, ich empfehle Ihnen kostenlos das passende Paket.</strong> Für die Agentur für Arbeit empfehle ich in der Regel das Standard-Paket.</div></div>
-    <div class="card reveal d2"><div class="obj-q">„Andere Anbieter sind günstiger…"</div><div class="obj-a"><strong>Günstigere Anbieter liefern oft Standardtexte ohne echte Individualität.</strong> Mein Plan ist auf Ihre Branche, Ihren Standort und Ihre persönliche Situation zugeschnitten.</div></div>
-  </div>
-</section>
+                        <h4>3. Leistungsangebot</h4>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• <strong>Frühstück (07:30–11:00):</strong> Menemen, Simit, Börek, türk. Tee & Kaffee</li>
+                            <li style="padding:0.2rem 0;">• <strong>Mittagstisch (11:30–14:30):</strong> Lahmacun, Gözleme, Köfte-Teller, Suppe</li>
+                            <li style="padding:0.2rem 0;">• <strong>Backwaren & Süßes:</strong> Baklava, Revani, Kadayıf – täglich frisch</li>
+                            <li style="padding:0.2rem 0;">• <strong>Außer-Haus & Catering:</strong> Partyplatten, Börek-Tabletts auf Bestellung</li>
+                        </ul>
+                        <table>
+                            <thead><tr><th>Produkt</th><th style="text-align:right;">Preis</th></tr></thead>
+                            <tbody>
+                                <tr><td>Frühstück-Set (2 Personen)</td><td style="text-align:right;">18 €</td></tr>
+                                <tr><td>Mittagsteller</td><td style="text-align:right;">9–12 €</td></tr>
+                                <tr><td>Börek (Stück)</td><td style="text-align:right;">2,50 €</td></tr>
+                                <tr><td>Baklava (100g)</td><td style="text-align:right;">4,50 €</td></tr>
+                            </tbody>
+                        </table>
 
-<section>
-  <span class="section-label reveal">Branchen</span>
-  <div class="section-h reveal">
-    <h2>Branchen-Vorlagen & Expertise</h2>
-    <p>Für jede Branche die passende Struktur und das richtige Finanzmodell.</p>
-  </div>
-  <div class="grid g-2">
-    <div class="card ind reveal d1"><h3>🏢 Dienstleistung</h3><ul><li>Reinigung, Logistik, Hausmeister</li><li>Fokus: Lokaler Markt, Direktvertrieb</li><li>USP: Zuverlässigkeit, Erreichbarkeit</li><li>Finanzmodell: Stundenbasiert + Pauschalen</li></ul></div>
-    <div class="card ind reveal d2"><h3>🍽️ Gastronomie</h3><ul><li>Café, Imbiss, Catering</li><li>Fokus: Standortanalyse, Laufkundschaft</li><li>USP: Konzept, Atmosphäre, Spezialität</li><li>Finanzmodell: Tagesdeckungsbeitrag</li></ul></div>
-    <div class="card ind reveal d3"><h3>🛒 Handel</h3><ul><li>Online oder stationär</li><li>Fokus: Sortiment, Plattformen, Einkauf</li><li>USP: Nische, Preis, Service</li><li>Finanzmodell: Wareneinsatz, Marge, Lager</li></ul></div>
-    <div class="card ind reveal d1"><h3>🔨 Handwerk</h3><ul><li>Maler, Elektriker, Schreiner</li><li>Fokus: Fachqualifikation, regionale Nachfrage</li><li>USP: Qualität, Termintreue, Spezialisierung</li><li>Finanzmodell: Stundensatz, Material, Projekte</li></ul></div>
-    <div class="card ind reveal d2"><h3>🎯 Coaching / Beratung</h3><ul><li>Persönlichkeitsentwicklung, Business-Coaching</li><li>Fokus: Zielgruppe & Problemlösung</li><li>USP: Methodik, Persönlichkeit, Nische</li><li>Finanzmodell: Stunden + Pakete + Online</li></ul></div>
-    <div class="card ind reveal d3"><h3>💻 IT / Tech</h3><ul><li>Webentwicklung, Software, Support</li><li>Fokus: Skalierbarkeit, Remote-Potenzial</li><li>USP: Spezialisierung, Schnelligkeit</li><li>Finanzmodell: Projekt- + Retainer-Modelle</li></ul></div>
-  </div>
-</section>
+                        <h4>4. Zielgruppe</h4>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• Berufstätige im Stadtteil (Mittagstisch, schnelles Frühstück)</li>
+                            <li style="padding:0.2rem 0;">• Studierende (preiswerte Mahlzeiten, WLAN-freundlich)</li>
+                            <li style="padding:0.2rem 0;">• Familien mit Kindern</li>
+                            <li style="padding:0.2rem 0;">• Türkischstämmige Einwohner (Heimatgefühl)</li>
+                            <li style="padding:0.2rem 0;">• Kulinarisch neugierige Gäste</li>
+                        </ul>
 
-<section id="kontakt" style="padding-bottom:4rem">
-  <div class="cta-s reveal">
-    <h2>Bereit für Ihren Gründungszuschuss?</h2>
-    <p>Lassen Sie uns gemeinsam Ihren überzeugenden Businessplan erstellen. Schnell, professionell und erfolgreich.</p>
-    <a href="mailto:anfrage@bpx-krekon.de" class="btn-w">Jetzt unverbindlich anfragen →</a>
-  </div>
-</section>
+                        <h4>5. Markt- und Wettbewerbsanalyse</h4>
+                        <p>Authentische türkische Küche jenseits von Döner-Imbissen ist in Bremen unterrepräsentiert. Das Konzept schließt eine Lücke zwischen einfachem Döner-Laden und teurem Restaurant.</p>
+                        <table>
+                            <thead><tr><th>Wettbewerber</th><th>Schwäche</th></tr></thead>
+                            <tbody>
+                                <tr><td>Döner-Imbisse</td><td>Kein Café-Erlebnis, keine Backwaren</td></tr>
+                                <tr><td>Türkische Restaurants</td><td>Zu teuer für schnellen Mittagstisch</td></tr>
+                                <tr><td>Café-Ketten</td><td>Keine türkische Spezialität</td></tr>
+                            </tbody>
+                        </table>
 
-<footer>
-  <div class="f-logo">BPX<span>-</span>krekon</div>
-  <p class="f-desc">Businessplan-Spezialist für Gründungszuschuss & Existenzgründung<br>schnell, verständlich, behördengerecht</p>
-  <div class="f-links"><a href="#leistungen">Leistungen</a><a href="#preise">Preise</a><a href="#ablauf">Ablauf</a><a href="#faq">FAQ</a></div>
-  <p class="copy">© 2026 BPX-krekon. Alle Rechte vorbehalten. | Dies ist eine Demo-Website.</p>
-</footer>
+                        <h4>6. Marketing & Vertrieb</h4>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• Google-Unternehmensprofil mit Fotos und Bewertungen</li>
+                            <li style="padding:0.2rem 0;">• Instagram: Tägliche Foodfotos, Stories, Tagesgerichte</li>
+                            <li style="padding:0.2rem 0;">• Flyerverteilung im 500m-Umkreis zur Eröffnung</li>
+                            <li style="padding:0.2rem 0;">• Eröffnungsangebot: 50% Rabatt auf Frühstück (erste 2 Wochen)</li>
+                            <li style="padding:0.2rem 0;">• Lieferando ab Monat 2</li>
+                            <li style="padding:0.2rem 0;">• WhatsApp-Verteiler für Stammkunden</li>
+                        </ul>
 
-<script>
-(function(){
-  'use strict';
-  
-  const nav=document.getElementById('nav');
-  window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
-  
-  const mobBtn=document.getElementById('mobBtn');
-  const navLinks=document.getElementById('navLinks');
-  mobBtn.addEventListener('click',()=>{navLinks.classList.toggle('open');mobBtn.textContent=navLinks.classList.contains('open')?'✕':'☰'});
-  
-  document.querySelectorAll('.faq-q').forEach(q=>{
-    const toggle=()=>{
-      const item=q.parentElement,on=item.classList.contains('on');
-      document.querySelectorAll('.faq').forEach(f=>{f.classList.remove('on');f.querySelector('.faq-q').setAttribute('aria-expanded','false')});
-      if(!on){item.classList.add('on');q.setAttribute('aria-expanded','true')}
-    };
-    q.addEventListener('click',toggle);
-    q.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
-  });
-  
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      e.preventDefault();
-      const t=document.querySelector(a.getAttribute('href'));
-      if(t){t.scrollIntoView({behavior:'smooth',block:'start'})}
-      navLinks.classList.remove('open');
-      mobBtn.textContent='☰';
-    });
-  });
-  
-  const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-})();
-</script>
+                        <h4>7. Finanzplanung</h4>
+                        <table>
+                            <thead><tr><th>Startkosten</th><th style="text-align:right;">Betrag</th></tr></thead>
+                            <tbody>
+                                <tr><td>Ladenmiete Kaution (3 Mon.)</td><td style="text-align:right;">3.000 €</td></tr>
+                                <tr><td>Küchenausstattung (gebraucht)</td><td style="text-align:right;">4.000 €</td></tr>
+                                <tr><td>Einrichtung / Mobiliar</td><td style="text-align:right;">2.500 €</td></tr>
+                                <tr><td>Erstbevorratung</td><td style="text-align:right;">800 €</td></tr>
+                                <tr><td>Marketing / Eröffnung</td><td style="text-align:right;">600 €</td></tr>
+                                <tr><td>Sonstiges / Reserven</td><td style="text-align:right;">600 €</td></tr>
+                                <tr style="background:#14532d; color:#fff; font-weight:bold;"><td>GESAMT STARTBEDARF</td><td style="text-align:right;">11.500 €</td></tr>
+                            </tbody>
+                        </table>
+                        <table style="margin-top:0.5rem;">
+                            <thead><tr><th>Phase</th><th>Zeitraum</th><th style="text-align:right;">Umsatz/Monat</th></tr></thead>
+                            <tbody>
+                                <tr><td>Aufbau</td><td>Monate 1–3</td><td style="text-align:right;">5.000–7.000 €</td></tr>
+                                <tr><td>Wachstum</td><td>Monate 4–6</td><td style="text-align:right;">7.000–9.000 €</td></tr>
+                                <tr><td>Stabil</td><td>Monate 7–12</td><td style="text-align:right;">9.000–11.000 €</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="highlight-box">
+                            <div><strong>Jahresumsatz Jahr 1</strong><br>ca. 90.000–95.000 €</div>
+                            <div><strong>Jahresgewinn Jahr 1</strong><br>ca. 20.000–28.000 €</div>
+                            <div><strong>Break-even</strong><br>Monat 3–4</div>
+                        </div>
+
+                        <h4>8. Schlussbewertung</h4>
+                        <p>Das Vorhaben ist wirtschaftlich tragfähig und fachlich fundiert. Die Kombination aus Café-Atmosphäre, frischer Küche und einzigartigem Gebäcksortiment bietet eine echte Marktlücke. Die Selbstständigkeit stellt eine realistische und nachhaltige Perspektive dar.</p>
+                        <p style="color:#777; font-size:0.8rem; margin-top:1rem;">Bremen, Mai 2026 | Aylin Demir</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MUSTER 2: HANDWERK/DIENSTLEISTUNG -->
+            <div class="muster-card reveal reveal-delay-2">
+                <div class="muster-header handwerk">
+                    <h3>🔨 Elektro-Srikandaraja</h3>
+                    <p>Elektro-Installation & Smart-Home · Berne/Niedersachsen · Hans-S. Srikandaraja</p>
+                </div>
+                <div class="muster-preview">
+                    <ul>
+                        <li>Executive Summary mit Smart-Home-Fokus</li>
+                        <li>Gesellenbrief + Sachkunde Elektroinstallation</li>
+                        <li>Dienstleistung: Installation, Wartung, Smart-Home</li>
+                        <li>Zielgruppe: Privatkunden, Gewerbe, Immobilienverwalter</li>
+                        <li>Wettbewerbsmatrix (Mittelstand vs. Ein-Mann-Betriebe)</li>
+                        <li>Marketing: Google Business, Empfehlungsprogramm</li>
+                        <li>Startkosten: 8.500 € · Break-even: Monat 2–3</li>
+                        <li>3-Jahres-Finanzplan mit 85.000 €/Jahr</li>
+                    </ul>
+                </div>
+                <button class="muster-toggle" onclick="toggleMuster(this)">📄 Vollständiges Muster anzeigen</button>
+                <div class="muster-content">
+                    <div class="muster-inner">
+                        <h4>1. Executive Summary</h4>
+                        <p>Mit <strong>„Elektro-Srikandaraja"</strong> wird ein Elektrofachbetrieb in der Region Berne (Niedersachsen) gegründet. Der Fokus liegt auf klassischer Elektroinstallation, Wartung sowie dem aufstrebenden Smart-Home-Segment. Das Alleinstellungsmerkmal ist die Kombination aus handwerklicher Präzision und technologischer Beratung – vom klassischen Stromkreis bis zur vernetzten Gebäudesteuerung.</p>
+                        <p>Die Nachfrage nach qualifizierten Elektrikern in der Region ist konstant hoch, während das Smart-Home-Geschäft zweistellige Wachstumsraten verzeichnet. Im ersten Geschäftsjahr wird ein Umsatz von <strong>65.000–85.000 €</strong> angestrebt.</p>
+
+                        <h4>2. Gründerperson und Unternehmen</h4>
+                        <p>Hans-Swathi Srikandaraja (29) ist <strong>staatlich geprüfter Elektrotechniker (Geselle)</strong> mit 6 Jahren Berufserfahrung in Installation, Instandhaltung und Projektleitung. Zusätzliche Qualifikationen: Smart-Home-Planung (KNX-Basis), Erste-Hilfe-Kurs Betrieb, Arbeitssicherheit nach DGUV Vorschrift 3.</p>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• <strong>Rechtsform:</strong> Einzelunternehmen ( später GmbH-Option offen)</li>
+                            <li style="padding:0.2rem 0;">• <strong>Standort:</strong> Home-Office + Fahrzeug, Einsatzgebiet 50km um Berne</li>
+                            <li style="padding:0.2rem 0;">• <strong>Personal:</strong> Gründer allein (1. Jahr), 1 Azubi ab Jahr 2</li>
+                        </ul>
+
+                        <h4>3. Leistungsangebot</h4>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• <strong>Neuinstallation:</strong> Elektroinstallation in Neubau & Sanierung (Wohnung/Haus)</li>
+                            <li style="padding:0.2rem 0;">• <strong>Wartung & Reparatur:</strong> Störungsbeseitigung, Sicherheitsprüfung nach DGUV</li>
+                            <li style="padding:0.2rem 0;">• <strong>Smart-Home:</strong> KNX-Planung, Lichtsteuerung, Heizungsregelung, App-Integration</li>
+                            <li style="padding:0.2rem 0;">• <strong>E-Mobilität:</strong> Wallbox-Installation (11kW/22kW) inkl. Abrechnungssystem</li>
+                        </ul>
+                        <table>
+                            <thead><tr><th>Leistung</th><th style="text-align:right;">Preis</th></tr></thead>
+                            <tbody>
+                                <tr><td>Störungsbeseitigung (1h)</td><td style="text-align:right;">75 €</td></tr>
+                                <tr><td>Neuinstallation Wohnung (bis 80m²)</td><td style="text-align:right;">2.500–4.500 €</td></tr>
+                                <tr><td>Smart-Home-Beratung & Planung</td><td style="text-align:right;">150 €/h</td></tr>
+                                <tr><td>Wallbox-Installation (11kW)</td><td style="text-align:right;">1.200–1.800 €</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4>4. Zielgruppe</h4>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• <strong>Privatkunden:</strong> Hausbesitzer, Eigentümergemeinschaften, Renovierer</li>
+                            <li style="padding:0.2rem 0;">• <strong>Gewerbekunden:</strong> Büroflächen, Ladengeschäfte, Gastronomie</li>
+                            <li style="padding:0.2rem 0;">• <strong>Immobilienverwalter:</strong> WEG-Verwaltungen für Sammelaufträge</li>
+                            <li style="padding:0.2rem 0;">• <strong>Bauträger:</strong> Elektroausstattung für Neubauvorhaben</li>
+                        </ul>
+
+                        <h4>5. Markt- und Wettbewerbsanalyse</h4>
+                        <p>Die Region Berne/Bremen hat einen Elektrikermangel. Viele etablierte Betriebe haben Wartezeiten von 3–6 Wochen. Kleine Ein-Mann-Betriebe sind oft nicht Smart-Home-affin. Hier liegt die Marktlücke.</p>
+                        <table>
+                            <thead><tr><th>Wettbewerber</th><th>Schwäche</th></tr></thead>
+                            <tbody>
+                                <tr><td>Große Elektrobetriebe</td><td>Hohe Preise, lange Wartezeiten, unpersönlich</td></tr>
+                                <tr><td>Schwarzarbeit / Billiganbieter</td><td>Keine Gewährleistung, keine Rechnung, Risiko</td></tr>
+                                <tr><td>Einzelkämpfer ohne Smart-Home</td><td>Keine Zukunftstechnologie, geringe Margen</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4>6. Marketing & Vertrieb</h4>
+                        <ul style="list-style:none; margin:0.5rem 0;">
+                            <li style="padding:0.2rem 0;">• <strong>Google Business Profile:</strong> Top-Ranking für „Elektriker Berne" sichern</li>
+                            <li style="padding:0.2rem 0;">• <strong>Empfehlungsprogramm:</strong> 50 € Gutschrift für Weiterempfehlung</li>
+                            <li style="padding:0.2rem 0;">• <strong>Kooperationen:</strong> Sanitär-, Maler- und Bauunternehmen als Multiplikatoren</li>
+                            <li style="padding:0.2rem 0;">• <strong>Smart-Home-Demo:</strong> Showroom im Home-Office (Vor-Ort-Beratung)</li>
+                            <li style="padding:0.2rem 0;">• <strong>Wartungsverträge:</strong> Jahresverträge für Gewerbekunden ( wiederkehrende Einnahmen)</li>
+                        </ul>
+
+                        <h4>7. Finanzplanung</h4>
+                        <table>
+                            <thead><tr><th>Startkosten</th><th style="text-align:right;">Betrag</th></tr></thead>
+                            <tbody>
+                                <tr><td>Werkzeug & Messgeräte (Vollausstattung)</td><td style="text-align:right;">3.500 €</td></tr>
+                                <tr><td>Firmenfahrzeug (Anzahlung gebraucht)</td><td style="text-align:right;">2.500 €</td></tr>
+                                <tr><td>Laptop, Software, Drucker</td><td style="text-align:right;">800 €</td></tr>
+                                <tr><td>Werbekosten (Website, Visitenkarten, Fahrzeugbeschriftung)</td><td style="text-align:right;">600 €</td></tr>
+                                <tr><td>Versicherungen (Betriebshaftpflicht, Berufsunfähigkeit)</td><td style="text-align:right;">700 €</td></tr>
+                                <tr><td>Reserven / Liquiditätspuffer</td><td style="text-align:right;">400 €</td></tr>
+                                <tr style="background:#1e3a5f; color:#fff; font-weight:bold;"><td>GESAMT STARTBEDARF</td><td style="text-align:right;">8.500 €</td></tr>
+                            </tbody>
+                        </table>
+                        <table style="margin-top:0.5rem;">
+                            <thead><tr><th>Phase</th><th>Zeitraum</th><th style="text-align:right;">Umsatz/Monat</th></tr></thead>
+                            <tbody>
+                                <tr><td>Aufbau</td><td>Monate 1–3</td><td style="text-align:right;">4.000–6.000 €</td></tr>
+                                <tr><td>Wachstum</td><td>Monate 4–6</td><td style="text-align:right;">6.500–8.500 €</td></tr>
+                                <tr><td>Stabil</td><td>Monate 7–12</td><td style="text-align:right;">8.000–10.000 €</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="highlight-box">
+                            <div><strong>Jahresumsatz Jahr 1</strong><br>ca. 75.000–85.000 €</div>
+                            <div><strong>Jahresgewinn Jahr 1</strong><br>ca. 28.000–35.000 €</div>
+                            <div><strong>Break-even</strong><br>Monat 2–3</div>
+                        </div>
+
+                        <h4>8. Schlussbewertung</h4>
+                        <p>Das Vorhaben ist wirtschaftlich robust: geringer Startkapitalbedarf, hohe regionale Nachfrage und ein klares Alleinstellungsmerkmal durch Smart-Home-Kompetenz. Die Kombination aus klassischem Handwerk und Zukunftstechnologie sichert langfristige Wettbewerbsfähigkeit. Der Gründungszuschuss deckt den vollständigen Startbedarf ab.</p>
+                        <p style="color:#777; font-size:0.8rem; margin-top:1rem;">Berne, Mai 2026 | Hans-Swathi Srikandaraja</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen">
+        <span class="section-label reveal">Leistungen</span>
+        <div class="section-header reveal">
+            <h2>Was Sie von mir bekommen</h2>
+            <p>Ein kompletter Businessplan-Service — von der ersten Idee bis zur erfolgreichen Einreichung bei der Agentur für Arbeit.</p>
+        </div>
+        <div class="features-grid">
+            <div class="glass-card reveal reveal-delay-1">
+                <div class="feature-icon-wrap">📋</div>
+                <h3>Vollständiger Businessplan</h3>
+                <p>10–15 Seiten mit Executive Summary, Unternehmenskonzept, Zielgruppen- und Wettbewerbsanalyse sowie Marketing- & Vertriebsstrategie.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-2">
+                <div class="feature-icon-wrap">📊</div>
+                <h3>Finanzplanung inklusive</h3>
+                <p>Startkapitalbedarf, Monatskostenplan, Umsatzprognose für 3 Jahre, Break-even-Analyse und Liquiditätsvorschau.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-3">
+                <div class="feature-icon-wrap">🎨</div>
+                <h3>Professionelles Layout</h3>
+                <p>Lieferung als Word-Dokument + PDF — direkt einreichbar bei der Agentur für Arbeit. Übersichtlich und überzeugend.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-1">
+                <div class="feature-icon-wrap">⚡</div>
+                <h3>Schnelle Lieferung</h3>
+                <p>Standard-Lieferung in 48–72 Stunden. Express-Option in 24 Stunden verfügbar. Keine Wartezeit.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-2">
+                <div class="feature-icon-wrap">🔄</div>
+                <h3>Kostenlose Überarbeitung</h3>
+                <p>Ich passe den Plan an die Anforderungen Ihres Sachbearbeiters an — bis er akzeptiert wird.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-3">
+                <div class="feature-icon-wrap">🤝</div>
+                <h3>Persönliche Betreuung</h3>
+                <p>Direkter Ansprechpartner — erreichbar und schnell bei Rückfragen, von Anfang bis zur Einreichung.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAKETE -->
+    <section id="preise">
+        <span class="section-label reveal">Pakete</span>
+        <div class="section-header reveal">
+            <h2>Transparente Pakete für Ihre Gründung</h2>
+            <p>Alle Preise sind Endpreise — wahlweise als Einmalzahlung oder bequem in 9 Monatsraten.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card reveal reveal-delay-1">
+                <div class="pricing-header">
+                    <h3>Basis</h3>
+                    <div class="price">499 € <span>/ einmalig</span><span class="rate">oder 9 × 55,56 € / Monat</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Businessplan (ca. 10 Seiten)</li>
+                    <li>Unternehmenskonzept + Marktanalyse</li>
+                    <li>Marketingplan</li>
+                    <li>Einfache Kostenübersicht</li>
+                    <li>1x kostenlose Überarbeitung</li>
+                    <li>Lieferung: 72 Stunden</li>
+                    <li>Format: Word + PDF</li>
+                    <li class="disabled">3-Jahres-Finanzplan</li>
+                    <li class="disabled">Break-even-Analyse</li>
+                    <li class="disabled">Beratungsgespräch</li>
+                </ul>
+                <a href="#kontakt" class="btn-pricing btn-pricing-outline">Basis wählen</a>
+            </div>
+            <div class="pricing-card featured reveal reveal-delay-2">
+                <div class="popular-tag">Beliebt</div>
+                <div class="pricing-header">
+                    <h3>Standard</h3>
+                    <div class="price">990 € <span>/ einmalig</span><span class="rate">oder 9 × 110,00 € / Monat</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Businessplan (ca. 12–14 Seiten)</li>
+                    <li>Alle Inhalte aus Basis</li>
+                    <li>Vollständiger 3-Jahres-Finanzplan</li>
+                    <li>Break-even-Analyse</li>
+                    <li>Executive Summary</li>
+                    <li>2x kostenlose Überarbeitung</li>
+                    <li>Lieferung: 48 Stunden</li>
+                    <li>Format: Word + PDF</li>
+                    <li class="disabled">Liquiditätsplanung (12 Monate)</li>
+                    <li class="disabled">Beratungsgespräch</li>
+                </ul>
+                <a href="#kontakt" class="btn-pricing btn-pricing-primary">Standard wählen</a>
+            </div>
+            <div class="pricing-card reveal reveal-delay-3">
+                <div class="pricing-header">
+                    <h3>Premium</h3>
+                    <div class="price">1.499 € <span>/ einmalig</span><span class="rate">oder 9 × 166,56 € / Monat</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Businessplan (ca. 15 Seiten)</li>
+                    <li>Alle Inhalte aus Standard</li>
+                    <li>Liquiditätsplanung (12 Monate)</li>
+                    <li>30-minütiges Beratungsgespräch</li>
+                    <li>Unbegrenzte Überarbeitungen</li>
+                    <li>Prioritäts-Lieferung: 24–48h</li>
+                    <li>Format: Word + PDF</li>
+                    <li>Optionaler Pitch-Foliensatz</li>
+                    <li>Persönlicher Premium-Support</li>
+                </ul>
+                <a href="#kontakt" class="btn-pricing btn-pricing-outline">Premium wählen</a>
+            </div>
+            <div class="pricing-card carefree reveal reveal-delay-4" id="carefree-info">
+                <div class="carefree-tag">★ Carefree</div>
+                <div class="pricing-header">
+                    <h3 style="color:var(--carefree);">Carefree</h3>
+                    <div class="price" style="color:var(--carefree);">2.999 € <span>/ einmalig</span><span class="rate" style="color:var(--carefree);">oder 9 × 333,22 € / Monat</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li class="carefree-item">Alles aus Premium inklusive</li>
+                    <li class="carefree-item"><strong>9 Monate Vollbetreuung</strong></li>
+                    <li class="carefree-item">Bis zu <strong>90 Optimierungen</strong> (10/Monat)</li>
+                    <li class="carefree-item">Monatlicher Check-in Call (30 min)</li>
+                    <li class="carefree-item">Sachbearbeiter-Kommunikation</li>
+                    <li class="carefree-item">Antragsunterlagen-Review</li>
+                    <li class="carefree-item">Gründungsbegleitung & Coaching</li>
+                    <li class="carefree-item">WhatsApp-Support (Mo–Sa)</li>
+                    <li class="carefree-item">Prioritäts-Behandlung jederzeit</li>
+                    <li class="carefree-item">Exklusive Carefree-Hotline</li>
+                </ul>
+                <a href="#kontakt" class="btn-pricing btn-pricing-carefree">Carefree wählen</a>
+            </div>
+        </div>
+        
+        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/arbeitslosengeld/gruendungszuschuss-beantragen" target="_blank" rel="noopener noreferrer" class="info-card reveal">
+            <div class="info-icon">📋</div>
+            <div class="info-content">
+                <h4>Offizielle Antragsunterlagen der Agentur für Arbeit</h4>
+                <p>Informieren Sie sich vorab über die exakten Anforderungen an den Businessplan und die Förderkriterien. Die Agentur für Arbeit verlangt eine fachkundige Stellungnahme sowie detaillierte Finanzpläne.</p>
+            </div>
+            <div class="info-arrow">→</div>
+        </a>
+    </section>
+
+    <!-- EINZELPAKETE -->
+    <section id="einzel" class="einzel-section">
+        <span class="section-label reveal">Einzelpakete</span>
+        <div class="section-header reveal">
+            <h2>Nur das, was Sie wirklich brauchen</h2>
+            <p>Kein komplettes Paket nötig? Wählen Sie gezielt einzelne Leistungen — flexibel und transparent.</p>
+        </div>
+        <div class="einzel-grid">
+            <div class="einzel-card reveal reveal-delay-1">
+                <div class="einzel-icon">📄</div>
+                <h4>Nur Businessplan</h4>
+                <p>Textlicher Businessplan ohne Finanzierung. 8–10 Seiten, Word + PDF, 48h Lieferung.</p>
+                <div class="einzel-price">299 € <span>/ einmalig</span></div>
+                <a href="#kontakt" class="einzel-btn">Auswählen</a>
+            </div>
+            <div class="einzel-card reveal reveal-delay-2">
+                <div class="einzel-icon">📊</div>
+                <h4>Nur Marktanalyse</h4>
+                <p>Wettbewerbsanalyse, Zielgruppenprofil, Marktlücken-Identifikation für Ihre Branche.</p>
+                <div class="einzel-price">199 € <span>/ einmalig</span></div>
+                <a href="#kontakt" class="einzel-btn">Auswählen</a>
+            </div>
+            <div class="einzel-card reveal reveal-delay-3">
+                <div class="einzel-icon">💰</div>
+                <h4>Nur Finanzplan</h4>
+                <p>3-Jahres-Finanzplan, Break-even, Liquidität. Excel + PDF, individuell auf Ihr Vorhaben.</p>
+                <div class="einzel-price">349 € <span>/ einmalig</span></div>
+                <a href="#kontakt" class="einzel-btn">Auswählen</a>
+            </div>
+            <div class="einzel-card reveal reveal-delay-1">
+                <div class="einzel-icon">🎯</div>
+                <h4>Nur Pitch-Deck</h4>
+                <p>10 Folien PowerPoint/Keynote für Investoren, Banken oder Pitch-Wettbewerbe.</p>
+                <div class="einzel-price">249 € <span>/ einmalig</span></div>
+                <a href="#kontakt" class="einzel-btn">Auswählen</a>
+            </div>
+            <div class="einzel-card reveal reveal-delay-2">
+                <div class="einzel-icon">📝</div>
+                <h4>Gründungszuschuss-Antrag</h4>
+                <p>Vollständige Antragsunterlagen inkl. Begleitschreiben und Checkliste für die Agentur.</p>
+                <div class="einzel-price">149 € <span>/ einmalig</span></div>
+                <a href="#kontakt" class="einzel-btn">Auswählen</a>
+            </div>
+            <div class="einzel-card reveal reveal-delay-3">
+                <div class="einzel-icon">🔧</div>
+                <h4>Sachbearbeiter-Optimierung</h4>
+                <p>Ihr Plan wurde abgelehnt? Ich optimiere ihn bis zur Annahme — inkl. Kommunikation.</p>
+                <div class="einzel-price">179 € <span>/ einmalig</span></div>
+                <a href="#kontakt" class="einzel-btn">Auswählen</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ablauf" class="process-section">
+        <span class="section-label reveal">Ablauf</span>
+        <div class="section-header reveal">
+            <h2>Von der Idee zur Einreichung in 4 Schritten</h2>
+            <p>Kein komplizierter Prozess. Sie füllen einen Fragebogen aus — ich erledige den Rest.</p>
+        </div>
+        <div class="process-steps">
+            <div class="step-card reveal reveal-delay-1">
+                <div class="step-num">1</div>
+                <h3>Beauftragung</h3>
+                <p>Sie beauftragen mich über Fiverr oder Malt.de und erhalten umgehend meinen strukturierten Fragebogen.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-2">
+                <div class="step-num">2</div>
+                <h3>Fragebogen</h3>
+                <p>Sie füllen den Fragebogen in nur 10–15 Minuten aus. Kein Fachjargon — einfache, verständliche Fragen.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-3">
+                <div class="step-num">3</div>
+                <h3>Erstellung</h3>
+                <p>Ich erstelle Ihren individuellen, professionellen Businessplan — maßgeschneidert für Ihre Branche und Idee.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-1">
+                <div class="step-num">4</div>
+                <h3>Lieferung</h3>
+                <p>Sie erhalten Word + PDF — fertig zur Einreichung bei der Agentur für Arbeit. Überarbeitungen inklusive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span class="section-label reveal">Zielgruppe</span>
+        <div class="section-header reveal">
+            <h2>Für wen ist dieses Angebot?</h2>
+            <p>Ob Existenzgründer, Arbeitslose mit Gründungsidee oder Quereinsteiger — ich unterstütze Sie.</p>
+        </div>
+        <div class="audience-grid">
+            <div class="audience-pill reveal reveal-delay-1">
+                <div class="check">✓</div>
+                Sie erhalten Arbeitslosengeld und wollen sich selbstständig machen
+            </div>
+            <div class="audience-pill reveal reveal-delay-2">
+                <div class="check">✓</div>
+                Sie haben eine konkrete Geschäftsidee und brauchen den Businessplan für die Agentur für Arbeit
+            </div>
+            <div class="audience-pill reveal reveal-delay-3">
+                <div class="check">✓</div>
+                Sie haben wenig Zeit oder Erfahrung mit Businessplänen
+            </div>
+            <div class="audience-pill reveal reveal-delay-1">
+                <div class="check">✓</div>
+                Sie wollen einen professionellen Plan — ohne Fachjargon-Wirrwarr
+            </div>
+            <div class="audience-pill reveal reveal-delay-2">
+                <div class="check">✓</div>
+                Ihre Branche: Dienstleistung, Handel, Gastronomie, Handwerk, IT, Coaching, Tourismus, Beauty, Logistik u.v.m.
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <span class="section-label reveal">FAQ</span>
+        <div class="section-header reveal">
+            <h2>Häufig gestellte Fragen</h2>
+            <p>Alles, was Sie vor der Beauftragung wissen sollten.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Brauche ich für den Gründungszuschuss wirklich einen Businessplan?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ja. Die Bundesagentur für Arbeit verlangt beim Antrag auf Gründungszuschuss immer einen schriftlichen Businessplan. Ohne ihn wird der Antrag nicht bearbeitet. Der Plan muss Ihr Vorhaben, Ihre Finanzierung und Ihre Markteinschätzung überzeugend darstellen.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Was ist das Carefree-Paket und für wen ist es gedacht?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Das Carefree-Paket ist unsere Premium-Vollbetreuung über 9 Monate. Sie erhalten nicht nur den kompletten Businessplan, sondern bis zu 90 Optimierungen (durchschnittlich 10 pro Monat), monatliche Check-in Calls, direkte Sachbearbeiter-Kommunikation und WhatsApp-Support. Ideal für Gründer, die maximale Sicherheit und Begleitung wünschen.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Ist der Plan wirklich individuell auf mich zugeschnitten?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ja. Ich erstelle keinen Massen-Plan, sondern arbeite mit den Informationen aus Ihrem Fragebogen. Jeder Plan ist individuell formuliert und auf Ihre Branche abgestimmt.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Was ist, wenn die Agentur für Arbeit Änderungen verlangt?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Im Standard-, Premium- und Carefree-Paket sind mehrere Überarbeitungsrunden inklusive. Im Carefree-Paket sogar bis zu 90 Optimierungen über 9 Monate. Ich passe den Plan an die Anforderungen des Sachbearbeiters an, bis er akzeptiert wird.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Wie schnell bekomme ich meinen Businessplan?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Standard-Lieferzeit: 48–72 Stunden nach Eingang Ihres ausgefüllten Fragebogens. Im Premium- und Carefree-Paket Express in 24 Stunden möglich.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Kann ich auch nur einzelne Teile bestellen?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ja. Unter „Einzelpakete" finden Sie 6 separate Leistungen: Nur Businessplan, Nur Marktanalyse, Nur Finanzplan, Nur Pitch-Deck, Gründungszuschuss-Antrag oder Sachbearbeiter-Optimierung. Kombinieren Sie frei.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Für welche Branchen kann ich einen Businessplan bestellen?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ich habe Erfahrung mit nahezu allen Branchen: Online-Handel, Dienstleistung, Gastronomie, Handwerk, IT/Tech, Coaching, Tourismus, Beauty & Wellness, Transport & Logistik, Reinigung, Einzelhandel und mehr.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Muss ich selbst etwas schreiben?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Nein. Sie füllen nur meinen Fragebogen aus (10–15 Minuten) — den Rest erledige ich.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Was kostet ein Businessplan ohne Ihre Hilfe beim Berater?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Klassische Unternehmensberater verlangen für vergleichbare Leistungen 1.500 bis 5.000 €. Mein Angebot ist deutlich günstiger — bei gleicher Qualität.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Ich habe noch keine genauen Zahlen für den Finanzplan. Was nun?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Kein Problem. Ich helfe Ihnen dabei, realistische Schätzungen zu entwickeln. Es geht nicht um perfekte Zahlen, sondern um eine nachvollziehbare, plausible Planung.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Kann ich auch auf Malt bezahlen?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ja. Sie können mich sowohl über Fiverr als auch über Malt.de beauftragen. Beide Wege sind sicher und einfach.</p></div>
+            </div>
+        </div>
+        
+        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/arbeitslosengeld/gruendungszuschuss-beantragen#gruendungszuschuss-beantragen" target="_blank" rel="noopener noreferrer" class="info-card reveal" style="margin-top: 2.5rem;">
+            <div class="info-icon">📝</div>
+            <div class="info-content">
+                <h4>Gründungszuschuss online beantragen</h4>
+                <p>Der Antrag wird direkt bei der Bundesagentur für Arbeit gestellt. Phase 1: 6 Monate ALG + 300€. Phase 2: 9 Monate 300€. Alle Formulare und Vordrucke finden Sie hier.</p>
+            </div>
+            <div class="info-arrow">→</div>
+        </a>
+    </section>
+
+    <section>
+        <span class="section-label reveal">Einwände</span>
+        <div class="section-header reveal">
+            <h2>Ihre Zweifel — meine Antworten</h2>
+            <p>Typische Bedenken vor der Beauftragung — und warum Sie sich keine Sorgen machen müssen.</p>
+        </div>
+        <div class="obj-grid">
+            <div class="obj-card reveal reveal-delay-1">
+                <div class="obj-quote">„Ich weiß nicht, ob meine Idee gut genug ist…"</div>
+                <div class="obj-answer"><strong>Für den Gründungszuschuss muss die Idee realistisch und nachvollziehbar sein — nicht revolutionär.</strong> Ich helfe Ihnen, sie überzeugend darzustellen.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-2">
+                <div class="obj-quote">„Ich habe Angst, dass der Plan abgelehnt wird…"</div>
+                <div class="obj-answer"><strong>Im Standard-, Premium- und Carefree-Paket arbeite ich so lange mit Ihnen, bis der Plan akzeptiert wird</strong> — Überarbeitungen sind inklusive.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-3">
+                <div class="obj-quote">„Ich brauche den Plan sehr schnell…"</div>
+                <div class="obj-answer"><strong>Express-Lieferung in 24–48 Stunden ist möglich</strong> — einfach das Premium- oder Carefree-Paket wählen oder vorher kurz anfragen.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-1">
+                <div class="obj-quote">„Ich bin nicht sicher, welches Paket ich brauche…"</div>
+                <div class="obj-answer"><strong>Schreiben Sie mir kurz Ihre Situation, ich empfehle Ihnen kostenlos das passende Paket.</strong> Für die Agentur für Arbeit empfehle ich in der Regel das Standard-Paket.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-2">
+                <div class="obj-quote">„Andere Anbieter sind günstiger…"</div>
+                <div class="obj-answer"><strong>Günstigere Anbieter liefern oft Standardtexte ohne echte Individualität.</strong> Mein Plan ist auf Ihre Branche, Ihren Standort und Ihre persönliche Situation zugeschnitten.</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span class="section-label reveal">Branchen</span>
+        <div class="section-header reveal">
+            <h2>Branchen-Vorlagen & Expertise</h2>
+            <p>Für jede Branche die passende Struktur und das richtige Finanzmodell.</p>
+        </div>
+        <div class="ind-grid">
+            <div class="ind-card reveal reveal-delay-1">
+                <h3>🏢 Dienstleistung</h3>
+                <ul><li>Reinigung, Logistik, Hausmeister</li><li>Fokus: Lokaler Markt, Direktvertrieb</li><li>USP: Zuverlässigkeit, Erreichbarkeit</li><li>Finanzmodell: Stundenbasiert + Pauschalen</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-2">
+                <h3>🍽️ Gastronomie</h3>
+                <ul><li>Café, Imbiss, Catering</li><li>Fokus: Standortanalyse, Laufkundschaft</li><li>USP: Konzept, Atmosphäre, Spezialität</li><li>Finanzmodell: Tagesdeckungsbeitrag</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-3">
+                <h3>🛒 Handel</h3>
+                <ul><li>Online oder stationär</li><li>Fokus: Sortiment, Plattformen, Einkauf</li><li>USP: Nische, Preis, Service</li><li>Finanzmodell: Wareneinsatz, Marge, Lager</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-1">
+                <h3>🔨 Handwerk</h3>
+                <ul><li>Maler, Elektriker, Schreiner</li><li>Fokus: Fachqualifikation, regionale Nachfrage</li><li>USP: Qualität, Termintreue, Spezialisierung</li><li>Finanzmodell: Stundensatz, Material, Projekte</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-2">
+                <h3>🎯 Coaching / Beratung</h3>
+                <ul><li>Persönlichkeitsentwicklung, Business-Coaching</li><li>Fokus: Zielgruppe & Problemlösung</li><li>USP: Methodik, Persönlichkeit, Nische</li><li>Finanzmodell: Stunden + Pakete + Online</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-3">
+                <h3>💻 IT / Tech</h3>
+                <ul><li>Webentwicklung, Software, Support</li><li>Fokus: Skalierbarkeit, Remote-Potenzial</li><li>USP: Spezialisierung, Schnelligkeit</li><li>Finanzmodell: Projekt- + Retainer-Modelle</li></ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="max-width:1200px;margin:0 auto;padding:0 1rem 7rem;">
+        <div class="cta-wrap reveal">
+            <h2>Bereit für Ihren Gründungszuschuss?</h2>
+            <p>Lassen Sie uns gemeinsam Ihren überzeugenden Businessplan erstellen. Schnell, professionell und erfolgreich.</p>
+            <a href="mailto:anfrage@bpx-krekon.de" class="btn-cta-white">Jetzt unverbindlich anfragen →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">BPX<span>-</span>krekon</div>
+        <p class="footer-desc">Businessplan-Spezialist für Gründungszuschuss & Existenzgründung<br>schnell, verständlich, behördengerecht</p>
+        <div class="footer-links">
+            <a href="#muster">Muster</a>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#preise">Pakete</a>
+            <a href="#einzel">Einzelpakete</a>
+            <a href="#ablauf">Ablauf</a>
+            <a href="#faq">FAQ</a>
+        </div>
+        <p class="copyright">© 2026 BPX-krekon. Alle Rechte vorbehalten. | Dies ist eine Demo-Website.</p>
+    </footer>
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const active = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('active'));
+                if (!active) item.classList.add('active');
+            });
+        });
+
+        function toggleMuster(btn) {
+            const content = btn.nextElementSibling;
+            const isOpen = content.classList.contains('open');
+            document.querySelectorAll('.muster-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.muster-toggle').forEach(b => b.textContent = '📄 Vollständiges Muster anzeigen');
+            if (!isOpen) {
+                content.classList.add('open');
+                btn.textContent = '✕ Muster schließen';
+            }
+        }
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+
+        document.getElementById('mobileBtn').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
