@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Businessplan-Spezialist — Gründungszuschuss-Experte</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+        
+        :root {
+            --cream: #FAF9F6;
+            --cream-2: #F5F3EF;
+            --cream-3: #EDEAE4;
+            --charcoal: #1A1A2E;
+            --charcoal-light: #2D2D44;
+            --text: #3D3D52;
+            --text-muted: #6B6B7B;
+            --accent: #E07A5F;
+            --accent-light: #F2CC8F;
+            --accent-dark: #C46A52;
+            --sage: #81B29A;
+            --sage-light: #A8D5BA;
+            --white: #FFFFFF;
+            --shadow: 0 4px 24px rgba(26, 26, 46, 0.06);
+            --shadow-lg: 0 12px 40px rgba(26, 26, 46, 0.10);
+            --radius: 20px;
+            --radius-sm: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background: var(--accent-light);
+            color: var(--charcoal);
+        }
+
+        .aurora-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .aurora-bg .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.35;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .blob-1 {
+            width: 600px; height: 600px;
+            background: linear-gradient(135deg, #F2CC8F, #E07A5F);
+            top: -10%; right: -5%;
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            width: 500px; height: 500px;
+            background: linear-gradient(135deg, #81B29A, #A8D5BA);
+            bottom: 10%; left: -10%;
+            animation-delay: -7s;
+            animation-duration: 25s;
+        }
+
+        .blob-3 {
+            width: 400px; height: 400px;
+            background: linear-gradient(135deg, #E07A5F, #F2CC8F);
+            top: 40%; left: 40%;
+            animation-delay: -14s;
+            animation-duration: 22s;
+            opacity: 0.2;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.95); }
+        }
+
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 1000;
+            padding: 1.2rem 0;
+            transition: all 0.4s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(250, 249, 246, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--accent); }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+            border-radius: 1px;
+        }
+
+        .nav-links a:hover { color: var(--charcoal); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            background: var(--charcoal);
+            color: var(--white) !important;
+            padding: 0.6rem 1.6rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s !important;
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--charcoal);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10rem 2rem 6rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(224, 122, 95, 0.1);
+            border: 1px solid rgba(224, 122, 95, 0.2);
+            color: var(--accent-dark);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-badge .dot {
+            width: 6px; height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 560px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(224, 122, 95, 0.3);
+        }
+
+        .btn-main:hover {
+            background: var(--accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(224, 122, 95, 0.4);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--charcoal);
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1.5px solid var(--cream-3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--charcoal);
+            background: var(--white);
+        }
+
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            opacity: 0.7;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .trust-item svg {
+            width: 18px; height: 18px;
+            color: var(--sage);
+        }
+
+        section {
+            padding: 7rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-header {
+            max-width: 640px;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(224, 122, 95, 0.15);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-icon-wrap {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, rgba(224,122,95,0.1), rgba(242,204,143,0.2));
+            border: 1px solid rgba(224,122,95,0.1);
+        }
+
+        .glass-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+
+        .glass-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            border: 1px solid var(--cream-3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: var(--cream-3);
+            transition: background 0.3s;
+        }
+
+        .pricing-card:hover::before { background: var(--accent); }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(224, 122, 95, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            transform: scale(1.03);
+            box-shadow: 0 20px 50px rgba(224, 122, 95, 0.12);
+        }
+
+        .pricing-card.featured::before { background: var(--accent); }
+
+        .pricing-card.featured .popular-tag {
+            position: absolute;
+            top: 1rem; right: 1.5rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-header { margin-bottom: 2rem; }
+
+        .pricing-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid var(--cream-2);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .pricing-features li::before {
+            content: '';
+            width: 18px; height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2381B29A' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E") center/contain no-repeat;
+            flex-shrink: 0;
+        }
+
+        .pricing-features li.disabled {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        .pricing-features li.disabled::before {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ccc' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6M6 6l12 12'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+
+        .btn-pricing {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0.9rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-pricing-primary {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .btn-pricing-primary:hover {
+            background: var(--accent);
+            box-shadow: 0 8px 20px rgba(224, 122, 95, 0.3);
+        }
+
+        .btn-pricing-outline {
+            background: transparent;
+            color: var(--charcoal);
+            border: 1.5px solid var(--cream-3);
+        }
+
+        .btn-pricing-outline:hover {
+            border-color: var(--charcoal);
+            background: var(--white);
+        }
+
+        .process-section {
+            background: var(--cream-2);
+            border-radius: 40px;
+            margin: 0 1rem;
+            max-width: 1160px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .step-num {
+            width: 64px; height: 64px;
+            background: var(--white);
+            border: 2px solid var(--cream-3);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover .step-num {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .audience-pill {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--white);
+            padding: 1.2rem 1.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--cream-3);
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .audience-pill:hover {
+            border-color: var(--sage);
+            transform: translateX(6px);
+            box-shadow: var(--shadow);
+        }
+
+        .audience-pill .check {
+            width: 28px; height: 28px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--cream-3);
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover { border-color: var(--cream-3); }
+        .faq-item.active {
+            border-color: var(--accent-light);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 1.4rem 1.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--charcoal);
+            transition: color 0.3s;
+            gap: 1rem;
+        }
+
+        .faq-question:hover { color: var(--accent); }
+
+        .faq-icon {
+            width: 28px; height: 28px;
+            background: var(--cream-2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent);
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            background: var(--accent);
+            color: var(--white);
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s;
+            padding: 0 1.8rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding: 0 1.8rem 1.4rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .obj-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .obj-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--cream-3);
+            transition: all 0.3s;
+        }
+
+        .obj-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .obj-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-light);
+            line-height: 1.5;
+        }
+
+        .obj-answer {
+            color: var(--text);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .obj-answer strong {
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .ind-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .ind-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--cream-3);
+            transition: all 0.3s;
+        }
+
+        .ind-card:hover {
+            border-color: var(--sage);
+            box-shadow: var(--shadow);
+            transform: translateY(-4px);
+        }
+
+        .ind-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .ind-card ul { list-style: none; }
+
+        .ind-card ul li {
+            padding: 0.4rem 0;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ind-card ul li::before {
+            content: '';
+            width: 5px; height: 5px;
+            background: var(--accent-light);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cta-wrap {
+            background: var(--charcoal);
+            border-radius: 40px;
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0 1rem;
+            max-width: 1160px;
+        }
+
+        .cta-wrap::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(224, 122, 95, 0.15) 0%, transparent 50%);
+            animation: cta-glow 10s ease-in-out infinite;
+        }
+
+        @keyframes cta-glow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .cta-wrap h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-wrap p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-cta-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            color: var(--charcoal);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-cta-white:hover {
+            background: var(--accent);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(224, 122, 95, 0.4);
+        }
+
+        footer {
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo span { color: var(--accent); }
+
+        .footer-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--accent); }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { padding: 8rem 1.5rem 4rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-cta-group { flex-direction: column; align-items: center; }
+            .btn-ghost { margin-left: 0; }
+            .pricing-card.featured { transform: scale(1); }
+            section { padding: 4rem 1.5rem; }
+            .obj-grid { grid-template-columns: 1fr; }
+            .process-section, .cta-wrap { margin: 0; border-radius: 24px; }
+            .trust-bar { gap: 1.2rem; }
+        }
+
+        .nav-links.open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background: rgba(250, 249, 246, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 2rem;
+            gap: 1.2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="aurora-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">BP<span>.</span>Experte</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#preise">Preise</a></li>
+                <li><a href="#ablauf">Ablauf</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontakt" class="nav-cta">Anfragen</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileBtn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Gründungszuschuss-zertifiziert
+            </div>
+            <h1>Ihr professioneller Businessplan für den <em>Gründungszuschuss</em> — fertig in 48 Stunden</h1>
+            <p class="hero-subtitle">Schnell, verständlich und behördengerecht. Ich erstelle Ihren individuellen Plan, der alle Anforderungen der Agentur für Arbeit erfüllt.</p>
+            <div class="hero-cta-group">
+                <a href="#preise" class="btn-main">Pakete entdecken →</a>
+                <a href="#ablauf" class="btn-ghost">So funktioniert's</a>
+            </div>
+            <div class="trust-bar">
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    DSGVO-konform
+                </div>
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Word + PDF
+                </div>
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    Kostenlose Überarbeitung
+                </div>
+                <div class="trust-item">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+                    Made in Germany
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen">
+        <span class="section-label reveal">Leistungen</span>
+        <div class="section-header reveal">
+            <h2>Was Sie von mir bekommen</h2>
+            <p>Ein kompletter Businessplan-Service — von der ersten Idee bis zur erfolgreichen Einreichung bei der Agentur für Arbeit.</p>
+        </div>
+        <div class="features-grid">
+            <div class="glass-card reveal reveal-delay-1">
+                <div class="feature-icon-wrap">📋</div>
+                <h3>Vollständiger Businessplan</h3>
+                <p>10–15 Seiten mit Executive Summary, Unternehmenskonzept, Zielgruppenanalyse, Wettbewerbsanalyse sowie Marketing- & Vertriebsstrategie.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-2">
+                <div class="feature-icon-wrap">📊</div>
+                <h3>Finanzplanung inklusive</h3>
+                <p>Startkapitalbedarf, Monatskostenplan, Umsatzprognose für 3 Jahre, Break-even-Analyse und Liquiditätsvorschau.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-3">
+                <div class="feature-icon-wrap">🎨</div>
+                <h3>Professionelles Layout</h3>
+                <p>Lieferung als Word-Dokument + PDF — direkt einreichbar bei der Agentur für Arbeit. Übersichtlich und überzeugend.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-1">
+                <div class="feature-icon-wrap">⚡</div>
+                <h3>Schnelle Lieferung</h3>
+                <p>Standard-Lieferung in 48–72 Stunden. Express-Option in 24 Stunden verfügbar. Keine Wartezeit.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-2">
+                <div class="feature-icon-wrap">🔄</div>
+                <h3>Kostenlose Überarbeitung</h3>
+                <p>Ich passe den Plan an die Anforderungen Ihres Sachbearbeiters an — bis er akzeptiert wird.</p>
+            </div>
+            <div class="glass-card reveal reveal-delay-3">
+                <div class="feature-icon-wrap">🤝</div>
+                <h3>Persönliche Betreuung</h3>
+                <p>Direkter Ansprechpartner — erreichbar und schnell bei Rückfragen, von Anfang bis zur Einreichung.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="preise">
+        <span class="section-label reveal">Preise</span>
+        <div class="section-header reveal">
+            <h2>Transparente Pakete für Ihre Gründung</h2>
+            <p>Alle Preise sind Endpreise — keine versteckten Kosten, keine Überraschungen.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card reveal reveal-delay-1">
+                <div class="pricing-header">
+                    <h3>Basic</h3>
+                    <div class="price">499 € <span>/ einmalig</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Businessplan (ca. 10 Seiten)</li>
+                    <li>Unternehmenskonzept + Marktanalyse</li>
+                    <li>Marketingplan</li>
+                    <li>Einfache Kostenübersicht</li>
+                    <li>1x kostenlose Überarbeitung</li>
+                    <li>Lieferung: 72 Stunden</li>
+                    <li>Format: Word + PDF</li>
+                    <li class="disabled">3-Jahres-Finanzplan</li>
+                    <li class="disabled">Break-even-Analyse</li>
+                    <li class="disabled">Beratungsgespräch</li>
+                </ul>
+                <a href="#kontakt" class="btn-pricing btn-pricing-outline">Basic wählen</a>
+            </div>
+            <div class="pricing-card featured reveal reveal-delay-2">
+                <div class="popular-tag">Beliebt</div>
+                <div class="pricing-header">
+                    <h3>Standard</h3>
+                    <div class="price">990 € <span>/ einmalig</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Businessplan (ca. 12–14 Seiten)</li>
+                    <li>Alle Inhalte aus Basic</li>
+                    <li>Vollständiger 3-Jahres-Finanzplan</li>
+                    <li>Break-even-Analyse</li>
+                    <li>Executive Summary</li>
+                    <li>2x kostenlose Überarbeitung</li>
+                    <li>Lieferung: 48 Stunden</li>
+                    <li>Format: Word + PDF</li>
+                    <li class="disabled">Liquiditätsplanung (12 Monate)</li>
+                    <li class="disabled">Beratungsgespräch</li>
+                </ul>
+                <a href="#kontakt" class="btn-pricing btn-pricing-primary">Standard wählen</a>
+            </div>
+            <div class="pricing-card reveal reveal-delay-3">
+                <div class="pricing-header">
+                    <h3>Premium</h3>
+                    <div class="price">1.499 € <span>/ einmalig</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Businessplan (ca. 15 Seiten)</li>
+                    <li>Alle Inhalte aus Standard</li>
+                    <li>Liquiditätsplanung (12 Monate)</li>
+                    <li>30-minütiges Beratungsgespräch</li>
+                    <li>Unbegrenzte Überarbeitungen</li>
+                    <li>Prioritäts-Lieferung: 24–48h</li>
+                    <li>Format: Word + PDF</li>
+                    <li>Optionaler Pitch-Foliensatz</li>
+                    <li>Persönlicher Premium-Support</li>
+                </ul>
+                <a href="#kontakt" class="btn-pricing btn-pricing-outline">Premium wählen</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ablauf" class="process-section">
+        <span class="section-label reveal">Ablauf</span>
+        <div class="section-header reveal">
+            <h2>Von der Idee zur Einreichung in 4 Schritten</h2>
+            <p>Kein komplizierter Prozess. Sie füllen einen Fragebogen aus — ich erledige den Rest.</p>
+        </div>
+        <div class="process-steps">
+            <div class="step-card reveal reveal-delay-1">
+                <div class="step-num">1</div>
+                <h3>Beauftragung</h3>
+                <p>Sie beauftragen mich über Fiverr oder Malt.de und erhalten umgehend meinen strukturierten Fragebogen.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-2">
+                <div class="step-num">2</div>
+                <h3>Fragebogen</h3>
+                <p>Sie füllen den Fragebogen in nur 10–15 Minuten aus. Kein Fachjargon — einfache, verständliche Fragen.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-3">
+                <div class="step-num">3</div>
+                <h3>Erstellung</h3>
+                <p>Ich erstelle Ihren individuellen, professionellen Businessplan — maßgeschneidert für Ihre Branche und Idee.</p>
+            </div>
+            <div class="step-card reveal reveal-delay-1">
+                <div class="step-num">4</div>
+                <h3>Lieferung</h3>
+                <p>Sie erhalten Word + PDF — fertig zur Einreichung bei der Agentur für Arbeit. Überarbeitungen inklusive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span class="section-label reveal">Zielgruppe</span>
+        <div class="section-header reveal">
+            <h2>Für wen ist dieses Angebot?</h2>
+            <p>Ob Existenzgründer, Arbeitslose mit Gründungsidee oder Quereinsteiger — ich unterstütze Sie.</p>
+        </div>
+        <div class="audience-grid">
+            <div class="audience-pill reveal reveal-delay-1">
+                <div class="check">✓</div>
+                Sie erhalten Arbeitslosengeld und wollen sich selbstständig machen
+            </div>
+            <div class="audience-pill reveal reveal-delay-2">
+                <div class="check">✓</div>
+                Sie haben eine konkrete Geschäftsidee und brauchen den Businessplan für die Agentur für Arbeit
+            </div>
+            <div class="audience-pill reveal reveal-delay-3">
+                <div class="check">✓</div>
+                Sie haben wenig Zeit oder Erfahrung mit Businessplänen
+            </div>
+            <div class="audience-pill reveal reveal-delay-1">
+                <div class="check">✓</div>
+                Sie wollen einen professionellen Plan — ohne Fachjargon-Wirrwarr
+            </div>
+            <div class="audience-pill reveal reveal-delay-2">
+                <div class="check">✓</div>
+                Ihre Branche: Dienstleistung, Handel, Gastronomie, Handwerk, IT, Coaching, Tourismus, Beauty, Logistik u.v.m.
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <span class="section-label reveal">FAQ</span>
+        <div class="section-header reveal">
+            <h2>Häufig gestellte Fragen</h2>
+            <p>Alles, was Sie vor der Beauftragung wissen sollten.</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Brauche ich für den Gründungszuschuss wirklich einen Businessplan?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ja. Die Bundesagentur für Arbeit verlangt beim Antrag auf Gründungszuschuss immer einen schriftlichen Businessplan. Ohne ihn wird der Antrag nicht bearbeitet.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Ist der Plan wirklich individuell auf mich zugeschnitten?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ja. Ich erstelle keinen Massen-Plan, sondern arbeite mit den Informationen aus Ihrem Fragebogen. Jeder Plan ist individuell formuliert und auf Ihre Branche abgestimmt.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Was ist, wenn die Agentur für Arbeit Änderungen verlangt?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Im Standard- und Premium-Paket sind mehrere Überarbeitungsrunden inklusive. Ich passe den Plan an die Anforderungen des Sachbearbeiters an, bis er akzeptiert wird.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Wie schnell bekomme ich meinen Businessplan?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Standard-Lieferzeit: 48–72 Stunden nach Eingang Ihres ausgefüllten Fragebogens. Im Premium-Paket auch Express in 24 Stunden möglich.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Für welche Branchen kann ich einen Businessplan bestellen?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ich habe Erfahrung mit nahezu allen Branchen: Online-Handel, Dienstleistung, Gastronomie, Handwerk, IT/Tech, Coaching, Tourismus, Beauty & Wellness, Transport & Logistik, Reinigung, Einzelhandel und mehr.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Muss ich selbst etwas schreiben?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Nein. Sie füllen nur meinen Fragebogen aus (10–15 Minuten) — den Rest erledige ich.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Was kostet ein Businessplan ohne Ihre Hilfe beim Berater?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Klassische Unternehmensberater verlangen für vergleichbare Leistungen 1.500 bis 5.000 €. Mein Angebot ist deutlich günstiger — bei gleicher Qualität.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Ich habe noch keine genauen Zahlen für den Finanzplan. Was nun?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Kein Problem. Ich helfe Ihnen dabei, realistische Schätzungen zu entwickeln. Es geht nicht um perfekte Zahlen, sondern um eine nachvollziehbare, plausible Planung.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">
+                    Kann ich auch auf Malt bezahlen?
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer"><p>Ja. Sie können mich sowohl über Fiverr als auch über Malt.de beauftragen. Beide Wege sind sicher und einfach.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span class="section-label reveal">Einwände</span>
+        <div class="section-header reveal">
+            <h2>Ihre Zweifel — meine Antworten</h2>
+            <p>Typische Bedenken vor der Beauftragung — und warum Sie sich keine Sorgen machen müssen.</p>
+        </div>
+        <div class="obj-grid">
+            <div class="obj-card reveal reveal-delay-1">
+                <div class="obj-quote">„Ich weiß nicht, ob meine Idee gut genug ist…"</div>
+                <div class="obj-answer"><strong>Für den Gründungszuschuss muss die Idee realistisch und nachvollziehbar sein — nicht revolutionär.</strong> Ich helfe Ihnen, sie überzeugend darzustellen.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-2">
+                <div class="obj-quote">„Ich habe Angst, dass der Plan abgelehnt wird…"</div>
+                <div class="obj-answer"><strong>Im Standard- und Premium-Paket arbeite ich so lange mit Ihnen, bis der Plan akzeptiert wird</strong> — Überarbeitungen sind inklusive.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-3">
+                <div class="obj-quote">„Ich brauche den Plan sehr schnell…"</div>
+                <div class="obj-answer"><strong>Express-Lieferung in 24–48 Stunden ist möglich</strong> — einfach das Premium-Paket wählen oder vorher kurz anfragen.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-1">
+                <div class="obj-quote">„Ich bin nicht sicher, welches Paket ich brauche…"</div>
+                <div class="obj-answer"><strong>Schreiben Sie mir kurz Ihre Situation, ich empfehle Ihnen kostenlos das passende Paket.</strong> Für die Agentur für Arbeit empfehle ich in der Regel das Standard-Paket.</div>
+            </div>
+            <div class="obj-card reveal reveal-delay-2">
+                <div class="obj-quote">„Andere Anbieter sind günstiger…"</div>
+                <div class="obj-answer"><strong>Günstigere Anbieter liefern oft Standardtexte ohne echte Individualität.</strong> Mein Plan ist auf Ihre Branche, Ihren Standort und Ihre persönliche Situation zugeschnitten.</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <span class="section-label reveal">Branchen</span>
+        <div class="section-header reveal">
+            <h2>Branchen-Vorlagen & Expertise</h2>
+            <p>Für jede Branche die passende Struktur und das richtige Finanzmodell.</p>
+        </div>
+        <div class="ind-grid">
+            <div class="ind-card reveal reveal-delay-1">
+                <h3>🏢 Dienstleistung</h3>
+                <ul><li>Reinigung, Logistik, Hausmeister</li><li>Fokus: Lokaler Markt, Direktvertrieb</li><li>USP: Zuverlässigkeit, Erreichbarkeit</li><li>Finanzmodell: Stundenbasiert + Pauschalen</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-2">
+                <h3>🍽️ Gastronomie</h3>
+                <ul><li>Café, Imbiss, Catering</li><li>Fokus: Standortanalyse, Laufkundschaft</li><li>USP: Konzept, Atmosphäre, Spezialität</li><li>Finanzmodell: Tagesdeckungsbeitrag</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-3">
+                <h3>🛒 Handel</h3>
+                <ul><li>Online oder stationär</li><li>Fokus: Sortiment, Plattformen, Einkauf</li><li>USP: Nische, Preis, Service</li><li>Finanzmodell: Wareneinsatz, Marge, Lager</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-1">
+                <h3>🔨 Handwerk</h3>
+                <ul><li>Maler, Elektriker, Schreiner</li><li>Fokus: Fachqualifikation, regionale Nachfrage</li><li>USP: Qualität, Termintreue, Spezialisierung</li><li>Finanzmodell: Stundensatz, Material, Projekte</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-2">
+                <h3>🎯 Coaching / Beratung</h3>
+                <ul><li>Persönlichkeitsentwicklung, Business-Coaching</li><li>Fokus: Zielgruppe & Problemlösung</li><li>USP: Methodik, Persönlichkeit, Nische</li><li>Finanzmodell: Stunden + Pakete + Online</li></ul>
+            </div>
+            <div class="ind-card reveal reveal-delay-3">
+                <h3>💻 IT / Tech</h3>
+                <ul><li>Webentwicklung, Software, Support</li><li>Fokus: Skalierbarkeit, Remote-Potenzial</li><li>USP: Spezialisierung, Schnelligkeit</li><li>Finanzmodell: Projekt- + Retainer-Modelle</li></ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="max-width:1200px;margin:0 auto;padding:0 1rem 7rem;">
+        <div class="cta-wrap reveal">
+            <h2>Bereit für Ihren Gründungszuschuss?</h2>
+            <p>Lassen Sie uns gemeinsam Ihren überzeugenden Businessplan erstellen. Schnell, professionell und erfolgreich.</p>
+            <a href="mailto:anfrage@bp-experte.de" class="btn-cta-white">Jetzt unverbindlich anfragen →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">BP<span>.</span>Experte</div>
+        <p class="footer-desc">Businessplan-Spezialist für Gründungszuschuss & Existenzgründung<br>schnell, verständlich, behördengerecht</p>
+        <div class="footer-links">
+            <a href="#leistungen">Leistungen</a>
+            <a href="#preise">Preise</a>
+            <a href="#ablauf">Ablauf</a>
+            <a href="#faq">FAQ</a>
+        </div>
+        <p class="copyright">© 2026 BP.Experte. Alle Rechte vorbehalten. | Dies ist eine Demo-Website.</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const active = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('active'));
+                if (!active) item.classList.add('active');
+            });
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+
+        document.getElementById('mobileBtn').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
