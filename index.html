@@ -9,26 +9,20 @@
     <meta name="author" content="BPX-krekon">
     <link rel="canonical" href="https://bpx-krekon.de/erstberatung-gruendungszuschuss/">
     
-    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bpx-krekon.de/erstberatung-gruendungszuschuss/">
     <meta property="og:title" content="Kostenlose Erstberatung — Businessplan für den Gründungszuschuss | BPX-krekon">
     <meta property="og:description" content="In 20 Minuten klären wir Ihre Chancen für den Gründungszuschuss. Professioneller Businessplan mit Festpreis.">
     <meta property="og:locale" content="de_DE">
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kostenlose Erstberatung — Businessplan für den Gründungszuschuss">
     <meta name="twitter:description" content="Prüfung Ihrer Chancen für den Gründungszuschuss in 20 Minuten. Festpreis. 48h Lieferzeit.">
     
-    <!-- Structured Data: LocalBusiness + Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -130,7 +124,6 @@
 
         ::selection { background: var(--accent-light); color: var(--charcoal); }
 
-        /* Accessibility Helpers */
         .visually-hidden {
             position: absolute;
             width: 1px;
@@ -165,7 +158,6 @@
             border-radius: 4px;
         }
 
-        /* Aurora Background */
         .aurora-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             pointer-events: none; z-index: 0; overflow: hidden;
@@ -188,7 +180,6 @@
             }
         }
 
-        /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1.2rem 0;
             transition: all 0.4s ease;
@@ -209,17 +200,17 @@
         .logo span { color: var(--accent); }
         
         .nav-links { 
-            display: flex; gap: 2rem; list-style: none; align-items: center; margin: 0; padding: 0; 
+            display: flex; gap: 1.2rem; list-style: none; align-items: center; margin: 0; padding: 0; 
         }
         .nav-links a { 
-            color: var(--text-muted); text-decoration: none; font-size: 0.88rem; 
+            color: var(--text-muted); text-decoration: none; font-size: 0.82rem; 
             font-weight: 500; transition: color 0.3s; padding: 0.25rem 0; 
         }
         .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--charcoal); }
         
         .nav-cta {
-            background: var(--accent); color: var(--white); padding: 0.6rem 1.4rem;
-            border-radius: 50px; font-weight: 600; font-size: 0.85rem; transition: all 0.3s;
+            background: var(--accent); color: var(--white); padding: 0.6rem 1.2rem;
+            border-radius: 50px; font-weight: 600; font-size: 0.82rem; transition: all 0.3s;
             text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;
             border: 2px solid var(--accent);
         }
@@ -234,7 +225,6 @@
         }
         .mobile-menu-btn[aria-expanded="true"] { background: var(--cream-2); }
 
-        /* Hero */
         .hero {
             min-height: 100vh; display: flex; align-items: center; justify-content: center;
             padding: 9rem 2rem 5rem; position: relative; z-index: 1;
@@ -291,6 +281,14 @@
         }
         .btn-ghost:hover { border-color: var(--charcoal); background: var(--white); }
 
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 0.4rem; background: var(--white);
+            color: var(--charcoal); padding: 0.7rem 1.4rem; border-radius: 50px;
+            text-decoration: none; font-weight: 600; font-size: 0.9rem;
+            border: 1.5px solid var(--cream-3); cursor: pointer; transition: all 0.3s;
+        }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
         .trust-bar-mini {
             display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;
             margin-top: 2rem; font-size: 0.82rem; color: var(--text-muted); font-weight: 500;
@@ -298,7 +296,6 @@
         .trust-bar-mini span { display: flex; align-items: center; gap: 0.4rem; }
         .trust-bar-mini svg { width: 18px; height: 18px; color: var(--sage); flex-shrink: 0; }
 
-        /* Booking Widget */
         .booking-section { 
             background: var(--white); border-radius: var(--radius); padding: 2.5rem; 
             margin-top: 3rem; box-shadow: var(--shadow-lg); border: 1px solid var(--cream-3); 
@@ -333,12 +330,14 @@
         
         .booking-form { display: grid; gap: 1rem; }
         .form-group { position: relative; }
-        .booking-form input, .booking-form select, .booking-form textarea {
+        .booking-form input, .booking-form select, .booking-form textarea,
+        .fragebogen-form input, .fragebogen-form select, .fragebogen-form textarea {
             width: 100%; padding: 0.9rem 1.2rem; border: 1.5px solid var(--cream-3); 
             border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; 
             color: var(--charcoal); background: var(--cream); transition: border-color 0.3s, box-shadow 0.3s;
         }
-        .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus { 
+        .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus,
+        .fragebogen-form input:focus, .fragebogen-form select:focus, .fragebogen-form textarea:focus { 
             outline: none; border-color: var(--accent); background: var(--white); 
             box-shadow: 0 0 0 3px rgba(196, 95, 69, 0.1);
         }
@@ -351,14 +350,14 @@
         .booking-form button[type="submit"]:hover:not(:disabled) { background: var(--accent); }
         .booking-form button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
         
-        .booking-form .consent-group {
+        .booking-form .consent-group, .fragebogen-form .consent-group {
             display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.82rem; color: var(--text-muted);
         }
-        .booking-form .consent-group input[type="checkbox"] {
+        .booking-form .consent-group input[type="checkbox"], .fragebogen-form .consent-group input[type="checkbox"] {
             width: auto; margin-top: 0.2rem; accent-color: var(--accent); cursor: pointer;
         }
-        .booking-form .consent-group label { cursor: pointer; line-height: 1.5; }
-        .booking-form .consent-group a { color: var(--accent); text-decoration: underline; }
+        .booking-form .consent-group label, .fragebogen-form .consent-group label { cursor: pointer; line-height: 1.5; }
+        .booking-form .consent-group a, .fragebogen-form .consent-group a { color: var(--accent); text-decoration: underline; }
         
         .booking-alt {
             text-align: center; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);
@@ -373,7 +372,6 @@
         }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Sections */
         main section { 
             padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; 
         }
@@ -389,7 +387,6 @@
         }
         .section-header p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; }
 
-        /* Pain Section */
         .pain-section { 
             background: linear-gradient(135deg, #fff5f5, var(--cream)); border-radius: 30px; 
             margin: 0 1rem; max-width: 1060px; border: 1px solid var(--danger-light); 
@@ -404,7 +401,6 @@
         .pain-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
         .pain-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* Solution */
         .solution-list { display: grid; gap: 1rem; }
         .solution-item {
             display: flex; align-items: flex-start; gap: 1.2rem; background: var(--white);
@@ -420,7 +416,6 @@
         .solution-item h4 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.2rem; }
         .solution-item p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* Profile */
         .profile-card {
             background: var(--white); border-radius: var(--radius); padding: 2.5rem;
             border: 1px solid var(--cream-3); display: flex; gap: 2rem; align-items: center;
@@ -439,7 +434,6 @@
         .profile-stats div strong { display: block; font-size: 1.3rem; color: var(--charcoal); }
         .profile-stats div span { font-size: 0.8rem; color: var(--text-muted); }
 
-        /* Testimonials */
         .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
         .testi-card {
             background: var(--white); border-radius: var(--radius); padding: 2rem;
@@ -461,7 +455,146 @@
             border-radius: 50px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
         }
 
-        /* Package Teaser */
+        /* FRAGEBOGEN STYLES */
+        .fragebogen-section { max-width: 860px; }
+        .fragebogen-card {
+            background: var(--white); border-radius: var(--radius); padding: 2.5rem;
+            border: 1px solid var(--cream-3); box-shadow: var(--shadow-lg);
+        }
+        .fragebogen-header {
+            background: linear-gradient(135deg, var(--cream-2), var(--cream));
+            border-radius: var(--radius-sm); padding: 1.5rem 2rem;
+            margin-bottom: 2rem; border: 1px solid var(--cream-3);
+        }
+        .fragebogen-header h2 {
+            font-family: 'Playfair Display', serif; font-size: 1.5rem;
+            color: var(--charcoal); margin-bottom: 0.4rem;
+        }
+        .fragebogen-header p { color: var(--text-muted); font-size: 0.9rem; margin: 0; }
+        
+        .progress-bar {
+            width: 100%; height: 6px; background: var(--cream-3);
+            border-radius: 3px; margin-bottom: 2rem; overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 3px; transition: width 0.4s ease; width: 0%;
+        }
+        
+        .fragebogen-form { display: grid; gap: 2rem; }
+        .fragebogen-block {
+            border: 1px solid var(--cream-3); border-radius: var(--radius-sm);
+            padding: 1.8rem; background: var(--cream);
+        }
+        .fragebogen-block h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.15rem;
+            color: var(--charcoal); margin-bottom: 1.2rem;
+            display: flex; align-items: center; gap: 0.6rem;
+        }
+        .fragebogen-block h3 .block-num {
+            width: 32px; height: 32px; background: var(--accent);
+            color: var(--white); border-radius: 50%;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; font-weight: 700; font-family: 'Inter', sans-serif;
+            flex-shrink: 0;
+        }
+        
+        .form-row {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;
+        }
+        .form-row.single { grid-template-columns: 1fr; }
+        .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+        .form-field label {
+            font-size: 0.85rem; font-weight: 600; color: var(--charcoal);
+        }
+        .form-field label .hint {
+            font-weight: 400; color: var(--text-muted); font-size: 0.8rem; display: block; margin-top: 0.15rem;
+        }
+        .form-field input, .form-field select, .form-field textarea {
+            padding: 0.8rem 1rem; border: 1.5px solid var(--cream-3);
+            border-radius: 10px; font-family: inherit; font-size: 0.92rem;
+            color: var(--charcoal); background: var(--white); transition: all 0.3s;
+        }
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+            outline: none; border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(196, 95, 69, 0.08);
+        }
+        .form-field textarea { resize: vertical; min-height: 80px; }
+        
+        .radio-group, .checkbox-group {
+            display: flex; flex-wrap: wrap; gap: 0.6rem;
+        }
+        .radio-pill, .checkbox-pill {
+            position: relative;
+        }
+        .radio-pill input, .checkbox-pill input {
+            position: absolute; opacity: 0; width: 0; height: 0;
+        }
+        .radio-pill label, .checkbox-pill label {
+            display: inline-block; padding: 0.5rem 1rem;
+            background: var(--white); border: 1.5px solid var(--cream-3);
+            border-radius: 50px; font-size: 0.85rem; color: var(--text);
+            cursor: pointer; transition: all 0.2s; font-weight: 500;
+        }
+        .radio-pill input:checked + label, .checkbox-pill input:checked + label {
+            background: var(--accent); color: var(--white); border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(196, 95, 69, 0.2);
+        }
+        .radio-pill label:hover, .checkbox-pill label:hover {
+            border-color: var(--accent); color: var(--accent);
+        }
+        .radio-pill input:checked + label:hover, .checkbox-pill input:checked + label:hover {
+            color: var(--white);
+        }
+        
+        .fragebogen-actions {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .fragebogen-success {
+            display: none; background: var(--sage-light); color: var(--white);
+            padding: 1.2rem 1.5rem; border-radius: var(--radius-sm);
+            font-weight: 500; font-size: 1rem; text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+        .fragebogen-success a { color: var(--white); text-decoration: underline; font-weight: 700; }
+
+        .ressourcen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .ressourcen-card {
+            background: var(--white); border-radius: var(--radius); padding: 2rem;
+            border: 1px solid var(--cream-3); transition: all 0.3s;
+        }
+        .ressourcen-card:hover { border-color: var(--sage-light); transform: translateY(-4px); box-shadow: var(--shadow); }
+        .ressourcen-icon {
+            width: 48px; height: 48px; background: linear-gradient(135deg, var(--cream-2), var(--cream-3));
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 1rem; line-height: 1;
+        }
+        .ressourcen-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
+        .ressourcen-card > p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.6; }
+        .ressourcen-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .ressourcen-links a {
+            display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.4rem 0.8rem;
+            background: var(--cream); border: 1px solid var(--cream-3); border-radius: 50px;
+            font-size: 0.78rem; color: var(--text); text-decoration: none; font-weight: 500;
+            transition: all 0.2s; line-height: 1.4;
+        }
+        .ressourcen-links a:hover { background: var(--sage-light); color: var(--white); border-color: var(--sage-light); }
+        .ressourcen-links a::after { content: '↗'; font-size: 0.7rem; opacity: 0.6; margin-left: 0.15rem; }
+        
+        .ressourcen-extra {
+            background: var(--white); border-radius: var(--radius); padding: 1.5rem 2rem;
+            border: 1px solid var(--cream-3); margin-top: 1.5rem;
+        }
+        .ressourcen-extra h4 { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.8rem; }
+        .ressourcen-links-inline { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .ressourcen-links-inline a {
+            font-size: 0.82rem; color: var(--text-muted); text-decoration: none; font-weight: 500;
+            transition: color 0.2s; padding: 0.2rem 0;
+        }
+        .ressourcen-links-inline a:hover { color: var(--accent); text-decoration: underline; }
+        .ressourcen-links-inline a::after { content: ' ↗'; font-size: 0.65rem; opacity: 0.5; }
+
         .teaser-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
         .teaser-card {
             background: var(--white); border-radius: var(--radius); padding: 1.8rem;
@@ -483,7 +616,6 @@
         .teaser-card.carefree-card h4 { color: var(--carefree); }
         .teaser-card.carefree-card .teaser-price { color: var(--carefree); }
 
-        /* FAQ with Details/Summary */
         .faq-list { display: grid; gap: 0.75rem; }
         details.faq-item {
             background: var(--white); border: 1px solid var(--cream-3); border-radius: var(--radius-sm);
@@ -507,7 +639,6 @@
             padding: 0 1.6rem 1.3rem; color: var(--text-muted); line-height: 1.7; font-size: 0.9rem;
         }
 
-        /* Final CTA */
         .cta-wrap {
             background: var(--charcoal); border-radius: 40px; padding: 4rem 2rem;
             text-align: center; position: relative; overflow: hidden; margin: 0 1rem; max-width: 1060px;
@@ -539,7 +670,6 @@
             box-shadow: 0 12px 30px rgba(196, 95, 69, 0.4); 
         }
 
-        /* Footer */
         footer { padding: 3rem 2rem 2rem; text-align: center; position: relative; z-index: 1; }
         .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
         .footer-logo span { color: var(--accent); }
@@ -555,7 +685,6 @@
         .footer-links a:hover { color: var(--accent); }
         .copyright { color: var(--text-muted); font-size: 0.75rem; opacity: 0.6; }
 
-        /* Back to Top */
         #backToTop {
             position: fixed; bottom: 2rem; right: 2rem;
             width: 48px; height: 48px; border-radius: 50%;
@@ -569,7 +698,6 @@
         #backToTop:hover { background: var(--accent); transform: translateY(-3px); }
         #backToTop:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
 
-        /* Reveal Animation */
         .reveal { opacity: 0; transform: translateY(24px); }
         @media (prefers-reduced-motion: no-preference) {
             .reveal { transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -579,7 +707,6 @@
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links { 
                 display: none; flex-direction: column; position: absolute; 
@@ -599,6 +726,9 @@
             .pain-section, .cta-wrap { margin: 0; border-radius: 24px; }
             .teaser-card.featured { transform: scale(1); }
             .booking-grid { grid-template-columns: repeat(2, 1fr); }
+            .ressourcen-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr !important; }
+            .fragebogen-block { padding: 1.2rem; }
             #backToTop { bottom: 1rem; right: 1rem; }
         }
         
@@ -606,16 +736,20 @@
             .booking-grid { grid-template-columns: 1fr 1fr; }
             .trust-bar-mini { flex-direction: column; gap: 0.75rem; }
             .profile-avatar { width: 80px; height: 80px; font-size: 2rem; }
+            .fragebogen-card { padding: 1.2rem; }
         }
 
-        /* Print Styles */
         @media print {
-            .aurora-bg, nav, #backToTop, .hero-cta-group, .booking-section, .btn-main, .btn-ghost, .btn-cta-white { display: none !important; }
+            .aurora-bg, nav, #backToTop, .hero-cta-group, .booking-section, .btn-main, .btn-ghost, .btn-cta-white, .fragebogen-actions button[type="button"] { display: none !important; }
             body { background: white; color: black; font-size: 12pt; }
             .hero { min-height: auto; padding: 2rem 0; }
             main section { padding: 1.5rem 0; page-break-inside: avoid; }
             a { text-decoration: none; color: black; }
             .pain-section, .cta-wrap { background: white; border: 1px solid #ccc; }
+            .fragebogen-card { box-shadow: none; border: 1px solid #ccc; }
+            .fragebogen-block { background: white; border: 1px solid #ddd; page-break-inside: avoid; }
+            .radio-pill label, .checkbox-pill label { border: 1px solid #999; }
+            .progress-bar, .fragebogen-success { display: none; }
         }
     </style>
 </head>
@@ -636,7 +770,8 @@
                 <ul class="nav-links" id="navLinks" role="menubar">
                     <li role="none"><a href="#problem" role="menuitem">Problem</a></li>
                     <li role="none"><a href="#loesung" role="menuitem">Lösung</a></li>
-                    <li role="none"><a href="#team" role="menuitem">Team</a></li>
+                    <li role="none"><a href="#fragebogen" role="menuitem">Fragebogen</a></li>
+                    <li role="none"><a href="#grundlagen" role="menuitem">Grundlagen</a></li>
                     <li role="none"><a href="#pakete" role="menuitem">Pakete</a></li>
                     <li role="none"><a href="#booking" class="nav-cta" role="menuitem">Termin sichern</a></li>
                 </ul>
@@ -677,9 +812,7 @@
                     <h3 id="booking-heading">🗓️ Termin wählen</h3>
                     <p>Wählen Sie einen passenden Slot und senden Sie uns Ihre Kontaktdaten – wir bestätigen den Termin persönlich.</p>
                     
-                    <div class="booking-grid" id="slotGrid" role="group" aria-label="Verfügbare Terminslots">
-                        <!-- Slots werden per JavaScript dynamisch befüllt -->
-                    </div>
+                    <div class="booking-grid" id="slotGrid" role="group" aria-label="Verfügbare Terminslots"></div>
 
                     <form class="booking-form" id="bookingForm" novalidate>
                         <div class="form-success" id="formSuccess" role="status" aria-live="polite">
@@ -728,7 +861,8 @@
                     <div class="booking-alt">
                         Oder direkt: 
                         <a href="https://wa.me/4917600000000" rel="noopener noreferrer">📱 WhatsApp schreiben</a> · 
-                        <a href="tel:+4917600000000">📞 anrufen</a>
+                        <a href="tel:+4917600000000">📞 anrufen</a><br><br>
+                        <a href="#fragebogen" class="btn-secondary">⏱️ Zeit sparen? Fragebogen vorab ausfüllen</a>
                     </div>
                 </div>
             </div>
@@ -804,27 +938,264 @@
             </div>
         </section>
 
-        <!-- Profile / Team -->
-        <section id="team" aria-labelledby="team-heading">
-            <span class="section-label reveal">Wer wir sind</span>
+        <!-- FRAGEBOGEN (neu integriert) -->
+        <section id="fragebogen" class="fragebogen-section" aria-labelledby="fragebogen-heading">
+            <span class="section-label reveal">Vorbereitung</span>
             <div class="section-header reveal">
-                <h2 id="team-heading">Ein organisch gewachsenes Netzwerk aus Expertise</h2>
-                <p>BPX‑krekon ist kein anonymer Beraterblock, sondern ein Netzwerk aus erfahrenen Fachleuten rund um Existenzgründung, Zahlen und Text.</p>
+                <h2 id="fragebogen-heading">Kundenfragebogen – Ihre Zeit ist wertvoll</h2>
+                <p>Füllen Sie diesen Fragebogen vor unserem Gespräch aus (ca. 10–15 Minuten). So können wir im Erstgespräch sofort auf Ihre Situation eingehen – statt Zeit mit Stammdaten zu verbringen.</p>
             </div>
-            <article class="profile-card reveal">
-                <div class="profile-avatar" aria-hidden="true">🤝</div>
-                <div class="profile-info">
-                    <h3>BPX‑krekon Team</h3>
-                    <span class="role">Spezialisiert auf Businesspläne für Gründungszuschuss & Existenzgründung</span>
-                    <p>Wir sind ein organisch gewachsenes Netzwerk aus Beratern, Finanzexperten und Texterinnen mit Projekterfahrung in Gastronomie, Handwerk, Dienstleistung, Handel, IT, Coaching und weiteren Branchen. Jeder Businessplan entsteht im Zusammenspiel dieser Kompetenzen – statt als generische Vorlage von der Stange.</p>
-                    <p>Standardmäßig arbeiten wir auf Deutsch, auf Anfrage auch multilingual (z.B. Deutsch–Englisch) und berücksichtigen kulturelle Besonderheiten in der Darstellung Ihres Vorhabens.</p>
-                    <div class="profile-stats">
-                        <div><strong>48h</strong><span>Standard‑Lieferzeit (nach Briefing)</span></div>
-                        <div><strong>Word + PDF</strong><span>Direkt einreichbar bei der Agentur für Arbeit</span></div>
-                        <div><strong>9 Mon.</strong><span>Begleitung im Carefree‑Paket möglich</span></div>
-                    </div>
+
+            <div class="fragebogen-card reveal">
+                <div class="fragebogen-header">
+                    <h2>Businessplan-Service – Erstgespräch</h2>
+                    <p>Alle Angaben werden vertraulich behandelt und ausschließlich zur Vorbereitung Ihres Businessplans verwendet.</p>
                 </div>
-            </article>
+
+                <div class="progress-bar" aria-hidden="true">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <form class="fragebogen-form" id="fragebogenForm" novalidate>
+                    <div class="fragebogen-success" id="fragebogenSuccess" role="status" aria-live="polite">
+                        ✅ Vielen Dank! Ihre Angaben sind bei uns eingegangen.<br>
+                        Wir melden uns innerhalb von 24 Stunden für Ihr kostenloses Erstgespräch.<br>
+                        <a href="#booking" style="color: var(--white); text-decoration: underline;">Oder direkt einen Termin sichern →</a>
+                    </div>
+
+                    <!-- A: Persönliche Daten -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt A: Persönliche Daten</legend>
+                        <h3><span class="block-num" aria-hidden="true">A</span>Persönliche Daten</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="fb-name">Vor- und Nachname</label>
+                                <input type="text" id="fb-name" name="name" required autocomplete="name">
+                            </div>
+                            <div class="form-field">
+                                <label for="fb-email">E-Mail-Adresse</label>
+                                <input type="email" id="fb-email" name="email" required autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="fb-phone">Telefonnummer</label>
+                                <input type="tel" id="fb-phone" name="phone" required autocomplete="tel">
+                            </div>
+                            <div class="form-field">
+                                <label for="fb-ort">Wohnort / Bundesland</label>
+                                <input type="text" id="fb-ort" name="ort" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="fb-beruf">Bisheriger Beruf / Ausbildung</label>
+                                <input type="text" id="fb-beruf" name="beruf" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="fb-start">Geplantes Startdatum</label>
+                                <input type="text" id="fb-start" name="startdatum" placeholder="z.B. 01.09.2026">
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label>Derzeit arbeitslos / ALG I?</label>
+                                <div class="radio-group">
+                                    <div class="radio-pill"><input type="radio" id="fb-alg-ja" name="alg" value="ja"><label for="fb-alg-ja">Ja</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-alg-nein" name="alg" value="nein"><label for="fb-alg-nein">Nein</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-alg-bald" name="alg" value="bald"><label for="fb-alg-bald">Bald</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- B: Geschäftsidee -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt B: Geschäftsidee</legend>
+                        <h3><span class="block-num" aria-hidden="true">B</span>Ihre Geschäftsidee</h3>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-idee">Was ist Ihre Geschäftsidee? <span class="hint">(3–5 Sätze)</span></label>
+                                <textarea id="fb-idee" name="idee" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="fb-branche">In welcher Branche?</label>
+                                <input type="text" id="fb-branche" name="branche" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="fb-idee-seit">Seit wann haben Sie die Idee?</label>
+                                <input type="text" id="fb-idee-seit" name="idee_seit" placeholder="z.B. Seit 6 Monaten">
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-schritte">Haben Sie bereits erste Schritte unternommen? <span class="hint">(Kunden, Testangebote, Anmeldungen)</span></label>
+                                <textarea id="fb-schritte" name="schritte" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-usp">Was macht Sie einzigartig? <span class="hint">(Ihr USP)</span></label>
+                                <textarea id="fb-usp" name="usp" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- C: Produkte & Preise -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt C: Produkte und Preise</legend>
+                        <h3><span class="block-num" aria-hidden="true">C</span>Produkte / Dienstleistungen & Preise</h3>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-angebot">Was genau bieten Sie an?</label>
+                                <textarea id="fb-angebot" name="angebot" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-preise">Welche Preise planen Sie?</label>
+                                <textarea id="fb-preise" name="preise" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label>Einmalige Leistung oder wiederkehrend?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-pill"><input type="checkbox" id="fb-einmalig" name="leistung" value="einmalig"><label for="fb-einmalig">Einmalig</label></div>
+                                    <div class="checkbox-pill"><input type="checkbox" id="fb-monatlich" name="leistung" value="monatlich"><label for="fb-monatlich">Monatlich</label></div>
+                                    <div class="checkbox-pill"><input type="checkbox" id="fb-beides" name="leistung" value="beides"><label for="fb-beides">Beides</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- D: Zielgruppe -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt D: Zielgruppe & Markt</legend>
+                        <h3><span class="block-num" aria-hidden="true">D</span>Zielgruppe & Markt</h3>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-zielgruppe">Wer sind Ihre Kunden? <span class="hint">(Alter, Beruf, Ort)</span></label>
+                                <textarea id="fb-zielgruppe" name="zielgruppe" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label>Lokal, regional oder bundesweit?</label>
+                                <div class="radio-group">
+                                    <div class="radio-pill"><input type="radio" id="fb-lokal" name="reichweite" value="lokal"><label for="fb-lokal">Lokal</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-regional" name="reichweite" value="regional"><label for="fb-regional">Regional</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-bundesweit" name="reichweite" value="bundesweit"><label for="fb-bundesweit">Bundesweit</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-online" name="reichweite" value="online"><label for="fb-online">Online</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-konkurrenz">Wer sind Ihre Hauptkonkurrenten?</label>
+                                <textarea id="fb-konkurrenz" name="konkurrenz" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- E: Finanzen -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt E: Finanzielle Planung</legend>
+                        <h3><span class="block-num" aria-hidden="true">E</span>Finanzielle Planung</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="fb-kapital">Welches Startkapital haben Sie?</label>
+                                <input type="text" id="fb-kapital" name="kapital" placeholder="z.B. 5.000 €">
+                            </div>
+                            <div class="form-field">
+                                <label for="fb-umsatz1">Welchen Umsatz planen Sie in Monat 1?</label>
+                                <input type="text" id="fb-umsatz1" name="umsatz1" placeholder="z.B. 2.000 €">
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-kosten">Welche monatlichen Kosten erwarten Sie? <span class="hint">(Miete, Material, Versicherungen...)</span></label>
+                                <textarea id="fb-kosten" name="kosten" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label>Benötigen Sie Kredit / Förderung?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-pill"><input type="checkbox" id="fb-foerder-gz" name="foerderung" value="gruendungszuschuss"><label for="fb-foerder-gz">Gründungszuschuss</label></div>
+                                    <div class="checkbox-pill"><input type="checkbox" id="fb-foerder-kfw" name="foerderung" value="kfw"><label for="fb-foerder-kfw">KfW-Kredit</label></div>
+                                    <div class="checkbox-pill"><input type="checkbox" id="fb-foerder-nein" name="foerderung" value="nein"><label for="fb-foerder-nein">Nein</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- F: Organisation -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt F: Organisation & Sonstiges</legend>
+                        <h3><span class="block-num" aria-hidden="true">F</span>Organisation & Sonstiges</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label>Allein oder mit Partnern?</label>
+                                <div class="radio-group">
+                                    <div class="radio-pill"><input type="radio" id="fb-allein" name="partner" value="allein"><label for="fb-allein">Allein</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-partner" name="partner" value="partner"><label for="fb-partner">Mit Partner/in</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-team" name="partner" value="team"><label for="fb-team">Team</label></div>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label>Geplante Rechtsform</label>
+                                <div class="radio-group">
+                                    <div class="radio-pill"><input type="radio" id="fb-einzel" name="rechtsform" value="einzelunternehmen"><label for="fb-einzel">Einzelunternehmen</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-ug" name="rechtsform" value="ug"><label for="fb-ug">UG</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-gmbh" name="rechtsform" value="gmbh"><label for="fb-gmbh">GmbH</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-unklar" name="rechtsform" value="unklar"><label for="fb-unklar">Noch unklar</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label>Bereits Beratung bei der Agentur für Arbeit?</label>
+                                <div class="radio-group">
+                                    <div class="radio-pill"><input type="radio" id="fb-beratung-ja" name="beratung" value="ja"><label for="fb-beratung-ja">Ja</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-beratung-nein" name="beratung" value="nein"><label for="fb-beratung-nein">Nein</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-beratung-geplant" name="beratung" value="geplant"><label for="fb-beratung-geplant">Termin geplant</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label>Welches Paket interessiert Sie?</label>
+                                <div class="radio-group">
+                                    <div class="radio-pill"><input type="radio" id="fb-paket-basis" name="paket" value="basis"><label for="fb-paket-basis">Basis (497 €)</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-paket-standard" name="paket" value="standard"><label for="fb-paket-standard">Standard (975 €)</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-paket-premium" name="paket" value="premium"><label for="fb-paket-premium">Premium (1.475 €)</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-paket-carefree" name="paket" value="carefree"><label for="fb-paket-carefree">★ Carefree (2.975 €)</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-paket-unklar" name="paket" value="unklar"><label for="fb-paket-unklar">Noch unklar</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-anmerkungen">Besondere Wünsche / Anmerkungen</label>
+                                <textarea id="fb-anmerkungen" name="anmerkungen" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group consent-group" style="margin-top: 0.5rem;">
+                        <input type="checkbox" id="fbConsent" name="consent" required aria-required="true">
+                        <label for="fbConsent">Ich stimme der Verarbeitung meiner Daten zur Vorbereitung des Erstgesprächs zu. <a href="/datenschutz" target="_blank">Datenschutzhinweise</a>.</label>
+                    </div>
+
+                    <div class="fragebogen-actions">
+                        <button type="submit" class="btn-main">📤 Fragebogen absenden</button>
+                        <button type="button" class="btn-secondary" onclick="window.print()">🖨️ Als PDF drucken</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <!-- Social Proof -->
@@ -871,6 +1242,71 @@
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <!-- RESSOURCEN / BEHÖRDENLINKS -->
+        <section id="grundlagen" aria-labelledby="grundlagen-heading">
+            <span class="section-label reveal">Rechtssicherheit</span>
+            <div class="section-header reveal">
+                <h2 id="grundlagen-heading">Wir arbeiten mit den offiziellen Vorgaben – nicht mit Hörensagen</h2>
+                <p>Transparenz ist Vertrauensvoraussetzung. Hier finden Sie die relevanten Behördenlinks, Gesetzestexte und Merkblätter, auf denen unsere Beratung fußt.</p>
+            </div>
+            
+            <div class="ressourcen-grid">
+                <article class="ressourcen-card reveal reveal-delay-1">
+                    <div class="ressourcen-icon" aria-hidden="true">🏛️</div>
+                    <h3>Bundesagentur für Arbeit</h3>
+                    <p>Offizielle Informationen zu Gründungszuschuss (ALG&nbsp;I) und Einstiegsgeld / Bürgergeld.</p>
+                    <div class="ressourcen-links">
+                        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/arbeitslosengeld/existenzgruendung-gruendungszuschuss" target="_blank" rel="noopener noreferrer">Existenzgründung & Gründungszuschuss</a>
+                        <a href="https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BA/gruendungszuschuss-2.html" target="_blank" rel="noopener noreferrer">Förderdatenbank: Programm</a>
+                        <a href="https://www.arbeitsagentur.de/datei/dok_ba024940.pdf" target="_blank" rel="noopener noreferrer">Fachliche Weisungen (PDF)</a>
+                        <a href="https://www.arbeitsagentur.de/datei/dok_ba035285.pdf" target="_blank" rel="noopener noreferrer">Hinweise & Hilfen (PDF)</a>
+                        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/buergergeld/arbeit-finden/existenzgruendung" target="_blank" rel="noopener noreferrer">Existenzgründung mit Bürgergeld</a>
+                        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/buergergeld/arbeit-finden/einstiegsgeld-fuer-selbststaendigkeit" target="_blank" rel="noopener noreferrer">Einstiegsgeld für Selbstständigkeit</a>
+                        <a href="https://www.arbeitsagentur.de/datei/fw-sgb-ii-16b_ba034550.pdf" target="_blank" rel="noopener noreferrer">Weisungen Einstiegsgeld §16b (PDF)</a>
+                        <a href="https://www.arbeitsagentur.de/datei/weisung201702004_ba023570.pdf" target="_blank" rel="noopener noreferrer">Frühere Weisungen Einstiegsgeld (PDF)</a>
+                    </div>
+                </article>
+
+                <article class="ressourcen-card reveal reveal-delay-2">
+                    <div class="ressourcen-icon" aria-hidden="true">⚖️</div>
+                    <h3>Gesetzliche Grundlagen</h3>
+                    <p>Original-Gesetzestexte für Gründungszuschuss und Einstiegsgeld.</p>
+                    <div class="ressourcen-links">
+                        <a href="https://www.gesetze-im-internet.de/sgb_3/__93.html" target="_blank" rel="noopener noreferrer">§&nbsp;93 SGB&nbsp;III Gründungszuschuss</a>
+                        <a href="https://www.gesetze-im-internet.de/sgb_3/__94.html" target="_blank" rel="noopener noreferrer">§&nbsp;94 SGB&nbsp;III Mitwirkung & Nachweise</a>
+                        <a href="https://www.gesetze-im-internet.de/sgb_2/__16b.html" target="_blank" rel="noopener noreferrer">§&nbsp;16b SGB&nbsp;II Einstiegsgeld</a>
+                    </div>
+                </article>
+
+                <article class="ressourcen-card reveal reveal-delay-3">
+                    <div class="ressourcen-icon" aria-hidden="true">📋</div>
+                    <h3>Praxis & Merkblätter</h3>
+                    <p>IHK, HWK und kommunale Serviceportale mit konkreten Unterlagen-Checklisten.</p>
+                    <div class="ressourcen-links">
+                        <a href="https://www.ihk.de/rostock/starthilfe/foerderung/foerderungen-bei-gruendungen-aus-der-arbeitslosigkeit-3161510" target="_blank" rel="noopener noreferrer">IHK: Förderungen bei Gründungen</a>
+                        <a href="https://www.ihk.de/darmstadt/produktmarken/gruendung/gruendungszuschuss-2538532" target="_blank" rel="noopener noreferrer">IHK Darmstadt: Gründungszuschuss</a>
+                        <a href="https://www.ihk.de/blueprint/servlet/resource/blob/3950766/c7d213496bdcf4e584b3cd50041c934f/gruendungszuschuss-merkblatt-data.pdf" target="_blank" rel="noopener noreferrer">IHK-Merkblatt (PDF)</a>
+                        <a href="https://www.hwk-muenchen.de/downloads/merkblatt-gruendungszuschuss-74,7892.pdf" target="_blank" rel="noopener noreferrer">HWK München: Merkblatt (PDF)</a>
+                        <a href="https://www.ihk.de/blueprint/servlet/resource/blob/6016626/a298698b3be5f0e4c0d72f5159168e91/gruendungszuschuss-agentur-fuer-arbeit-data.pdf" target="_blank" rel="noopener noreferrer">IHK Dresden (PDF)</a>
+                        <a href="https://www.gera.de/serviceportal/gruendungszuschuss-beantragen-l221924745" target="_blank" rel="noopener noreferrer">Serviceportal Gera</a>
+                        <a href="https://verwaltungsportal.hessen.de/leistung?leistung_id=B100019_574730" target="_blank" rel="noopener noreferrer">Verwaltungsportal Hessen</a>
+                        <a href="https://www.greifswald.de/de/verwaltung-politik/verwaltungsleistungen_basis/Gruendungszuschuss-beantragen/" target="_blank" rel="noopener noreferrer">Stadt Greifswald</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="ressourcen-extra reveal">
+                <h4>Zusätzliche Hintergrundinformationen</h4>
+                <div class="ressourcen-links-inline">
+                    <a href="https://www.betanet.de/gruendungszuschuss.html" target="_blank" rel="noopener noreferrer">Betanet: Übersicht Gründungszuschuss</a>
+                    <a href="https://www.betanet.de/gruendungszuschuss.html?pdf=487" target="_blank" rel="noopener noreferrer">Betanet Infoblatt (PDF)</a>
+                    <a href="https://www.fuer-gruender.de/kapital/foerdermittel/zuschuss/einstiegsgeld/" target="_blank" rel="noopener noreferrer">Für-Gründer.de: Einstiegsgeld</a>
+                    <a href="https://www.deutschland-startet.de/gruendung-aus-alg-1-2/gruendungszuschuss-aus-alg1/" target="_blank" rel="noopener noreferrer">Deutschland-startet: ALG&nbsp;1</a>
+                    <a href="https://gobusiness-group.de/existenzgruendung/gruendungszuschuss-vom-arbeitsamt" target="_blank" rel="noopener noreferrer">Ratgeber: Gründungszuschuss vom Arbeitsamt</a>
+                </div>
             </div>
         </section>
 
@@ -975,26 +1411,15 @@
         (function() {
             'use strict';
 
-            // Dynamic Year
             document.getElementById('year').textContent = new Date().getFullYear();
 
-            // Navbar scroll behavior
             const navbar = document.getElementById('navbar');
-            let lastScroll = 0;
-            
             function updateNavbar() {
-                const currentScroll = window.scrollY;
-                if (currentScroll > 20) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-                lastScroll = currentScroll;
+                navbar.classList.toggle('scrolled', window.scrollY > 20);
             }
             window.addEventListener('scroll', updateNavbar, { passive: true });
             updateNavbar();
 
-            // Mobile nav
             const mobileBtn = document.getElementById('mobileBtn');
             const navLinks = document.getElementById('navLinks');
             
@@ -1006,7 +1431,6 @@
                 this.setAttribute('aria-label', expanded ? 'Menü öffnen' : 'Menü schließen');
             });
 
-            // Smooth scroll for nav links with offset
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
@@ -1018,7 +1442,6 @@
                         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
                         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                     }
-                    // Close mobile menu if open
                     navLinks.classList.remove('open');
                     mobileBtn.setAttribute('aria-expanded', 'false');
                     mobileBtn.textContent = '☰';
@@ -1026,7 +1449,6 @@
                 });
             });
 
-            // Intersection Observer for reveal animations (performance-optimized)
             const revealElements = document.querySelectorAll('.reveal');
             if ('IntersectionObserver' in window) {
                 const revealObserver = new IntersectionObserver((entries) => {
@@ -1037,14 +1459,11 @@
                         }
                     });
                 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-                
                 revealElements.forEach(el => revealObserver.observe(el));
             } else {
-                // Fallback for older browsers
                 revealElements.forEach(el => el.classList.add('visible'));
             }
 
-            // Dynamic Booking Slots (next 6 weekdays)
             const slotGrid = document.getElementById('slotGrid');
             const times = ['10:00', '14:00', '09:00', '16:00', '11:00', '15:00'];
             const dayNames = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
@@ -1053,11 +1472,11 @@
             function getNextWeekdays(count) {
                 const slots = [];
                 let d = new Date();
-                d.setDate(d.getDate() + 1); // start tomorrow
+                d.setDate(d.getDate() + 1);
                 
                 while (slots.length < count) {
                     const day = d.getDay();
-                    if (day !== 0 && day !== 6) { // skip weekend
+                    if (day !== 0 && day !== 6) {
                         const dateStr = d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' });
                         slots.push({
                             dayName: dayNames[day],
@@ -1080,10 +1499,7 @@
                 el.setAttribute('tabindex', '0');
                 el.setAttribute('aria-selected', 'false');
                 el.setAttribute('data-time', `${slot.shortDay}, ${slot.date}. — ${time} Uhr`);
-                el.innerHTML = `
-                    <span class="day">${slot.dayName}</span>
-                    <span class="time">${time}</span>
-                `;
+                el.innerHTML = `<span class="day">${slot.dayName}</span><span class="time">${time}</span>`;
                 
                 function select() {
                     document.querySelectorAll('.booking-slot').forEach(s => {
@@ -1102,11 +1518,9 @@
                         select();
                     }
                 });
-                
                 slotGrid.appendChild(el);
             });
 
-            // Booking form submit
             const bookingForm = document.getElementById('bookingForm');
             const submitBtn = document.getElementById('submitBtn');
             const formSuccess = document.getElementById('formSuccess');
@@ -1115,24 +1529,18 @@
                 e.preventDefault();
                 
                 const slot = document.getElementById('selectedSlot').value;
-                const name = document.getElementById('bookName').value.trim();
-                const email = document.getElementById('bookEmail').value.trim();
-                const phone = document.getElementById('bookPhone').value.trim();
-                const topic = document.getElementById('bookTopic').value;
                 const consent = document.getElementById('bookConsent').checked;
                 
-                // Validation
                 if (!slot) {
                     alert('Bitte wählen Sie zuerst einen Terminslot aus.');
                     return;
                 }
                 if (!consent) {
-                    alert('Bitte stimmen Sie der Datenverarbeitung zu, damit wir Ihre Anfrage bearbeiten dürfen.');
+                    alert('Bitte stimmen Sie der Datenverarbeitung zu.');
                     document.getElementById('bookConsent').focus();
                     return;
                 }
                 
-                // Simulate submission
                 submitBtn.disabled = true;
                 submitBtn.querySelector('.btn-text').textContent = '⏳ Wird gesendet...';
                 
@@ -1149,35 +1557,72 @@
                     submitBtn.disabled = false;
                     submitBtn.querySelector('.btn-text').textContent = '✉️ Termin-Anfrage senden';
                     
-                    // Hide success message after 8 seconds
-                    setTimeout(() => {
-                        formSuccess.style.display = 'none';
-                    }, 8000);
+                    setTimeout(() => { formSuccess.style.display = 'none'; }, 8000);
                 }, 1500);
             });
 
-            // Back to Top
+            // FRAGEBOGEN LOGIK
+            const fragebogenForm = document.getElementById('fragebogenForm');
+            const progressFill = document.getElementById('progressFill');
+            const fragebogenSuccess = document.getElementById('fragebogenSuccess');
+            
+            function updateProgress() {
+                const inputs = fragebogenForm.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]), textarea, select');
+                const checkedRadios = fragebogenForm.querySelectorAll('input[type="radio"]:checked');
+                const checkedBoxes = fragebogenForm.querySelectorAll('input[type="checkbox"]:checked');
+                
+                let filled = 0;
+                inputs.forEach(input => { if (input.value.trim()) filled++; });
+                filled += checkedRadios.length;
+                filled += checkedBoxes.length > 0 ? 1 : 0;
+                
+                const total = inputs.length + 6; // ca. 6 Radio/Checkbox-Gruppen
+                const percent = Math.min(100, Math.round((filled / total) * 100));
+                progressFill.style.width = percent + '%';
+            }
+            
+            fragebogenForm.addEventListener('input', updateProgress);
+            fragebogenForm.addEventListener('change', updateProgress);
+            
+            fragebogenForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const consent = document.getElementById('fbConsent').checked;
+                if (!consent) {
+                    alert('Bitte stimmen Sie der Datenverarbeitung zu.');
+                    document.getElementById('fbConsent').focus();
+                    return;
+                }
+                
+                const submitter = fragebogenForm.querySelector('button[type="submit"]');
+                submitter.disabled = true;
+                submitter.textContent = '⏳ Wird gesendet...';
+                
+                setTimeout(() => {
+                    fragebogenSuccess.style.display = 'block';
+                    fragebogenSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                    submitter.disabled = false;
+                    submitter.textContent = '📤 Fragebogen absenden';
+                    
+                    setTimeout(() => { fragebogenSuccess.style.display = 'none'; }, 10000);
+                }, 1500);
+            });
+
             const backToTop = document.getElementById('backToTop');
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('visible');
-                } else {
-                    backToTop.classList.remove('visible');
-                }
+                backToTop.classList.toggle('visible', window.scrollY > 500);
             }, { passive: true });
             
             backToTop.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // FAQ enhancement: close others when one opens (optional UX improvement)
             document.querySelectorAll('details.faq-item').forEach(detail => {
                 detail.addEventListener('toggle', function() {
                     if (this.open) {
                         document.querySelectorAll('details.faq-item').forEach(other => {
-                            if (other !== this && other.open) {
-                                other.open = false;
-                            }
+                            if (other !== this && other.open) other.open = false;
                         });
                     }
                 });
