@@ -296,6 +296,38 @@
         .trust-bar-mini span { display: flex; align-items: center; gap: 0.4rem; }
         .trust-bar-mini svg { width: 18px; height: 18px; color: var(--sage); flex-shrink: 0; }
 
+        /* ABLAUF TIMELINE */
+        .ablauf-section { max-width: 900px; }
+        .ablauf-timeline {
+            display: grid; gap: 1.5rem; position: relative;
+        }
+        .ablauf-timeline::before {
+            content: ''; position: absolute; left: 28px; top: 0; bottom: 0;
+            width: 2px; background: var(--cream-3);
+        }
+        .ablauf-step {
+            display: flex; gap: 1.5rem; align-items: flex-start;
+            background: var(--white); border-radius: var(--radius-sm);
+            padding: 1.8rem; border: 1px solid var(--cream-3);
+            transition: all 0.3s; position: relative; z-index: 1;
+        }
+        .ablauf-step:hover { border-color: var(--accent-light); transform: translateX(4px); box-shadow: var(--shadow); }
+        .ablauf-num {
+            width: 56px; height: 56px; background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--white); border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.3rem; font-weight: 800; flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(196, 95, 69, 0.25);
+        }
+        .ablauf-content h3 { font-size: 1.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.3rem; }
+        .ablauf-content p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+        .ablauf-content .ablauf-hinweis {
+            display: inline-block; margin-top: 0.6rem;
+            background: var(--cream-2); padding: 0.4rem 0.9rem;
+            border-radius: 50px; font-size: 0.78rem; color: var(--text-muted);
+            border: 1px solid var(--cream-3);
+        }
+
         .booking-section { 
             background: var(--white); border-radius: var(--radius); padding: 2.5rem; 
             margin-top: 3rem; box-shadow: var(--shadow-lg); border: 1px solid var(--cream-3); 
@@ -416,45 +448,6 @@
         .solution-item h4 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.2rem; }
         .solution-item p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 
-        .profile-card {
-            background: var(--white); border-radius: var(--radius); padding: 2.5rem;
-            border: 1px solid var(--cream-3); display: flex; gap: 2rem; align-items: center;
-            box-shadow: var(--shadow);
-        }
-        .profile-avatar {
-            width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent-light), var(--accent));
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 2.5rem; flex-shrink: 0; line-height: 1;
-        }
-        .profile-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--charcoal); margin-bottom: 0.3rem; }
-        .profile-info .role { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.8rem; display: block; }
-        .profile-info p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 0.8rem; }
-        .profile-info p:last-of-type { margin-bottom: 0; }
-        .profile-stats { display: flex; gap: 2rem; margin-top: 1.2rem; flex-wrap: wrap; }
-        .profile-stats div strong { display: block; font-size: 1.3rem; color: var(--charcoal); }
-        .profile-stats div span { font-size: 0.8rem; color: var(--text-muted); }
-
-        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .testi-card {
-            background: var(--white); border-radius: var(--radius); padding: 2rem;
-            border: 1px solid var(--cream-3); transition: all 0.3s; position: relative;
-        }
-        .testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .testi-stars { color: var(--carefree-light); font-size: 1.2rem; margin-bottom: 0.8rem; letter-spacing: 2px; }
-        .testi-text { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin-bottom: 1.2rem; font-style: italic; }
-        .testi-author { display: flex; align-items: center; gap: 0.8rem; }
-        .testi-author-avatar {
-            width: 44px; height: 44px; background: var(--cream-2); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
-        }
-        .testi-author-info strong { display: block; font-size: 0.9rem; color: var(--charcoal); }
-        .testi-author-info span { font-size: 0.8rem; color: var(--text-muted); }
-        .testi-result {
-            position: absolute; top: 1.5rem; right: 1.5rem;
-            background: var(--sage-light); color: var(--white); padding: 0.3rem 0.8rem;
-            border-radius: 50px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
-        }
-
         /* FRAGEBOGEN STYLES */
         .fragebogen-section { max-width: 860px; }
         .fragebogen-card {
@@ -547,6 +540,36 @@
             color: var(--white);
         }
         
+        /* FILE UPLOAD */
+        .upload-zone {
+            border: 2px dashed var(--cream-3); border-radius: var(--radius-sm);
+            padding: 2rem; text-align: center; cursor: pointer;
+            transition: all 0.3s; background: var(--white);
+        }
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--accent); background: rgba(196, 95, 69, 0.02);
+        }
+        .upload-zone .upload-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .upload-zone p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+        .upload-zone .upload-hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.3rem; }
+        .upload-zone input[type="file"] { display: none; }
+        
+        .file-list {
+            display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;
+        }
+        .file-chip {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: var(--cream-2); padding: 0.4rem 0.9rem;
+            border-radius: 50px; font-size: 0.82rem; color: var(--charcoal);
+            border: 1px solid var(--cream-3);
+        }
+        .file-chip .remove-file {
+            background: none; border: none; color: var(--danger); cursor: pointer;
+            font-size: 1rem; line-height: 1; padding: 0; width: 18px; height: 18px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .file-chip .remove-file:hover { color: var(--danger); }
+        
         .fragebogen-actions {
             display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
             margin-top: 1rem;
@@ -558,6 +581,51 @@
             animation: fadeIn 0.5s ease;
         }
         .fragebogen-success a { color: var(--white); text-decoration: underline; font-weight: 700; }
+
+        /* BA DOKUMENTEN CHECKLISTE */
+        .dok-checkliste {
+            background: var(--white); border-radius: var(--radius); padding: 2rem;
+            border: 1px solid var(--cream-3); box-shadow: var(--shadow);
+        }
+        .dok-checkliste h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.3rem;
+            color: var(--charcoal); margin-bottom: 1.2rem;
+        }
+        .dok-item {
+            display: flex; align-items: flex-start; gap: 0.8rem;
+            padding: 0.9rem 0; border-bottom: 1px solid var(--cream-3);
+        }
+        .dok-item:last-child { border-bottom: none; }
+        .dok-item input[type="checkbox"] {
+            width: 20px; height: 20px; accent-color: var(--sage);
+            margin-top: 0.15rem; cursor: pointer;
+        }
+        .dok-item label {
+            font-size: 0.9rem; color: var(--text); cursor: pointer; line-height: 1.5;
+        }
+        .dok-item label strong { color: var(--charcoal); display: block; margin-bottom: 0.1rem; }
+        .dok-item label span { font-size: 0.82rem; color: var(--text-muted); }
+
+        .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .testi-card {
+            background: var(--white); border-radius: var(--radius); padding: 2rem;
+            border: 1px solid var(--cream-3); transition: all 0.3s; position: relative;
+        }
+        .testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .testi-stars { color: var(--carefree-light); font-size: 1.2rem; margin-bottom: 0.8rem; letter-spacing: 2px; }
+        .testi-text { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin-bottom: 1.2rem; font-style: italic; }
+        .testi-author { display: flex; align-items: center; gap: 0.8rem; }
+        .testi-author-avatar {
+            width: 44px; height: 44px; background: var(--cream-2); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+        }
+        .testi-author-info strong { display: block; font-size: 0.9rem; color: var(--charcoal); }
+        .testi-author-info span { font-size: 0.8rem; color: var(--text-muted); }
+        .testi-result {
+            position: absolute; top: 1.5rem; right: 1.5rem;
+            background: var(--sage-light); color: var(--white); padding: 0.3rem 0.8rem;
+            border-radius: 50px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+        }
 
         .ressourcen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
         .ressourcen-card {
@@ -595,6 +663,7 @@
         .ressourcen-links-inline a:hover { color: var(--accent); text-decoration: underline; }
         .ressourcen-links-inline a::after { content: ' ↗'; font-size: 0.65rem; opacity: 0.5; }
 
+        /* PAKETE + WEBSITE ADD-ON */
         .teaser-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
         .teaser-card {
             background: var(--white); border-radius: var(--radius); padding: 1.8rem;
@@ -615,6 +684,39 @@
         .teaser-card.carefree-card { background: linear-gradient(180deg, var(--white) 0%, #fffbeb 100%); border-color: var(--carefree-light); }
         .teaser-card.carefree-card h4 { color: var(--carefree); }
         .teaser-card.carefree-card .teaser-price { color: var(--carefree); }
+
+        /* WEBSITE ADD-ON */
+        .addon-section {
+            background: linear-gradient(135deg, var(--charcoal), var(--charcoal-light));
+            border-radius: var(--radius); padding: 2.5rem;
+            margin-top: 2rem; color: var(--white);
+        }
+        .addon-section h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .addon-section > p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .addon-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;
+        }
+        .addon-item {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-sm); padding: 1.2rem;
+        }
+        .addon-item .addon-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .addon-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .addon-item p { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+        .addon-price {
+            margin-top: 1rem; font-size: 1.3rem; font-weight: 800;
+        }
+        .addon-price span { font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.5); }
+        .addon-cta {
+            display: inline-flex; margin-top: 1.5rem; background: var(--accent);
+            color: var(--white); padding: 0.9rem 2rem; border-radius: 50px;
+            text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+        .addon-cta:hover { background: var(--accent-light); color: var(--charcoal); transform: translateY(-2px); }
 
         .faq-list { display: grid; gap: 0.75rem; }
         details.faq-item {
@@ -729,6 +831,10 @@
             .ressourcen-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr !important; }
             .fragebogen-block { padding: 1.2rem; }
+            .ablauf-step { padding: 1.2rem; }
+            .ablauf-timeline::before { left: 22px; }
+            .ablauf-num { width: 44px; height: 44px; font-size: 1.1rem; }
+            .addon-grid { grid-template-columns: 1fr; }
             #backToTop { bottom: 1rem; right: 1rem; }
         }
         
@@ -740,7 +846,7 @@
         }
 
         @media print {
-            .aurora-bg, nav, #backToTop, .hero-cta-group, .booking-section, .btn-main, .btn-ghost, .btn-cta-white, .fragebogen-actions button[type="button"] { display: none !important; }
+            .aurora-bg, nav, #backToTop, .hero-cta-group, .booking-section, .btn-main, .btn-ghost, .btn-cta-white, .fragebogen-actions button[type="button"], .upload-zone, .ablauf-step { display: none !important; }
             body { background: white; color: black; font-size: 12pt; }
             .hero { min-height: auto; padding: 2rem 0; }
             main section { padding: 1.5rem 0; page-break-inside: avoid; }
@@ -768,8 +874,7 @@
             <div class="nav-container">
                 <a href="#" class="logo" aria-label="BPX-krekon Startseite">BPX<span>-</span>krekon</a>
                 <ul class="nav-links" id="navLinks" role="menubar">
-                    <li role="none"><a href="#problem" role="menuitem">Problem</a></li>
-                    <li role="none"><a href="#loesung" role="menuitem">Lösung</a></li>
+                    <li role="none"><a href="#ablauf" role="menuitem">Ablauf</a></li>
                     <li role="none"><a href="#fragebogen" role="menuitem">Fragebogen</a></li>
                     <li role="none"><a href="#grundlagen" role="menuitem">Grundlagen</a></li>
                     <li role="none"><a href="#pakete" role="menuitem">Pakete</a></li>
@@ -788,8 +893,8 @@
                 <h1 id="hero-heading">Kostenlose Erstberatung: Wie Ihr <em>Businessplan für den Gründungszuschuss</em> sicher durch die Agentur für Arbeit kommt</h1>
                 <p class="hero-subtitle">In 20 Minuten klären wir Ihre Chancen, typische Ablehnungsgründe und welcher Businessplan‑Umfang für Ihre Situation wirklich nötig ist.</p>
                 <div class="hero-cta-group">
-                    <a href="#booking" class="btn-main">📅 kostenlosen Beratungstermin sichern</a>
-                    <a href="#problem" class="btn-ghost">Warum das wichtig ist</a>
+                    <a href="#fragebogen" class="btn-main">📝 Fragebogen ausfüllen & loslegen</a>
+                    <a href="#ablauf" class="btn-ghost">So funktioniert's</a>
                 </div>
 
                 <div class="trust-bar-mini">
@@ -799,151 +904,78 @@
                     </span>
                     <span>
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        20 Minuten
+                        20 Minuten Erstgespräch
                     </span>
                     <span>
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
                         Telefon oder Zoom
                     </span>
                 </div>
-
-                <!-- Booking Widget -->
-                <div class="booking-section reveal" id="booking" aria-labelledby="booking-heading">
-                    <h3 id="booking-heading">🗓️ Termin wählen</h3>
-                    <p>Wählen Sie einen passenden Slot und senden Sie uns Ihre Kontaktdaten – wir bestätigen den Termin persönlich.</p>
-                    
-                    <div class="booking-grid" id="slotGrid" role="group" aria-label="Verfügbare Terminslots"></div>
-
-                    <form class="booking-form" id="bookingForm" novalidate>
-                        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
-                            ✅ Vielen Dank! Ihre Anfrage ist eingegangen. Wir melden uns zeitnah zur Bestätigung.
-                        </div>
-
-                        <div class="form-group">
-                            <label for="bookName" class="visually-hidden">Vollständiger Name</label>
-                            <input type="text" id="bookName" name="name" placeholder="Vollständiger Name" required aria-required="true" autocomplete="name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="bookEmail" class="visually-hidden">E-Mail-Adresse</label>
-                            <input type="email" id="bookEmail" name="email" placeholder="E-Mail-Adresse" required aria-required="true" autocomplete="email">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="bookPhone" class="visually-hidden">Telefon / WhatsApp</label>
-                            <input type="tel" id="bookPhone" name="phone" placeholder="Telefon / WhatsApp" required aria-required="true" autocomplete="tel">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="bookTopic" class="visually-hidden">Thema des Gesprächs</label>
-                            <select id="bookTopic" name="topic" required aria-required="true">
-                                <option value="" disabled selected>Worum geht es in Kürze?</option>
-                                <option value="gruendungszuschuss">Gründungszuschuss beantragen – Businessplan fehlt</option>
-                                <option value="ablehnung">Businessplan wurde abgelehnt – Unterstützung nötig</option>
-                                <option value="idee">Geschäftsidee vorhanden, noch keine Unterlagen</option>
-                                <option value="finanzplan">Businessplan vorhanden, Finanzplan fehlt</option>
-                                <option value="sonstiges">Sonstiges / Erstgespräch allgemein</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group consent-group">
-                            <input type="checkbox" id="bookConsent" name="consent" required aria-required="true">
-                            <label for="bookConsent">Ich stimme der Verarbeitung meiner Daten zur Terminvereinbarung zu. <a href="/datenschutz" target="_blank">Datenschutzhinweise</a>.</label>
-                        </div>
-
-                        <input type="hidden" id="selectedSlot" name="slot" value="">
-                        
-                        <button type="submit" id="submitBtn">
-                            <span class="btn-text">✉️ Termin-Anfrage senden</span>
-                        </button>
-                    </form>
-                    
-                    <div class="booking-alt">
-                        Oder direkt: 
-                        <a href="https://wa.me/4917600000000" rel="noopener noreferrer">📱 WhatsApp schreiben</a> · 
-                        <a href="tel:+4917600000000">📞 anrufen</a><br><br>
-                        <a href="#fragebogen" class="btn-secondary">⏱️ Zeit sparen? Fragebogen vorab ausfüllen</a>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Pain -->
-        <section id="problem" class="pain-section" aria-labelledby="problem-heading">
-            <span class="section-label reveal">Das Problem</span>
+        <!-- ABLAUF TIMELINE -->
+        <section id="ablauf" class="ablauf-section" aria-labelledby="ablauf-heading">
+            <span class="section-label reveal">Ihr Weg zum Erfolg</span>
             <div class="section-header reveal">
-                <h2 id="problem-heading">Kennen Sie das?</h2>
-                <p>Der Gründungszuschuss ist eine große Chance – aber viele Anträge scheitern an formalen Details und unklaren Businessplänen.</p>
+                <h2 id="ablauf-heading">So funktioniert unsere Zusammenarbeit</h2>
+                <p>Ein klarer, transparenter Prozess in 5 Schritten – von der ersten Kontaktaufnahme bis zum fertigen Businessplan.</p>
             </div>
-            <div class="pain-grid">
-                <article class="pain-card reveal reveal-delay-1">
-                    <div class="pain-icon" aria-hidden="true">😰</div>
-                    <h4>Unsicherheit beim Inhalt</h4>
-                    <p>Die Agentur für Arbeit verlangt eine „fachkundige Stellungnahme“ – aber selten ist klar, was genau im Businessplan stehen muss.</p>
-                </article>
-                <article class="pain-card reveal reveal-delay-2">
-                    <div class="pain-icon" aria-hidden="true">⏰</div>
-                    <h4>Angst vor Ablehnung</h4>
-                    <p>Formfehler, unvollständige Finanzplanung oder schwammige Marktanalyse können den Zuschuss verzögern oder kosten.</p>
-                </article>
-                <article class="pain-card reveal reveal-delay-3">
-                    <div class="pain-icon" aria-hidden="true">🤯</div>
-                    <h4>Zu wenig Zeit für Experimente</h4>
-                    <p>Stundenlang recherchieren, Vorlagen anpassen und trotzdem keine Sicherheit: passt das wirklich für den Sachbearbeiter?</p>
-                </article>
-                <article class="pain-card reveal reveal-delay-1">
-                    <div class="pain-icon" aria-hidden="true">💸</div>
-                    <h4>Beratung oft unerschwinglich</h4>
-                    <p>Klassische Unternehmensberater arbeiten mit Honoraren im vierstelligen Bereich – häufig ohne Spezialisierung auf den Gründungszuschuss.</p>
-                </article>
-            </div>
-        </section>
 
-        <!-- Solution -->
-        <section id="loesung" aria-labelledby="loesung-heading">
-            <span class="section-label reveal">Die Lösung</span>
-            <div class="section-header reveal">
-                <h2 id="loesung-heading">Was Sie in der Erstberatung erhalten</h2>
-                <p>Kein Verkaufsmonolog, sondern eine klare, ehrliche Einschätzung Ihrer Situation und der nächsten Schritte.</p>
-            </div>
-            <div class="solution-list">
-                <article class="solution-item reveal reveal-delay-1">
-                    <div class="solution-check" aria-hidden="true">✓</div>
-                    <div>
-                        <h4>Analyse Ihrer Ausgangslage</h4>
-                        <p>Wir klären gemeinsam, welche Fristen gelten, welchen Status Sie bei der Agentur für Arbeit haben und wie weit Ihre Pläne sind.</p>
+            <div class="ablauf-timeline">
+                <article class="ablauf-step reveal reveal-delay-1">
+                    <div class="ablauf-num" aria-hidden="true">1</div>
+                    <div class="ablauf-content">
+                        <h3>Fragebogen ausfüllen & Dokumente hochladen</h3>
+                        <p>Füllen Sie unseren detaillierten Fragebogen aus und laden Sie bereits vorhandene Unterlagen (Konzepte, Zeichnungen, Kostenvoranschläge) hoch. So können wir uns optimal vorbereiten.</p>
+                        <span class="ablauf-hinweis">⏱️ Dauer: ca. 10–15 Minuten · Kostenlos</span>
                     </div>
                 </article>
-                <article class="solution-item reveal reveal-delay-2">
-                    <div class="solution-check" aria-hidden="true">✓</div>
-                    <div>
-                        <h4>Klarheit zu Anforderungen & Unterlagen</h4>
-                        <p>Wir zeigen, welche Inhalte im Businessplan für den Gründungszuschuss wirklich entscheidend sind – inklusive Finanzteil.</p>
+
+                <article class="ablauf-step reveal reveal-delay-2">
+                    <div class="ablauf-num" aria-hidden="true">2</div>
+                    <div class="ablauf-content">
+                        <h3>Kostenloses Erstgespräch mit BPX‑krekon</h3>
+                        <p>Wir analysieren Ihre Unterlagen, klären offene Fragen und erstellen ein erstes Bild Ihrer Situation. Sie erhalten eine erste Einschätzung Ihrer Chancen.</p>
+                        <span class="ablauf-hinweis">⏱️ Dauer: 20 Minuten · Telefon oder Zoom</span>
                     </div>
                 </article>
-                <article class="solution-item reveal reveal-delay-3">
-                    <div class="solution-check" aria-hidden="true">✓</div>
-                    <div>
-                        <h4>Empfehlung des passenden Umfangs</h4>
-                        <p>Wir empfehlen, ob ein kompaktes Paket, ein vollständiger Businessplan oder eine intensive Begleitung sinnvoll ist – branchen- und situationsabhängig.</p>
+
+                <article class="ablauf-step reveal reveal-delay-3">
+                    <div class="ablauf-num" aria-hidden="true">3</div>
+                    <div class="ablauf-content">
+                        <h3>Termin bei der Bundesagentur für Arbeit</h3>
+                        <p>Sie vereinbaren Ihr offizielles Erstgespräch bei der Agentur für Arbeit. Wir stellen Ihnen eine Checkliste mit allen erforderlichen Dokumenten zur Verfügung, die Sie beim Termin erfragen und anschließend an uns weiterleiten.</p>
+                        <span class="ablauf-hinweis">📋 Checkliste & Upload nach dem Termin</span>
                     </div>
                 </article>
-                <article class="solution-item reveal reveal-delay-1">
-                    <div class="solution-check" aria-hidden="true">✓</div>
-                    <div>
-                        <h4>Konkretes Angebot – nur wenn es passt</h4>
-                        <p>Wenn Sie möchten, erhalten Sie im Anschluss ein schriftliches Angebot mit Festpreis und klaren Leistungen. Ohne Druck, mit Bedenkzeit.</p>
+
+                <article class="ablauf-step reveal reveal-delay-1">
+                    <div class="ablauf-num" aria-hidden="true">4</div>
+                    <div class="ablauf-content">
+                        <h3>Maßgeschneidertes Angebot & Paketempfehlung</h3>
+                        <p>Basierend auf Ihren Unterlagen und den BA-Anforderungen erstellen wir ein persönliches Angebot mit Festpreis. Sie entscheiden in Ruhe, ob und mit welchem Paket Sie starten möchten.</p>
+                        <span class="ablauf-hinweis">📧 Erhalt innerhalb 24h nach Dokumenten-Upload</span>
+                    </div>
+                </article>
+
+                <article class="ablauf-step reveal reveal-delay-2">
+                    <div class="ablauf-num" aria-hidden="true">5</div>
+                    <div class="ablauf-content">
+                        <h3>Businessplan-Erstellung & optionale Website</h3>
+                        <p>Nach Auftragserteilung starten wir die Erstellung Ihres behördengerechten Businessplans. Optional: Wir gestalten parallel Ihre professionelle Website für den perfekten Start.</p>
+                        <span class="ablauf-hinweis">🚀 Lieferzeit: 48–72h · Express möglich</span>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- FRAGEBOGEN (neu integriert) -->
+        <!-- FRAGEBOGEN -->
         <section id="fragebogen" class="fragebogen-section" aria-labelledby="fragebogen-heading">
-            <span class="section-label reveal">Vorbereitung</span>
+            <span class="section-label reveal">Schritt 1</span>
             <div class="section-header reveal">
                 <h2 id="fragebogen-heading">Kundenfragebogen – Ihre Zeit ist wertvoll</h2>
-                <p>Füllen Sie diesen Fragebogen vor unserem Gespräch aus (ca. 10–15 Minuten). So können wir im Erstgespräch sofort auf Ihre Situation eingehen – statt Zeit mit Stammdaten zu verbringen.</p>
+                <p>Füllen Sie diesen Fragebogen aus und laden Sie vorhandene Unterlagen hoch. So können wir im Erstgespräch sofort auf Ihre Situation eingehen – statt Zeit mit Stammdaten zu verbrauchen.</p>
             </div>
 
             <div class="fragebogen-card reveal">
@@ -958,7 +990,7 @@
 
                 <form class="fragebogen-form" id="fragebogenForm" novalidate>
                     <div class="fragebogen-success" id="fragebogenSuccess" role="status" aria-live="polite">
-                        ✅ Vielen Dank! Ihre Angaben sind bei uns eingegangen.<br>
+                        ✅ Vielen Dank! Ihre Angaben und Dateien sind bei uns eingegangen.<br>
                         Wir melden uns innerhalb von 24 Stunden für Ihr kostenloses Erstgespräch.<br>
                         <a href="#booking" style="color: var(--white); text-decoration: underline;">Oder direkt einen Termin sichern →</a>
                     </div>
@@ -969,27 +1001,27 @@
                         <h3><span class="block-num" aria-hidden="true">A</span>Persönliche Daten</h3>
                         <div class="form-row">
                             <div class="form-field">
-                                <label for="fb-name">Vor- und Nachname</label>
+                                <label for="fb-name">Vor- und Nachname *</label>
                                 <input type="text" id="fb-name" name="name" required autocomplete="name">
                             </div>
                             <div class="form-field">
-                                <label for="fb-email">E-Mail-Adresse</label>
+                                <label for="fb-email">E-Mail-Adresse *</label>
                                 <input type="email" id="fb-email" name="email" required autocomplete="email">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-field">
-                                <label for="fb-phone">Telefonnummer</label>
+                                <label for="fb-phone">Telefonnummer *</label>
                                 <input type="tel" id="fb-phone" name="phone" required autocomplete="tel">
                             </div>
                             <div class="form-field">
-                                <label for="fb-ort">Wohnort / Bundesland</label>
+                                <label for="fb-ort">Wohnort / Bundesland *</label>
                                 <input type="text" id="fb-ort" name="ort" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-field">
-                                <label for="fb-beruf">Bisheriger Beruf / Ausbildung</label>
+                                <label for="fb-beruf">Bisheriger Beruf / Ausbildung *</label>
                                 <input type="text" id="fb-beruf" name="beruf" required>
                             </div>
                             <div class="form-field">
@@ -999,9 +1031,9 @@
                         </div>
                         <div class="form-row single">
                             <div class="form-field">
-                                <label>Derzeit arbeitslos / ALG I?</label>
+                                <label>Derzeit arbeitslos / ALG I? *</label>
                                 <div class="radio-group">
-                                    <div class="radio-pill"><input type="radio" id="fb-alg-ja" name="alg" value="ja"><label for="fb-alg-ja">Ja</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-alg-ja" name="alg" value="ja" required><label for="fb-alg-ja">Ja</label></div>
                                     <div class="radio-pill"><input type="radio" id="fb-alg-nein" name="alg" value="nein"><label for="fb-alg-nein">Nein</label></div>
                                     <div class="radio-pill"><input type="radio" id="fb-alg-bald" name="alg" value="bald"><label for="fb-alg-bald">Bald</label></div>
                                 </div>
@@ -1015,620 +1047,718 @@
                         <h3><span class="block-num" aria-hidden="true">B</span>Ihre Geschäftsidee</h3>
                         <div class="form-row single">
                             <div class="form-field">
-                                <label for="fb-idee">Was ist Ihre Geschäftsidee? <span class="hint">(3–5 Sätze)</span></label>
-                                <textarea id="fb-idee" name="idee" rows="3" required></textarea>
+                                <label for="fb-branche">Branche / Gewerbe</label>
+                                <input type="text" id="fb-branche" name="branche" placeholder="z.B. Gastronomie, Handwerk, E-Commerce, IT-Dienstleistungen">
                             </div>
                         </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-idee">Beschreiben Sie Ihre Geschäftsidee kurz</label>
+                                <textarea id="fb-idee" name="idee" rows="3" placeholder="Was möchten Sie verkaufen oder anbieten? Wer ist Ihre Zielgruppe?"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row single">
+                            <div class="form-field">
+                                <label for="fb-stand">Aktueller Stand der Planung</label>
+                                <div class="radio-group">
+                                    <div class="radio-pill"><input type="radio" id="fb-stand-idee" name="stand" value="idee"><label for="fb-stand-idee">Erste Idee</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-stand-konzept" name="stand" value="konzept"><label for="fb-stand-konzept">Konzept vorhanden</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-stand-kva" name="stand" value="kva"><label for="fb-stand-kva">Kostenvoranschläge eingeholt</label></div>
+                                    <div class="radio-pill"><input type="radio" id="fb-stand-raum" name="stand" value="raum"><label for="fb-stand-raum">Räume / Location gefunden</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- C: Dokumenten-Upload -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt C: Dokumente & Unterlagen</legend>
+                        <h3><span class="block-num" aria-hidden="true">C</span>Dokumente hochladen</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Haben Sie bereits Unterlagen? Laden Sie sie hier hoch – das beschleunigt den Prozess enorm.</p>
+                        
+                        <div class="upload-zone" id="uploadZone">
+                            <input type="file" id="fileInput" name="dateien" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.xls,.xlsx">
+                            <div class="upload-icon">📎</div>
+                            <p><strong>Dateien hierher ziehen</strong> oder klicken zum Durchsuchen</p>
+                            <p class="upload-hint">Max. 10 MB · PDF, Word, Excel, Bilder (JPG/PNG)</p>
+                        </div>
+                        <div class="file-list" id="fileList"></div>
+                    </fieldset>
+
+                    <!-- D: Terminwunsch -->
+                    <fieldset class="fragebogen-block">
+                        <legend class="visually-hidden">Abschnitt D: Terminwunsch</legend>
+                        <h3><span class="block-num" aria-hidden="true">D</span>Erstgespräch-Termin</h3>
                         <div class="form-row">
                             <div class="form-field">
-                                <label for="fb-branche">In welcher Branche?</label>
-                                <input type="text" id="fb-branche" name="branche" required>
+                                <label for="fb-termin-tag">Bevorzugter Wochentag</label>
+                                <select id="fb-termin-tag" name="termin_tag">
+                                    <option value="">Bitte wählen</option>
+                                    <option value="montag">Montag</option>
+                                    <option value="dienstag">Dienstag</option>
+                                    <option value="mittwoch">Mittwoch</option>
+                                    <option value="donnerstag">Donnerstag</option>
+                                    <option value="freitag">Freitag</option>
+                                </select>
                             </div>
                             <div class="form-field">
-                                <label for="fb-idee-seit">Seit wann haben Sie die Idee?</label>
-                                <input type="text" id="fb-idee-seit" name="idee_seit" placeholder="z.B. Seit 6 Monaten">
+                                <label for="fb-zeit">Bevorzugte Uhrzeit</label>
+                                <select id="fb-zeit" name="termin_zeit">
+                                    <option value="">Bitte wählen</option>
+                                    <option value="vormittag">Vormittag (09:00–12:00)</option>
+                                    <option value="nachmittag">Nachmittag (12:00–15:00)</option>
+                                    <option value="spaet">Spätnachmittag (15:00–18:00)</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-row single">
                             <div class="form-field">
-                                <label for="fb-schritte">Haben Sie bereits erste Schritte unternommen? <span class="hint">(Kunden, Testangebote, Anmeldungen)</span></label>
-                                <textarea id="fb-schritte" name="schritte" rows="2"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label for="fb-usp">Was macht Sie einzigartig? <span class="hint">(Ihr USP)</span></label>
-                                <textarea id="fb-usp" name="usp" rows="2"></textarea>
+                                <label for="fb-kommentar">Weitere Anmerkungen / Fragen</label>
+                                <textarea id="fb-kommentar" name="kommentar" rows="2" placeholder="Gibt es Besonderheiten, die wir wissen sollten?"></textarea>
                             </div>
                         </div>
                     </fieldset>
 
-                    <!-- C: Produkte & Preise -->
-                    <fieldset class="fragebogen-block">
-                        <legend class="visually-hidden">Abschnitt C: Produkte und Preise</legend>
-                        <h3><span class="block-num" aria-hidden="true">C</span>Produkte / Dienstleistungen & Preise</h3>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label for="fb-angebot">Was genau bieten Sie an?</label>
-                                <textarea id="fb-angebot" name="angebot" rows="3" required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label for="fb-preise">Welche Preise planen Sie?</label>
-                                <textarea id="fb-preise" name="preise" rows="2"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label>Einmalige Leistung oder wiederkehrend?</label>
-                                <div class="checkbox-group">
-                                    <div class="checkbox-pill"><input type="checkbox" id="fb-einmalig" name="leistung" value="einmalig"><label for="fb-einmalig">Einmalig</label></div>
-                                    <div class="checkbox-pill"><input type="checkbox" id="fb-monatlich" name="leistung" value="monatlich"><label for="fb-monatlich">Monatlich</label></div>
-                                    <div class="checkbox-pill"><input type="checkbox" id="fb-beides" name="leistung" value="beides"><label for="fb-beides">Beides</label></div>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <!-- D: Zielgruppe -->
-                    <fieldset class="fragebogen-block">
-                        <legend class="visually-hidden">Abschnitt D: Zielgruppe & Markt</legend>
-                        <h3><span class="block-num" aria-hidden="true">D</span>Zielgruppe & Markt</h3>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label for="fb-zielgruppe">Wer sind Ihre Kunden? <span class="hint">(Alter, Beruf, Ort)</span></label>
-                                <textarea id="fb-zielgruppe" name="zielgruppe" rows="3" required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label>Lokal, regional oder bundesweit?</label>
-                                <div class="radio-group">
-                                    <div class="radio-pill"><input type="radio" id="fb-lokal" name="reichweite" value="lokal"><label for="fb-lokal">Lokal</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-regional" name="reichweite" value="regional"><label for="fb-regional">Regional</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-bundesweit" name="reichweite" value="bundesweit"><label for="fb-bundesweit">Bundesweit</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-online" name="reichweite" value="online"><label for="fb-online">Online</label></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label for="fb-konkurrenz">Wer sind Ihre Hauptkonkurrenten?</label>
-                                <textarea id="fb-konkurrenz" name="konkurrenz" rows="2"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <!-- E: Finanzen -->
-                    <fieldset class="fragebogen-block">
-                        <legend class="visually-hidden">Abschnitt E: Finanzielle Planung</legend>
-                        <h3><span class="block-num" aria-hidden="true">E</span>Finanzielle Planung</h3>
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label for="fb-kapital">Welches Startkapital haben Sie?</label>
-                                <input type="text" id="fb-kapital" name="kapital" placeholder="z.B. 5.000 €">
-                            </div>
-                            <div class="form-field">
-                                <label for="fb-umsatz1">Welchen Umsatz planen Sie in Monat 1?</label>
-                                <input type="text" id="fb-umsatz1" name="umsatz1" placeholder="z.B. 2.000 €">
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label for="fb-kosten">Welche monatlichen Kosten erwarten Sie? <span class="hint">(Miete, Material, Versicherungen...)</span></label>
-                                <textarea id="fb-kosten" name="kosten" rows="2"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label>Benötigen Sie Kredit / Förderung?</label>
-                                <div class="checkbox-group">
-                                    <div class="checkbox-pill"><input type="checkbox" id="fb-foerder-gz" name="foerderung" value="gruendungszuschuss"><label for="fb-foerder-gz">Gründungszuschuss</label></div>
-                                    <div class="checkbox-pill"><input type="checkbox" id="fb-foerder-kfw" name="foerderung" value="kfw"><label for="fb-foerder-kfw">KfW-Kredit</label></div>
-                                    <div class="checkbox-pill"><input type="checkbox" id="fb-foerder-nein" name="foerderung" value="nein"><label for="fb-foerder-nein">Nein</label></div>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <!-- F: Organisation -->
-                    <fieldset class="fragebogen-block">
-                        <legend class="visually-hidden">Abschnitt F: Organisation & Sonstiges</legend>
-                        <h3><span class="block-num" aria-hidden="true">F</span>Organisation & Sonstiges</h3>
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label>Allein oder mit Partnern?</label>
-                                <div class="radio-group">
-                                    <div class="radio-pill"><input type="radio" id="fb-allein" name="partner" value="allein"><label for="fb-allein">Allein</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-partner" name="partner" value="partner"><label for="fb-partner">Mit Partner/in</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-team" name="partner" value="team"><label for="fb-team">Team</label></div>
-                                </div>
-                            </div>
-                            <div class="form-field">
-                                <label>Geplante Rechtsform</label>
-                                <div class="radio-group">
-                                    <div class="radio-pill"><input type="radio" id="fb-einzel" name="rechtsform" value="einzelunternehmen"><label for="fb-einzel">Einzelunternehmen</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-ug" name="rechtsform" value="ug"><label for="fb-ug">UG</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-gmbh" name="rechtsform" value="gmbh"><label for="fb-gmbh">GmbH</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-unklar" name="rechtsform" value="unklar"><label for="fb-unklar">Noch unklar</label></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label>Bereits Beratung bei der Agentur für Arbeit?</label>
-                                <div class="radio-group">
-                                    <div class="radio-pill"><input type="radio" id="fb-beratung-ja" name="beratung" value="ja"><label for="fb-beratung-ja">Ja</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-beratung-nein" name="beratung" value="nein"><label for="fb-beratung-nein">Nein</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-beratung-geplant" name="beratung" value="geplant"><label for="fb-beratung-geplant">Termin geplant</label></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label>Welches Paket interessiert Sie?</label>
-                                <div class="radio-group">
-                                    <div class="radio-pill"><input type="radio" id="fb-paket-basis" name="paket" value="basis"><label for="fb-paket-basis">Basis (497 €)</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-paket-standard" name="paket" value="standard"><label for="fb-paket-standard">Standard (975 €)</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-paket-premium" name="paket" value="premium"><label for="fb-paket-premium">Premium (1.475 €)</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-paket-carefree" name="paket" value="carefree"><label for="fb-paket-carefree">★ Carefree (2.975 €)</label></div>
-                                    <div class="radio-pill"><input type="radio" id="fb-paket-unklar" name="paket" value="unklar"><label for="fb-paket-unklar">Noch unklar</label></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row single">
-                            <div class="form-field">
-                                <label for="fb-anmerkungen">Besondere Wünsche / Anmerkungen</label>
-                                <textarea id="fb-anmerkungen" name="anmerkungen" rows="3"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <div class="form-group consent-group" style="margin-top: 0.5rem;">
-                        <input type="checkbox" id="fbConsent" name="consent" required aria-required="true">
-                        <label for="fbConsent">Ich stimme der Verarbeitung meiner Daten zur Vorbereitung des Erstgesprächs zu. <a href="/datenschutz" target="_blank">Datenschutzhinweise</a>.</label>
+                    <div class="consent-group">
+                        <input type="checkbox" id="fb-dsgvo" name="dsgvo" required>
+                        <label for="fb-dsgvo">Ich stimme der Verarbeitung meiner Daten zur Vorbereitung des Erstgesprächs zu. <a href="#datenschutz">Datenschutzerklärung</a>. *</label>
                     </div>
 
                     <div class="fragebogen-actions">
-                        <button type="submit" class="btn-main">📤 Fragebogen absenden</button>
-                        <button type="button" class="btn-secondary" onclick="window.print()">🖨️ Als PDF drucken</button>
+                        <button type="submit" class="btn-main">Fragebogen absenden & Erstgespräch starten</button>
                     </div>
                 </form>
             </div>
         </section>
 
-        <!-- Social Proof -->
-        <section aria-labelledby="testi-heading">
-            <span class="section-label reveal">Ergebnisse</span>
+        <!-- BA DOKUMENTEN CHECKLISTE (Schritt 3) -->
+        <section id="ba-checkliste" aria-labelledby="ba-checkliste-heading">
+            <span class="section-label reveal">Schritt 3 – Vorbereitung</span>
             <div class="section-header reveal">
-                <h2 id="testi-heading">Was Gründerinnen und Gründer über die Zusammenarbeit sagen</h2>
-                <p>Ausgewählte Stimmen von Menschen, die ihren Gründungszuschuss mit einem professionellen Businessplan beantragt haben.</p>
+                <h2 id="ba-checkliste-heading">Dokumenten-Checkliste für Ihren BA-Termin</h2>
+                <p>Erfragen Sie bei Ihrem Termin bei der Agentur für Arbeit diese Unterlagen und leiten Sie sie uns anschließend zu. So erstellen wir ein wasserdichtes Angebot.</p>
             </div>
-            <div class="testi-grid">
-                <article class="testi-card reveal reveal-delay-1">
-                    <div class="testi-result" aria-label="Gründungszuschuss bewilligt">✓ Bewilligt</div>
-                    <div class="testi-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-                    <p class="testi-text">„Wir hatten große Sorge, an der Bürokratie zu scheitern. Der Plan war in 48 Stunden fertig und wurde vom Sachbearbeiter ohne Nachfragen akzeptiert. Gründungszuschuss bewilligt – wir konnten direkt loslegen.“</p>
-                    <div class="testi-author">
-                        <div class="testi-author-avatar" aria-hidden="true">🍽️</div>
-                        <div class="testi-author-info">
-                            <strong>Aylin D.</strong>
-                            <span>Café & Imbiss, Bremen · Gründungszuschuss</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="testi-card reveal reveal-delay-2">
-                    <div class="testi-result" aria-label="Gründungszuschuss bewilligt">✓ Bewilligt</div>
-                    <div class="testi-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-                    <p class="testi-text">„Der Finanzplan war für uns das größte Fragezeichen. Das Netzwerk von BPX‑krekon hat Zahlen entwickelt, die realistisch und trotzdem überzeugend sind. Die Agentur hat den Plan akzeptiert und wir haben den Zuschuss erhalten.“</p>
-                    <div class="testi-author">
-                        <div class="testi-author-avatar" aria-hidden="true">🔧</div>
-                        <div class="testi-author-info">
-                            <strong>Marcus T.</strong>
-                            <span>Handwerk, Niedersachsen · Gründungszuschuss</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="testi-card reveal reveal-delay-3">
-                    <div class="testi-result" aria-label="Carefree Paket Kunde">★ Carefree</div>
-                    <div class="testi-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-                    <p class="testi-text">„Mit dem Carefree‑Paket hatten wir in jeder Phase jemanden an unserer Seite. Mehrfach wollte der Sachbearbeiter Ergänzungen – das Team hat alles übernommen, wir mussten nichts allein klären. Heute läuft unser Online‑Business stabil.“</p>
-                    <div class="testi-author">
-                        <div class="testi-author-avatar" aria-hidden="true">🛒</div>
-                        <div class="testi-author-info">
-                            <strong>Sarah K.</strong>
-                            <span>E‑Commerce · Carefree‑Begleitung</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
 
-        <!-- RESSOURCEN / BEHÖRDENLINKS -->
-        <section id="grundlagen" aria-labelledby="grundlagen-heading">
-            <span class="section-label reveal">Rechtssicherheit</span>
-            <div class="section-header reveal">
-                <h2 id="grundlagen-heading">Wir arbeiten mit den offiziellen Vorgaben – nicht mit Hörensagen</h2>
-                <p>Transparenz ist Vertrauensvoraussetzung. Hier finden Sie die relevanten Behördenlinks, Gesetzestexte und Merkblätter, auf denen unsere Beratung fußt.</p>
-            </div>
-            
-            <div class="ressourcen-grid">
-                <article class="ressourcen-card reveal reveal-delay-1">
-                    <div class="ressourcen-icon" aria-hidden="true">🏛️</div>
-                    <h3>Bundesagentur für Arbeit</h3>
-                    <p>Offizielle Informationen zu Gründungszuschuss (ALG&nbsp;I) und Einstiegsgeld / Bürgergeld.</p>
-                    <div class="ressourcen-links">
-                        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/arbeitslosengeld/existenzgruendung-gruendungszuschuss" target="_blank" rel="noopener noreferrer">Existenzgründung & Gründungszuschuss</a>
-                        <a href="https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BA/gruendungszuschuss-2.html" target="_blank" rel="noopener noreferrer">Förderdatenbank: Programm</a>
-                        <a href="https://www.arbeitsagentur.de/datei/dok_ba024940.pdf" target="_blank" rel="noopener noreferrer">Fachliche Weisungen (PDF)</a>
-                        <a href="https://www.arbeitsagentur.de/datei/dok_ba035285.pdf" target="_blank" rel="noopener noreferrer">Hinweise & Hilfen (PDF)</a>
-                        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/buergergeld/arbeit-finden/existenzgruendung" target="_blank" rel="noopener noreferrer">Existenzgründung mit Bürgergeld</a>
-                        <a href="https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/buergergeld/arbeit-finden/einstiegsgeld-fuer-selbststaendigkeit" target="_blank" rel="noopener noreferrer">Einstiegsgeld für Selbstständigkeit</a>
-                        <a href="https://www.arbeitsagentur.de/datei/fw-sgb-ii-16b_ba034550.pdf" target="_blank" rel="noopener noreferrer">Weisungen Einstiegsgeld §16b (PDF)</a>
-                        <a href="https://www.arbeitsagentur.de/datei/weisung201702004_ba023570.pdf" target="_blank" rel="noopener noreferrer">Frühere Weisungen Einstiegsgeld (PDF)</a>
-                    </div>
-                </article>
+            <div class="dok-checkliste reveal">
+                <h3>📋 Erfragen & an BPX‑krekon weiterleiten:</h3>
+                
+                <div class="dok-item">
+                    <input type="checkbox" id="dok1" name="dok1">
+                    <label for="dok1"><strong>Bescheinigung über ALG I-Bezug</strong><span>Vom zuständigen Sachbearbeiter ausgestellt</span></label>
+                </div>
+                <div class="dok-item">
+                    <input type="checkbox" id="dok2" name="dok2">
+                    <label for="dok2"><strong>Antragsformular Gründungszuschuss</strong><span>Erstgespräch bei der BA – Formular erfragen</span></label>
+                </div>
+                <div class="dok-item">
+                    <input type="checkbox" id="dok3" name="dok3">
+                    <label for="dok3"><strong>Liste der erforderlichen Nachweise</strong><span>Jede BA-Filiale hat leicht unterschiedliche Anforderungen</span></label>
+                </div>
+                <div class="dok-item">
+                    <input type="checkbox" id="dok4" name="dok4">
+                    <label for="dok4"><strong>Kontaktdaten des zuständigen Sachbearbeiters</strong><span>Für Rückfragen während der Businessplan-Erstellung</span></label>
+                </div>
+                <div class="dok-item">
+                    <input type="checkbox" id="dok5" name="dok5">
+                    <label for="dok5"><strong>Fristen & Bearbeitungszeiten</strong><span>Wie lange dauert die Genehmigung? Wann muss der Businessplan vorliegen?</span></label>
+                </div>
+                <div class="dok-item">
+                    <input type="checkbox" id="dok6" name="dok6">
+                    <label for="dok6"><strong>Eventuelle Förderberatung / Coaching-Zuschuss</strong><span>Gibt es zusätzliche Fördermöglichkeiten?</span></label>
+                </div>
 
-                <article class="ressourcen-card reveal reveal-delay-2">
-                    <div class="ressourcen-icon" aria-hidden="true">⚖️</div>
-                    <h3>Gesetzliche Grundlagen</h3>
-                    <p>Original-Gesetzestexte für Gründungszuschuss und Einstiegsgeld.</p>
-                    <div class="ressourcen-links">
-                        <a href="https://www.gesetze-im-internet.de/sgb_3/__93.html" target="_blank" rel="noopener noreferrer">§&nbsp;93 SGB&nbsp;III Gründungszuschuss</a>
-                        <a href="https://www.gesetze-im-internet.de/sgb_3/__94.html" target="_blank" rel="noopener noreferrer">§&nbsp;94 SGB&nbsp;III Mitwirkung & Nachweise</a>
-                        <a href="https://www.gesetze-im-internet.de/sgb_2/__16b.html" target="_blank" rel="noopener noreferrer">§&nbsp;16b SGB&nbsp;II Einstiegsgeld</a>
-                    </div>
-                </article>
-
-                <article class="ressourcen-card reveal reveal-delay-3">
-                    <div class="ressourcen-icon" aria-hidden="true">📋</div>
-                    <h3>Praxis & Merkblätter</h3>
-                    <p>IHK, HWK und kommunale Serviceportale mit konkreten Unterlagen-Checklisten.</p>
-                    <div class="ressourcen-links">
-                        <a href="https://www.ihk.de/rostock/starthilfe/foerderung/foerderungen-bei-gruendungen-aus-der-arbeitslosigkeit-3161510" target="_blank" rel="noopener noreferrer">IHK: Förderungen bei Gründungen</a>
-                        <a href="https://www.ihk.de/darmstadt/produktmarken/gruendung/gruendungszuschuss-2538532" target="_blank" rel="noopener noreferrer">IHK Darmstadt: Gründungszuschuss</a>
-                        <a href="https://www.ihk.de/blueprint/servlet/resource/blob/3950766/c7d213496bdcf4e584b3cd50041c934f/gruendungszuschuss-merkblatt-data.pdf" target="_blank" rel="noopener noreferrer">IHK-Merkblatt (PDF)</a>
-                        <a href="https://www.hwk-muenchen.de/downloads/merkblatt-gruendungszuschuss-74,7892.pdf" target="_blank" rel="noopener noreferrer">HWK München: Merkblatt (PDF)</a>
-                        <a href="https://www.ihk.de/blueprint/servlet/resource/blob/6016626/a298698b3be5f0e4c0d72f5159168e91/gruendungszuschuss-agentur-fuer-arbeit-data.pdf" target="_blank" rel="noopener noreferrer">IHK Dresden (PDF)</a>
-                        <a href="https://www.gera.de/serviceportal/gruendungszuschuss-beantragen-l221924745" target="_blank" rel="noopener noreferrer">Serviceportal Gera</a>
-                        <a href="https://verwaltungsportal.hessen.de/leistung?leistung_id=B100019_574730" target="_blank" rel="noopener noreferrer">Verwaltungsportal Hessen</a>
-                        <a href="https://www.greifswald.de/de/verwaltung-politik/verwaltungsleistungen_basis/Gruendungszuschuss-beantragen/" target="_blank" rel="noopener noreferrer">Stadt Greifswald</a>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="ressourcen-extra reveal">
-                <h4>Zusätzliche Hintergrundinformationen</h4>
-                <div class="ressourcen-links-inline">
-                    <a href="https://www.betanet.de/gruendungszuschuss.html" target="_blank" rel="noopener noreferrer">Betanet: Übersicht Gründungszuschuss</a>
-                    <a href="https://www.betanet.de/gruendungszuschuss.html?pdf=487" target="_blank" rel="noopener noreferrer">Betanet Infoblatt (PDF)</a>
-                    <a href="https://www.fuer-gruender.de/kapital/foerdermittel/zuschuss/einstiegsgeld/" target="_blank" rel="noopener noreferrer">Für-Gründer.de: Einstiegsgeld</a>
-                    <a href="https://www.deutschland-startet.de/gruendung-aus-alg-1-2/gruendungszuschuss-aus-alg1/" target="_blank" rel="noopener noreferrer">Deutschland-startet: ALG&nbsp;1</a>
-                    <a href="https://gobusiness-group.de/existenzgruendung/gruendungszuschuss-vom-arbeitsamt" target="_blank" rel="noopener noreferrer">Ratgeber: Gründungszuschuss vom Arbeitsamt</a>
+                <div style="margin-top: 1.5rem; padding: 1rem; background: var(--cream-2); border-radius: var(--radius-sm); border: 1px solid var(--cream-3);">
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">
+                        <strong style="color: var(--charcoal);">💡 Tipp:</strong> Laden Sie die erfragten Dokumente nach Ihrem BA-Termin <a href="#fragebogen" style="color: var(--accent);">hier erneut hoch</a> oder senden Sie sie per E-Mail an <a href="mailto:info@bpx-krekon.de" style="color: var(--accent);">info@bpx-krekon.de</a>.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Package Teaser -->
-        <section id="pakete" aria-labelledby="pakete-heading">
-            <span class="section-label reveal">Investition</span>
+        <!-- GRUNDLAGEN / PAIN POINTS -->
+        <section id="grundlagen" class="pain-section" aria-labelledby="pain-heading">
+            <span class="section-label reveal" style="padding-left: 2rem; padding-top: 2rem; display: inline-block;">Warum scheitern Anträge?</span>
+            <div class="section-header reveal" style="padding: 0 2rem;">
+                <h2 id="pain-heading">Die häufigsten Ablehnungsgründe – und wie wir sie vermeiden</h2>
+            </div>
+            <div class="pain-grid" style="padding: 0 2rem 2rem;">
+                <div class="pain-card reveal">
+                    <div class="pain-icon">❌</div>
+                    <h4>Unrealistische Finanzplanung</h4>
+                    <p>Die BA prüft Zahlen streng. Zu optimistische Umsätze oder fehlende Puffer führen sofort zur Ablehnung.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="pain-icon">❌</div>
+                    <h4>Fehlende Marktanalyse</h4>
+                    <p>„Ich kenne mich aus" reicht nicht. Wir liefern belegte Zahlen, Wettbewerbsanalyse und Zielgruppendaten.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="pain-icon">❌</div>
+                    <h4>Unvollständiger Businessplan</h4>
+                    <p>Fehlende Kapitel, fehlende Nachweise oder falsche Gliederung – wir kennen die BA-Vorgaben genau.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-3">
+                    <div class="pain-icon">❌</div>
+                    <h4>Falsche Rechtsformwahl</h4>
+                    <p>GbR, GmbH, Einzelunternehmen? Die Wahl beeinflusst Förderfähigkeit und Haftung massiv.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="loesungen" aria-labelledby="loesungen-heading">
+            <span class="section-label reveal">Unser Ansatz</span>
             <div class="section-header reveal">
-                <h2 id="pakete-heading">Premium‑Leistung – mit psychologisch smarten Preisen</h2>
-                <p>Wir arbeiten mit Festpreisen knapp unter wichtigen Preisschwellen – so bleibt die Qualität hoch, die Entscheidung aber leichter.</p>
+                <h2 id="loesungen-heading">Was Sie bei BPX‑krekon erwartet</h2>
+                <p>Keine Templates aus der Schublade. Keine halben Sachen. Nur behördengerechte Businesspläne, die überzeugen.</p>
             </div>
-            <div class="teaser-grid">
-                <article class="teaser-card reveal reveal-delay-1">
+            <div class="solution-list">
+                <div class="solution-item reveal">
+                    <div class="solution-check">✓</div>
+                    <div>
+                        <h4>Individuelle Analyse Ihrer Chancen</h4>
+                        <p>Wir prüfen vorab, ob Ihr Vorhaben förderfähig ist – und wo Stolperfallen lauern. So investieren Sie keine Zeit umsonst.</p>
+                    </div>
+                </div>
+                <div class="solution-item reveal reveal-delay-1">
+                    <div class="solution-check">✓</div>
+                    <div>
+                        <h4>Behördengerechte Struktur & Vollständigkeit</h4>
+                        <p>Unsere Businesspläne erfüllen die formalen und inhaltlichen Anforderungen der Agentur für Arbeit – Kapitel für Kapitel.</p>
+                    </div>
+                </div>
+                <div class="solution-item reveal reveal-delay-2">
+                    <div class="solution-check">✓</div>
+                    <div>
+                        <h4>Realistische Finanzplanung mit Szenarien</h4>
+                        <p>Wir rechnen konservativ, planen Puffer ein und zeigen Worst-Case- sowie Best-Case-Szenarien auf.</p>
+                    </div>
+                </div>
+                <div class="solution-item reveal reveal-delay-3">
+                    <div class="solution-check">✓</div>
+                    <div>
+                        <h4>Korrekturschleifen bis zur BA-Abgabe</h4>
+                        <p>Ihr Sachbearbeiter hat Nachbesserungswünsche? Kein Problem. Wir optimieren bis die Genehmigung feststeht.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAKETE -->
+        <section id="pakete" aria-labelledby="pakete-heading">
+            <span class="section-label reveal">Schritt 4 – Ihr Angebot</span>
+            <div class="section-header reveal">
+                <h2 id="pakete-heading">Businessplan-Pakete mit Festpreis</h2>
+                <p>Transparente Preise. Keine versteckten Kosten. Wählen Sie das Paket, das zu Ihrem Vorhaben und Ihrem Budget passt.</p>
+            </div>
+
+            <div class="teaser-grid reveal">
+                <div class="teaser-card">
                     <h4>Basis</h4>
-                    <div class="teaser-price">497 €<<span>oder 9 × 55,– €</span></div>
-                    <p>Für sehr einfache, risikoarme Vorhaben. Kompakter Businessplan (ca. 10 Seiten), 1× Überarbeitung, 72h Lieferung.</p>
-                </article>
-                <article class="teaser-card featured reveal reveal-delay-2">
-                    <div class="teaser-tag">Meistgewählt</div>
+                    <div class="teaser-price">497 €<<span>einmalig</span></div>
+                    <p>Businessplan-Grundgerüst für einfache Gewerbeanmeldungen mit geringer Komplexität.</p>
+                    <a href="#booking" class="btn-secondary" style="margin-top: auto;">Beratungstermin</a>
+                </div>
+                <div class="teaser-card featured">
+                    <div class="teaser-tag">Beliebt</div>
                     <h4>Standard</h4>
-                    <div class="teaser-price">975 €<<span>oder 9 × 115,– €</span></div>
-                    <p>Für die meisten Gründungszuschuss‑Projekte. 12–14 Seiten, 3‑Jahres‑Finanzplan, 2× Überarbeitung, 48h Lieferung.</p>
-                </article>
-                <article class="teaser-card reveal reveal-delay-3">
+                    <div class="teaser-price">975 €<<span>einmalig</span></div>
+                    <p>Vollständiger Businessplan inkl. Marktanalyse, Finanzplanung und Risikoanalyse. Für die meisten Gründungen.</p>
+                    <a href="#booking" class="btn-main" style="margin-top: auto;">Jetzt starten</a>
+                </div>
+                <div class="teaser-card">
                     <h4>Premium</h4>
-                    <div class="teaser-price">1.475 €<<span>oder 9 × 169,– €</span></div>
-                    <p>Für komplexe Vorhaben oder kritische Sachbearbeiter. Zusätzliche Liquiditätsplanung, Beratungscall, unbegrenzte Überarbeitungen.</p>
-                </article>
-                <article class="teaser-card carefree-card reveal reveal-delay-1">
-                    <h4>★ Carefree</h4>
-                    <div class="teaser-price">2.975 €<<span>oder 9 × 339,– €</span></div>
-                    <p>9 Monate Vollbetreuung: bis zu 90 Optimierungen, monatliche Calls, WhatsApp‑Support, direkte Unterstützung bei Sachbearbeiter‑Anfragen.</p>
-                </article>
+                    <div class="teaser-price">1.475 €<<span>einmalig</span></div>
+                    <p>Umfassende Analyse, 3-Jahres-Planung, detaillierte Wettbewerbsbetrachtung und Investitionsplan.</p>
+                    <a href="#booking" class="btn-secondary" style="margin-top: auto;">Beratungstermin</a>
+                </div>
+                <div class="teaser-card carefree-card">
+                    <h4>Carefree</h4>
+                    <div class="teaser-price">2.975 €<<span>einmalig</span></div>
+                    <p>Alles aus Premium + Begleitung bis zur BA-Genehmigung, Behördenkommunikation und unbegrenzte Korrekturen.</p>
+                    <a href="#booking" class="btn-secondary" style="margin-top: auto; border-color: var(--carefree-light); color: var(--carefree);">Premium-Beratung</a>
+                </div>
             </div>
-            <div style="text-align:center; margin-top:2rem;">
-                <a href="#booking" class="btn-main">Jetzt kostenloses Erstgespräch vereinbaren</a>
+
+            <!-- WEBSITE ADD-ON -->
+            <div class="addon-section reveal">
+                <h3>🌐 Zusatzleistung: Professionelle Website</h3>
+                <p>Erscheinen Sie bei der BA und Ihren ersten Kunden nicht nur mit einem Plan, sondern mit einer professionellen Online-Präsenz.</p>
+                <div class="addon-grid">
+                    <div class="addon-item">
+                        <div class="addon-icon">🎨</div>
+                        <h4>Webdesign & Branding</h4>
+                        <p>Individuelles Design abgestimmt auf Ihre Corporate Identity</p>
+                    </div>
+                    <div class="addon-item">
+                        <div class="addon-icon">📱</div>
+                        <h4>Responsive & SEO-basiert</h4>
+                        <p>Optimiert für Mobile, Tablets und Google-Ranking</p>
+                    </div>
+                    <div class="addon-item">
+                        <div class="addon-icon">⚡</div>
+                        <h4>Express-Setup</h4>
+                        <p>Online innerhalb von 7 Tagen parallel zum Businessplan</p>
+                    </div>
+                    <div class="addon-item">
+                        <div class="addon-icon">🔧</div>
+                        <h4>Hosting & Domain</h4>
+                        <p>Komplettpaket inkl. Domain, SSL-Zertifikat & E-Mail</p>
+                    </div>
+                </div>
+                <div class="addon-price">ab 890 € <span>einmalig · optional buchbar</span></div>
+                <a href="#booking" class="addon-cta">Website-Beratung vereinbaren</a>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="testimonials" aria-labelledby="testimonials-heading">
+            <span class="section-label reveal">Erfolgsgeschichten</span>
+            <div class="section-header reveal">
+                <h2 id="testimonials-heading">Was Gründer über BPX‑krekon sagen</h2>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card reveal">
+                    <div class="testi-result">Genehmigt</div>
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">„Der Businessplan war so detailliert, dass mein Sachbearbeiter nur noch das Formular abzeichnen musste. Nach 3 Wochen hatte ich die Zusage für den Gründungszuschuss."</p>
+                    <div class="testi-author">
+                        <div class="testi-author-avatar">MK</div>
+                        <div class="testi-author-info">
+                            <strong>Michael K.</strong>
+                            <span>IT-Beratung, Hamburg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal reveal-delay-1">
+                    <div class="testi-result">Genehmigt</div>
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">„Ich hatte schon einen Ablehnungsbescheid wegen einer unvollständigen Finanzplanung. BPX‑krekon hat alles überarbeitet – die zweite Einreichung lief durch."</p>
+                    <div class="testi-author">
+                        <div class="testi-author-avatar">SL</div>
+                        <div class="testi-author-info">
+                            <strong>Sarah L.</strong>
+                            <span>Handmade-Shop, München</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-card reveal reveal-delay-2">
+                    <div class="testi-result">Genehmigt</div>
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">„Das Carefree-Paket hat sich gelohnt. Die Begleitung bis zur finalen Genehmigung gab mir Sicherheit. Dazu noch die Website – mein Café ist jetzt online und offline gestartet."</p>
+                    <div class="testi-author">
+                        <div class="testi-author-avatar">TB</div>
+                        <div class="testi-author-info">
+                            <strong>Thomas B.</strong>
+                            <span>Café-Betrieb, Köln</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESSOURCEN -->
+        <section id="ressourcen" aria-labelledby="ressourcen-heading">
+            <span class="section-label reveal">Hilfreiche Links</span>
+            <div class="section-header reveal">
+                <h2 id="ressourcen-heading">Offizielle Ressourcen & Downloads</h2>
+                <p>Behalten Sie den Überblick über Fristen, Formulare und Fördermöglichkeiten.</p>
+            </div>
+            <div class="ressourcen-grid">
+                <div class="ressourcen-card reveal">
+                    <div class="ressourcen-icon">📄</div>
+                    <h3>Anträge & Formulare</h3>
+                    <p>Offizielle Dokumente der Bundesagentur für Arbeit zum Download.</p>
+                    <div class="ressourcen-links">
+                        <a href="https://www.arbeitsagentur.de/datei/antrag-gruendungszuschuss_ba042611.pdf" target="_blank">Antrag Gründungszuschuss</a>
+                        <a href="https://www.arbeitsagentur.de/datei/ba042613.pdf" target="_blank">Verpflichtungserklärung</a>
+                    </div>
+                </div>
+                <div class="ressourcen-card reveal reveal-delay-1">
+                    <div class="ressourcen-icon">📊</div>
+                    <h3>Förderdatenbank</h3>
+                    <p>Zusätzliche Fördermöglichkeiten von Bund und Ländern für Existenzgründer.</p>
+                    <div class="ressourcen-links">
+                        <a href="https://www.foerderdatenbank.de/" target="_blank">Förderdatenbank.de</a>
+                        <a href="https://www.bmwi.de/" target="_blank">BMWi Förderung</a>
+                    </div>
+                </div>
+                <div class="ressourcen-card reveal reveal-delay-2">
+                    <div class="ressourcen-icon">🏛️</div>
+                    <h3>IHK & HWK</h3>
+                    <p>Beratungsangebote der Industrie- und Handelskammern sowie Handwerkskammern.</p>
+                    <div class="ressourcen-links">
+                        <a href="https://www.ihk.de/" target="_blank">IHK Finder</a>
+                        <a href="https://www.hwk.de/" target="_blank">HWK Finder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ressourcen-extra reveal">
+                <h4>Weitere nützliche Links</h4>
+                <div class="ressourcen-links-inline">
+                    <a href="https://www.existenzgruender.de/" target="_blank">Existenzgründer.de</a>
+                    <a href="https://www.gruendung.de/" target="_blank">Gründung.de</a>
+                    <a href="https://www.dehoga.de/" target="_blank">DEHOGA (Gastronomie)</a>
+                    <a href="https://www.bmuv.de/" target="_blank">Umwelt- und Bauaufsicht</a>
+                    <a href="https://www.bsi.bund.de/" target="_blank">BSI (IT-Sicherheit)</a>
+                </div>
             </div>
         </section>
 
         <!-- FAQ -->
         <section id="faq" aria-labelledby="faq-heading">
-            <span class="section-label reveal">FAQ</span>
+            <span class="section-label reveal">Häufige Fragen</span>
             <div class="section-header reveal">
-                <h2 id="faq-heading">Häufige Fragen vor dem Erstgespräch</h2>
+                <h2 id="faq-heading">Fragen & Antworten</h2>
             </div>
             <div class="faq-list">
                 <details class="faq-item reveal">
-                    <summary class="faq-question">Was kostet das Erstgespräch?<div class="faq-icon" aria-hidden="true">+</div></summary>
-                    <div class="faq-answer"><p>Das Erstgespräch ist für Sie komplett kostenlos und unverbindlich. Es dient dazu, Ihre Situation zu verstehen und zu klären, ob und wie wir Sie sinnvoll unterstützen können.</p></div>
+                    <summary class="faq-question">
+                        <span>Muss ich für das Erstgespräch bezahlen?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Nein. Das erste Gespräch ist komplett kostenlos und unverbindlich. Wir klären Ihre Chancen und zeigen Ihnen, welches Paket passt – ohne Verpflichtung.</p>
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-1">
+                    <summary class="faq-question">
+                        <span>Wie lange dauert die Erstellung des Businessplans?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Standardmäßig 48–72 Stunden nach Auftragserteilung und vollständiger Dokumentenübergabe. Express-Fertigstellung innerhalb von 24 Stunden ist gegen Aufpreis möglich.</p>
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-2">
+                    <summary class="faq-question">
+                        <span>Was passiert, wenn die BA den Businessplan ablehnt?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Mit dem Standard- und Premium-Paket sind 2 Korrekturschleifen inklusive. Im Carefree-Paket begleiten wir Sie bis zur finalen Genehmigung – ohne Zusatzkosten.</p>
+                    </div>
+                </details>
+                <details class="faq-item reveal reveal-delay-3">
+                    <summary class="faq-question">
+                        <span>Kann ich den Businessplan auch ohne Gründungszuschuss nutzen?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Absolut. Unsere Businesspläne eignen sich auch für Bankgespräche, Investoren-Pitches, Förderanträge oder als internes Planungswerkzeug.</p>
+                    </div>
                 </details>
                 <details class="faq-item reveal">
-                    <summary class="faq-question">Brauchen wir schon eine fertige Geschäftsidee?<div class="faq-icon" aria-hidden="true">+</div></summary>
-                    <div class="faq-answer"><p>Nein. Eine grobe Vorstellung von Branche und Angebot reicht für den Start. Im Gespräch arbeiten wir heraus, welche Informationen der Businessplan später enthalten sollte.</p></div>
-                </details>
-                <details class="faq-item reveal">
-                    <summary class="faq-question">Findet das Gespräch telefonisch oder per Zoom statt?<div class="faq-icon" aria-hidden="true">+</div></summary>
-                    <div class="faq-answer"><p>Sie wählen, was besser passt. Viele Kunden starten telefonisch, bei Bedarf wechseln wir in ein Online‑Meeting, um gemeinsam auf Unterlagen zu schauen.</p></div>
-                </details>
-                <details class="faq-item reveal">
-                    <summary class="faq-question">Was passiert nach dem Gespräch?<div class="faq-icon" aria-hidden="true">+</div></summary>
-                    <div class="faq-answer"><p>Wenn Sie möchten, erhalten Sie innerhalb von 24 Stunden eine kurze Zusammenfassung mit Empfehlung und ein Festpreis‑Angebot. Dieses können Sie in Ruhe prüfen.</p></div>
-                </details>
-                <details class="faq-item reveal">
-                    <summary class="faq-question">Arbeitet Ihr Netzwerk auch in anderen Sprachen?<div class="faq-icon" aria-hidden="true">+</div></summary>
-                    <div class="faq-answer"><p>Ja. Standard ist Deutsch, auf Anfrage erstellen wir Businesspläne auch zweisprachig (z.B. Deutsch–Englisch) und beziehen kulturelle Besonderheiten in die Formulierungen ein.</p></div>
-                </details>
-                <details class="faq-item reveal">
-                    <summary class="faq-question">Wie schnell erhalten wir den fertigen Businessplan?<div class="faq-icon" aria-hidden="true">+</div></summary>
-                    <div class="faq-answer"><p>Abhängig vom Paket: Basis ca. 72h, Standard 48h, Premium & Carefree auf Wunsch mit Express‑Option. Die genaue Frist vereinbaren wir im Erstgespräch.</p></div>
+                    <summary class="faq-question">
+                        <span>Wie funktioniert die Website-Zusatzleistung?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sie buchen die Website parallel zu Ihrem Businessplan-Paket. Wir klären Ihre Anforderungen, erstellen das Design und setzen die Seite um – inklusive Domain, Hosting und SSL. Fertigstellung innerhalb von 7 Tagen.</p>
+                    </div>
                 </details>
             </div>
         </section>
 
-        <!-- Final CTA -->
-        <section style="max-width:1100px; margin:0 auto; padding:0 2rem 4rem;" aria-labelledby="final-cta-heading">
-            <div class="cta-wrap">
-                <h2 id="final-cta-heading">Der erste Schritt ist ein Gespräch – nicht ein Formularstapel</h2>
-                <p>Nutzen Sie die kostenlose Erstberatung, um Klarheit zu gewinnen. Danach entscheiden Sie selbst, ob unser Netzwerk Sie beim Businessplan für den Gründungszuschuss begleiten soll.</p>
-                <a href="#booking" class="btn-cta-white">📅 Jetzt kostenlosen Termin anfragen</a>
+        <!-- TERMINBUCHUNG -->
+        <section id="booking" aria-labelledby="booking-heading">
+            <span class="section-label reveal">Sofort starten</span>
+            <div class="section-header reveal">
+                <h2 id="booking-heading">Kostenloses Erstgespräch vereinbaren</h2>
+                <p>Wählen Sie einen Termin, der Ihnen passt. Wir melden uns umgehend zur Bestätigung.</p>
             </div>
+
+            <div class="booking-section reveal">
+                <div class="form-success" id="bookingSuccess" role="status" aria-live="polite">
+                    ✅ Terminwunsch eingegangen! Wir bestätigen innerhalb von 2 Stunden per E-Mail oder Telefon.
+                </div>
+
+                <h3>Verfügbare Termine (nächste 7 Tage)</h3>
+                <p>Klicken Sie auf einen Slot, um ihn auszuwählen:</p>
+                
+                <div class="booking-grid" id="bookingGrid" role="radiogroup" aria-label="Terminauswahl">
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Mo" data-time="10:00">
+                        <span class="day">Montag</span>
+                        <span class="time">10:00</span>
+                    </div>
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Mo" data-time="14:00">
+                        <span class="day">Montag</span>
+                        <span class="time">14:00</span>
+                    </div>
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Di" data-time="09:00">
+                        <span class="day">Dienstag</span>
+                        <span class="time">09:00</span>
+                    </div>
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Di" data-time="16:00">
+                        <span class="day">Dienstag</span>
+                        <span class="time">16:00</span>
+                    </div>
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Mi" data-time="11:00">
+                        <span class="day">Mittwoch</span>
+                        <span class="time">11:00</span>
+                    </div>
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Do" data-time="10:00">
+                        <span class="day">Donnerstag</span>
+                        <span class="time">10:00</span>
+                    </div>
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Do" data-time="15:00">
+                        <span class="day">Donnerstag</span>
+                        <span class="time">15:00</span>
+                    </div>
+                    <div class="booking-slot" role="radio" tabindex="0" aria-checked="false" data-day="Fr" data-time="09:00">
+                        <span class="day">Freitag</span>
+                        <span class="time">09:00</span>
+                    </div>
+                </div>
+
+                <form class="booking-form" id="bookingForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="bk-name">Name *</label>
+                            <input type="text" id="bk-name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-field">
+                            <label for="bk-email">E-Mail *</label>
+                            <input type="email" id="bk-email" name="email" required autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="bk-phone">Telefon *</label>
+                            <input type="tel" id="bk-phone" name="phone" required autocomplete="tel">
+                        </div>
+                        <div class="form-field">
+                            <label for="bk-art">Gesprächsart</label>
+                            <select id="bk-art" name="art">
+                                <option value="telefon">Telefonisch</option>
+                                <option value="zoom">Zoom-Video</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row single">
+                        <div class="form-field">
+                            <label for="bk-notiz">Anmerkung (optional)</label>
+                            <textarea id="bk-notiz" name="notiz" rows="2" placeholder="Themen, die Sie besonders besprechen möchten..."></textarea>
+                        </div>
+                    </div>
+                    <div class="consent-group">
+                        <input type="checkbox" id="bk-dsgvo" name="dsgvo" required>
+                        <label for="bk-dsgvo">Ich stimme der Kontaktaufnahme zur Terminbestätigung zu. <a href="#datenschutz">Datenschutz</a>. *</label>
+                    </div>
+                    <button type="submit" id="bookingSubmit">Termin jetzt anfragen →</button>
+                </form>
+                <p class="booking-alt">Oder direkt anrufen: <a href="tel:+4917600000000">0176 – 00 00 00 00</a></p>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="cta-wrap" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">Bereit, durchzustarten?</h2>
+            <p>Der Gründungszuschuss kann Ihre Existenzgründung finanzieren. Wir sorgen dafür, dass Ihr Businessplan die Agentur für Arbeit überzeugt.</p>
+            <a href="#fragebogen" class="btn-cta-white">Fragebogen ausfüllen & loslegen</a>
         </section>
     </main>
 
     <footer>
         <div class="footer-logo">BPX<span>-</span>krekon</div>
-        <div class="footer-desc">Organisch gewachsenes Netzwerk für professionelle Businesspläne zum Gründungszuschuss in Deutschland.</div>
+        <p class="footer-desc">Spezialisiertes Netzwerk für professionelle Businesspläne und Existenzgründung in Deutschland.</p>
         <address class="footer-address">
-            Hans-Swathi Srikandaraja · Lange Straße 82 · 27804 Berne · Niedersachsen<br>
-            <a href="mailto:info@bpx-krekon.de">info@bpx-krekon.de</a> · 
-            <a href="tel:+4917600000000">+49 176 000 000 00</a>
+            Hans-Swathi Srikandaraja · Lange Straße 82 · 27804 Berne (Niedersachsen)<br>
+            <a href="mailto:info@bpx-krekon.de">info@bpx-krekon.de</a> · <a href="tel:+4917600000000">0176 – 00 00 00 00</a>
         </address>
         <div class="footer-links">
-            <a href="/impressum">Impressum</a>
-            <a href="/datenschutz">Datenschutz</a>
-            <a href="mailto:info@bpx-krekon.de">Kontakt</a>
+            <a href="#datenschutz">Datenschutz</a>
+            <a href="#impressum">Impressum</a>
+            <a href="#agb">AGB</a>
+            <a href="#kontakt">Kontakt</a>
         </div>
-        <div class="copyright">© <span id="year">2026</span> BPX‑krekon. Alle Rechte vorbehalten.</div>
+        <p class="copyright">© 2026 BPX-krekon. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <button id="backToTop" aria-label="Zurück nach oben scrollen">↑</button>
+    <button id="backToTop" aria-label="Zum Seitenanfang scrollen">↑</button>
 
     <script>
-        (function() {
-            'use strict';
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobileBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileBtn.addEventListener('click', () => {
+            const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+            mobileBtn.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('open');
+        });
 
-            document.getElementById('year').textContent = new Date().getFullYear();
-
-            const navbar = document.getElementById('navbar');
-            function updateNavbar() {
-                navbar.classList.toggle('scrolled', window.scrollY > 20);
-            }
-            window.addEventListener('scroll', updateNavbar, { passive: true });
-            updateNavbar();
-
-            const mobileBtn = document.getElementById('mobileBtn');
-            const navLinks = document.getElementById('navLinks');
-            
-            mobileBtn.addEventListener('click', function() {
-                const expanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !expanded);
-                navLinks.classList.toggle('open');
-                this.textContent = expanded ? '☰' : '✕';
-                this.setAttribute('aria-label', expanded ? 'Menü öffnen' : 'Menü schließen');
-            });
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href === '#') return;
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const offset = navbar.offsetHeight + 20;
-                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                    }
-                    navLinks.classList.remove('open');
-                    mobileBtn.setAttribute('aria-expanded', 'false');
-                    mobileBtn.textContent = '☰';
-                    mobileBtn.setAttribute('aria-label', 'Menü öffnen');
-                });
-            });
-
-            const revealElements = document.querySelectorAll('.reveal');
-            if ('IntersectionObserver' in window) {
-                const revealObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            revealObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-                revealElements.forEach(el => revealObserver.observe(el));
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
             } else {
-                revealElements.forEach(el => el.classList.add('visible'));
+                navbar.classList.remove('scrolled');
             }
+        });
 
-            const slotGrid = document.getElementById('slotGrid');
-            const times = ['10:00', '14:00', '09:00', '16:00', '11:00', '15:00'];
-            const dayNames = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
-            const shortDays = ['So','Mo','Di','Mi','Do','Fr','Sa'];
-            
-            function getNextWeekdays(count) {
-                const slots = [];
-                let d = new Date();
-                d.setDate(d.getDate() + 1);
-                
-                while (slots.length < count) {
-                    const day = d.getDay();
-                    if (day !== 0 && day !== 6) {
-                        const dateStr = d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' });
-                        slots.push({
-                            dayName: dayNames[day],
-                            shortDay: shortDays[day],
-                            date: dateStr,
-                            iso: d.toISOString().split('T')[0]
-                        });
-                    }
-                    d.setDate(d.getDate() + 1);
+        // Reveal on Scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
                 }
-                return slots;
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
             }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-            const slots = getNextWeekdays(6);
-            slots.forEach((slot, index) => {
-                const time = times[index];
-                const el = document.createElement('div');
-                el.className = 'booking-slot';
-                el.setAttribute('role', 'button');
-                el.setAttribute('tabindex', '0');
-                el.setAttribute('aria-selected', 'false');
-                el.setAttribute('data-time', `${slot.shortDay}, ${slot.date}. — ${time} Uhr`);
-                el.innerHTML = `<span class="day">${slot.dayName}</span><span class="time">${time}</span>`;
-                
-                function select() {
-                    document.querySelectorAll('.booking-slot').forEach(s => {
-                        s.classList.remove('selected');
-                        s.setAttribute('aria-selected', 'false');
-                    });
-                    el.classList.add('selected');
-                    el.setAttribute('aria-selected', 'true');
-                    document.getElementById('selectedSlot').value = el.getAttribute('data-time');
-                }
-                
-                el.addEventListener('click', select);
-                el.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        select();
-                    }
+        // Booking Slot Selection
+        const bookingSlots = document.querySelectorAll('.booking-slot');
+        let selectedSlot = null;
+        bookingSlots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                bookingSlots.forEach(s => {
+                    s.setAttribute('aria-selected', 'false');
+                    s.setAttribute('aria-checked', 'false');
                 });
-                slotGrid.appendChild(el);
+                slot.setAttribute('aria-selected', 'true');
+                slot.setAttribute('aria-checked', 'true');
+                selectedSlot = slot;
             });
-
-            const bookingForm = document.getElementById('bookingForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const formSuccess = document.getElementById('formSuccess');
-            
-            bookingForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const slot = document.getElementById('selectedSlot').value;
-                const consent = document.getElementById('bookConsent').checked;
-                
-                if (!slot) {
-                    alert('Bitte wählen Sie zuerst einen Terminslot aus.');
-                    return;
+            slot.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    slot.click();
                 }
-                if (!consent) {
-                    alert('Bitte stimmen Sie der Datenverarbeitung zu.');
-                    document.getElementById('bookConsent').focus();
-                    return;
-                }
-                
-                submitBtn.disabled = true;
-                submitBtn.querySelector('.btn-text').textContent = '⏳ Wird gesendet...';
-                
-                setTimeout(() => {
-                    formSuccess.style.display = 'block';
-                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    bookingForm.reset();
-                    document.querySelectorAll('.booking-slot').forEach(s => {
-                        s.classList.remove('selected');
-                        s.setAttribute('aria-selected', 'false');
-                    });
-                    document.getElementById('selectedSlot').value = '';
-                    
-                    submitBtn.disabled = false;
-                    submitBtn.querySelector('.btn-text').textContent = '✉️ Termin-Anfrage senden';
-                    
-                    setTimeout(() => { formSuccess.style.display = 'none'; }, 8000);
-                }, 1500);
             });
+        });
 
-            // FRAGEBOGEN LOGIK
-            const fragebogenForm = document.getElementById('fragebogenForm');
-            const progressFill = document.getElementById('progressFill');
-            const fragebogenSuccess = document.getElementById('fragebogenSuccess');
-            
-            function updateProgress() {
-                const inputs = fragebogenForm.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]), textarea, select');
-                const checkedRadios = fragebogenForm.querySelectorAll('input[type="radio"]:checked');
-                const checkedBoxes = fragebogenForm.querySelectorAll('input[type="checkbox"]:checked');
-                
-                let filled = 0;
-                inputs.forEach(input => { if (input.value.trim()) filled++; });
-                filled += checkedRadios.length;
-                filled += checkedBoxes.length > 0 ? 1 : 0;
-                
-                const total = inputs.length + 6; // ca. 6 Radio/Checkbox-Gruppen
-                const percent = Math.min(100, Math.round((filled / total) * 100));
-                progressFill.style.width = percent + '%';
+        // Booking Form Submit
+        const bookingForm = document.getElementById('bookingForm');
+        const bookingSuccess = document.getElementById('bookingSuccess');
+        const bookingSubmit = document.getElementById('bookingSubmit');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!selectedSlot) {
+                alert('Bitte wählen Sie zuerst einen Termin-Slot aus.');
+                return;
             }
-            
-            fragebogenForm.addEventListener('input', updateProgress);
-            fragebogenForm.addEventListener('change', updateProgress);
-            
-            fragebogenForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const consent = document.getElementById('fbConsent').checked;
-                if (!consent) {
-                    alert('Bitte stimmen Sie der Datenverarbeitung zu.');
-                    document.getElementById('fbConsent').focus();
+            bookingSubmit.disabled = true;
+            bookingSubmit.textContent = 'Wird gesendet...';
+            setTimeout(() => {
+                bookingSuccess.style.display = 'block';
+                bookingForm.reset();
+                bookingSlots.forEach(s => {
+                    s.setAttribute('aria-selected', 'false');
+                    s.setAttribute('aria-checked', 'false');
+                });
+                selectedSlot = null;
+                bookingSubmit.disabled = false;
+                bookingSubmit.textContent = 'Termin jetzt anfragen →';
+                bookingSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1500);
+        });
+
+        // Fragebogen Progress Bar
+        const fragebogenForm = document.getElementById('fragebogenForm');
+        const progressFill = document.getElementById('progressFill');
+        const fragebogenInputs = fragebogenForm.querySelectorAll('input, select, textarea');
+        
+        function updateProgress() {
+            const total = fragebogenInputs.length;
+            let filled = 0;
+            fragebogenInputs.forEach(input => {
+                if (input.type === 'checkbox' || input.type === 'radio') {
+                    if (input.checked) filled++;
+                } else if (input.value.trim() !== '') {
+                    filled++;
+                }
+            });
+            const percent = Math.min(100, Math.round((filled / total) * 100));
+            progressFill.style.width = percent + '%';
+        }
+        fragebogenInputs.forEach(input => {
+            input.addEventListener('input', updateProgress);
+            input.addEventListener('change', updateProgress);
+        });
+
+        // File Upload
+        const uploadZone = document.getElementById('uploadZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        let uploadedFiles = [];
+
+        uploadZone.addEventListener('click', () => fileInput.click());
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            handleFiles(e.dataTransfer.files);
+        });
+        fileInput.addEventListener('change', () => {
+            handleFiles(fileInput.files);
+        });
+
+        function handleFiles(files) {
+            Array.from(files).forEach(file => {
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('Datei zu groß: ' + file.name + ' (Max. 10 MB)');
                     return;
                 }
-                
-                const submitter = fragebogenForm.querySelector('button[type="submit"]');
-                submitter.disabled = true;
-                submitter.textContent = '⏳ Wird gesendet...';
-                
-                setTimeout(() => {
-                    fragebogenSuccess.style.display = 'block';
-                    fragebogenSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    
-                    submitter.disabled = false;
-                    submitter.textContent = '📤 Fragebogen absenden';
-                    
-                    setTimeout(() => { fragebogenSuccess.style.display = 'none'; }, 10000);
-                }, 1500);
+                uploadedFiles.push(file);
+                renderFileList();
             });
+        }
 
-            const backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', () => {
-                backToTop.classList.toggle('visible', window.scrollY > 500);
-            }, { passive: true });
-            
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            document.querySelectorAll('details.faq-item').forEach(detail => {
-                detail.addEventListener('toggle', function() {
-                    if (this.open) {
-                        document.querySelectorAll('details.faq-item').forEach(other => {
-                            if (other !== this && other.open) other.open = false;
-                        });
-                    }
+        function renderFileList() {
+            fileList.innerHTML = '';
+            uploadedFiles.forEach((file, index) => {
+                const chip = document.createElement('div');
+                chip.className = 'file-chip';
+                chip.innerHTML = `
+                    <span>${file.name}</span>
+                    <button type="button" class="remove-file" aria-label="Datei entfernen">×</button>
+                `;
+                chip.querySelector('.remove-file').addEventListener('click', () => {
+                    uploadedFiles.splice(index, 1);
+                    renderFileList();
                 });
+                fileList.appendChild(chip);
             });
+        }
 
-        })();
+        // Fragebogen Submit
+        const fragebogenSuccess = document.getElementById('fragebogenSuccess');
+        fragebogenForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = fragebogenForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Wird gesendet...';
+            
+            setTimeout(() => {
+                fragebogenSuccess.style.display = 'block';
+                fragebogenForm.querySelectorAll('.fragebogen-block, .consent-group, .fragebogen-actions').forEach(el => {
+                    el.style.display = 'none';
+                });
+                progressFill.parentElement.style.display = 'none';
+                fragebogenSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1500);
+        });
     </script>
 </body>
 </html>
